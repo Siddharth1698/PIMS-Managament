@@ -1,32 +1,8 @@
-.carder{
-	margin-left:180px;
-	margin-right: 180px;
-	margin-top: 55px;
-}
 
 footer{
 	margin-top: 190px;
 }
 
-/* Bootstrap css */
-@import "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
-
-/* Google Material icons */
-@import "http://fonts.googleapis.com/icon?family=Material+Icons";
-
-/* Propeller css */
-@import "dist/css/propeller.min.css";
-
-/* Bootstrap datetimepicker */
-@import "datetimepicker/css/bootstrap-datetimepicker.css";
-
-/* Propeller datetimepicker */
-@import "datetimepicker/css/pmd-datetimepicker.css";
-
-.pt-3-half {
-padding-top: 1.4rem;
-}
-
-.fo{
-	padding: 80px;
+.carder{
+	margin:100px;
 }

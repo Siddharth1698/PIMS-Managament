@@ -67,7 +67,7 @@
 <div class="card carder">
 
     <h5 class="card-header info-color white-text text-center py-4">
-        <strong>Add Patient</strong>
+        <strong>Patient Registration</strong>
     </h5>
 <br>
     <!--Card content-->
@@ -78,17 +78,17 @@
 
             <div class="form-row">
                 <div class="col">
-                    <div class="md-form">                   First Name:
+                    <div class="md-form"> First Name:
 
-                        <input type="text" id="materialRegisterFormFirstName"  class="form-control">
-                        <label for="materialRegisterFormFirstName"></label>
+                        <input type="text" name="firstname" id="FirstName"  class="form-control">
+                        <label for="FirstName"></label>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="md-form">
-                    <!-- Last name -->Last Name:
-                        <input type="email" id="materialRegisterFormLastName"  class="form-control">
-                        <label for="materialRegisterFormLastName"></label>
+                    <div class="md-form"> Last Name:
+                    <!-- Last name -->
+                        <input type="email" id="LastName" name="lastname"  class="form-control">
+                        <label for="lastname"></label>
                     </div>
                 </div>
 
@@ -99,29 +99,29 @@
   <form class="text-center" style="color: #757575;">
 
             <div class="form-row">
-                <div class="col">
-                    <div class="md-form">                   Heigth:
-
-                        <input type="number" id="materialRegisterFormFirstName"  class="form-control">
-                        <label for="materialRegisterFormFirstName"></label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="md-form">
-                    <!-- Last name -->Weight:
-                        <input type="number" id="materialRegisterFormLastName"  class="form-control">
-                        <label for="materialRegisterFormLastName"></label>
-                    </div>
-                </div>
+                 <div class="col">
+            <div class="md-form">Height:
+                <input type="number" id="Height" name="height" class="form-control">
+                        <label for="Height"></label>
+               
+            </div>
+          </div>
+                 <div class="col">
+            <div class="md-form">Weight:
+                <input type="number" id="Weight" name="weight" class="form-control">
+                        <label for="Weight"></label>
+               
+            </div>
+          </div>
 
                 <div class="col">
             <div class="md-form">Phone Number:
-                <input type="number" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhone">
-               <br>
-                  
-                </small>
-            </div></div>
-
+                <input type="number" id="PhoneNumber" name="phno" class="form-control">
+                        <label for="PhoneNumber"></label>
+               
+            </div>
+          </div>
+<br>
 
    <!-- Password -->
 </div>
@@ -142,14 +142,10 @@
 <!-- Basic dropdown -->
 
             </div>
- <!-- E-mail --><div class="col">Date:
+ <!-- E-mail --><div class="col">Date of Birth(mm/dd/yyyy):
             <div class="md-form"> 
-                 <input id="datepicker"  width="100%" />
-                            <script>
-                          $('#datepicker').datepicker({
-                             uiLibrary: 'bootstrap4'
-                                     });
-                          </script>
+             <input type="date" id="date" class="form-control" aria-describedby="text">
+
             </div>
             </div>
 
@@ -191,7 +187,7 @@
 
 
 
-            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">ADD</button>
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Add </button>
 
 
 
