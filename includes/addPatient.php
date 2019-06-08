@@ -67,7 +67,7 @@
 <div class="card carder">
 
     <h5 class="card-header info-color white-text text-center py-4">
-        <strong>Add or Update Patient</strong>
+        <strong>Update</strong>
     </h5>
 <br>
     <!--Card content-->
