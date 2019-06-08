@@ -92,6 +92,28 @@
                     </div>
                 </div>
 
+                
+
+   <!-- Password -->
+</div>
+  <form class="text-center" style="color: #757575;">
+
+            <div class="form-row">
+                <div class="col">
+                    <div class="md-form">                   Heigth:
+
+                        <input type="number" id="materialRegisterFormFirstName"  class="form-control">
+                        <label for="materialRegisterFormFirstName"></label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="md-form">
+                    <!-- Last name -->Weight:
+                        <input type="number" id="materialRegisterFormLastName"  class="form-control">
+                        <label for="materialRegisterFormLastName"></label>
+                    </div>
+                </div>
+
                 <div class="col">
             <div class="md-form">Phone Number:
                 <input type="number" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhone">
@@ -99,6 +121,7 @@
                   
                 </small>
             </div></div>
+
 
    <!-- Password -->
 </div>
@@ -200,7 +223,7 @@ include "ailments.php";
                 <div class="col">
                     <!-- First name -->
                     <div class="md-form">   Complaints:
-                        <input type="text" id="materialRegisterFormFirstName" class="form-control">
+                        <input type="text" id="materialRegisterFormFirstName" class="form-control" >
                         <label for="materialRegisterFormFirstName"></label>
                     </div>
                 </div>
@@ -212,8 +235,9 @@ include "ailments.php";
 
               <div class="col">
                     <!-- First name -->
-                    <div class="md-form"> Blood Pressure:
-                        <input type="number" id="materialRegisterFormFirstName" class="form-control">
+                    <div class="md-form d-inline p-2 "> Blood Pressure:
+                        <input type="number" id="materialRegisterFormFirstName" class="form-control">/
+                        <input type="number" id="" class="form-control">
                         <label for="materialRegisterFormFirstName"></label>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ while($row=mysqli_fetch_array($res))
 {
 echo "<tr>";
 
-echo "<td>"; ?><h5><div id="name<?php echo $row["id"]; ?>"> <?php echo $row["name"]; ?> </div></h5> <br><?php  echo "</td>"; 
+echo "<td>"; ?><h5><div id="name<?php echo $row["id"]; ?>"> <?php echo $row["name"]; ?> :</div></h5>  <?php  echo "</td>"; 
 echo "<td>"; ?><h6><div id="city<?php echo $row["id"]; ?>"> <?php echo $row["city"]; ?> </div></h6><?php  echo "</td>";
 echo "<td>"; ?> <input class="btn" type="button" id="<?php echo $row["id"]; ?>" name="<?php echo $row["id"]; ?>" value="delete" onClick="delete1(this.id)"> <?php echo "</td>";
 echo "<td>"; ?> 
