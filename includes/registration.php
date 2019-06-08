@@ -14,13 +14,6 @@
   <link href="../css/mdb.min.css" rel="stylesheet">
 
 
-
-
-
-
-
-   
-
   <!-- Your custom styles (optional) -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -74,9 +67,9 @@
     <div class="card-body px-lg-5 pt-0">
 
         <!-- Form -->
-        <form class="text-center" style="color: #757575;">
+        <form class="text-center" method="post" action="server.php">
 
-            <div class="form-row">
+            <div class="row">
                 <div class="col">
                     <div class="md-form"> First Name:
 
@@ -87,18 +80,23 @@
                 <div class="col">
                     <div class="md-form"> Last Name:
                     <!-- Last name -->
-                        <input type="email" id="LastName" name="lastname"  class="form-control">
+                        <input type="text" id="LastName" name="lastname"  class="form-control">
                         <label for="lastname"></label>
                     </div>
                 </div>
+                <div class="col">
+                    <div class="md-form"> Occupation:
+                    <!-- Last name -->
+                        <input type="text" id="Occupation" name="occupation"  class="form-control">
+                        <label for="occupation"></label>
+                    </div>
+                </div>
+                </div>
 
-                
 
-   <!-- Password -->
-</div>
-  <form class="text-center" style="color: #757575;">
+   
 
-            <div class="form-row">
+            <div class="row">
                  <div class="col">
             <div class="md-form">Height:
                 <input type="number" id="Height" name="height" class="form-control">
@@ -122,16 +120,16 @@
             </div>
           </div>
 <br>
-
-   <!-- Password -->
 </div>
-         <div class="form-row">
+   <!-- Password -->
+
+         <div class="row">
 
             <div class="col">Gender:
             <div class="md-form"> 
              
                   <!-- Basic dropdown -->
-<select class="browser-default custom-select">
+<select class="browser-default custom-select" name="gender">
   <option selected>Select Gender</option>
   <option value="1">Male</option>
   <option value="2">Female</option>
@@ -144,51 +142,29 @@
             </div>
  <!-- E-mail --><div class="col">Date of Birth(mm/dd/yyyy):
             <div class="md-form"> 
-             <input type="date" id="date" class="form-control" aria-describedby="text">
+             <input type="date" id="date" name="dob" class="form-control" aria-describedby="text">
 
             </div>
             </div>
 
  <div class="col"> Reffered By:
             <div class="md-form">
-                <input type="text" id="text" class="form-control" aria-describedby="text">
+                <input type="text" id="text" name="reffered" class="form-control" aria-describedby="text">
                 
               
-                  
-                </small>
-            </div></div>
+            </div>
+
+          </div>
 
             </div>
 
             <!-- Newsletter -->
           
 
-
-
 <!-- Editable table -->
 
-
-
-
-
-
-
-
-
-        
-      
-    
-    <!--/.Content-->
- 
-<!--Modal: modalCookie-->
-
-
-
-
-
-
-            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Add </button>
-
+            
+<input type="submit" class="btn" name="submit"></input>
 
 
         </form>
