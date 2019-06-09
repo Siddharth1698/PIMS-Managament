@@ -187,14 +187,14 @@ $uniquekey = $uniquedob . $user_id;
             </div>
  <!-- E-mail --><div class="col">
             <label for="dob">Date of Birth(mm/dd/yyyy):</label>
-             <input type="date" id="dob" name="dob" value="<?php echo "$dob"; ?>"  class="form-control" aria-describedby="text">
+             <input type="date" id="dob" name="dob" value="<?php echo "$dob"; ?>"  class="form-control">
 
            
             </div>
 
- <div class="col"> 
+          <div class="col"> 
             <label for="reffered">Reffered By:</label>
-                <input type="text" id="reffered" name="reffered" value="<?php echo "$reffered"; ?>" class="form-control" aria-describedby="text">
+                <input type="text" id="reffered" name="reffered" value="<?php echo "$reffered"; ?>" class="form-control">
            
 
           </div>

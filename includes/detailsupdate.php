@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
 
 $quersel = "SELECT * FROM `users` WHERE `user_id` LIKE '$user_id'";
 
-  $query = "UPDATE `users` SET `user_fname` = '$firstname', `user_lname` = '$lastname', `user_dob` = '$dob', `user_phone` = '$phno', `user_gender` = '$gender', `user_occupation` = '$occupation', `user_referredby` = ' $reffered', `user_height` = '$height', `user_weight` = '$weight'
+  $query = "UPDATE `users` SET `user_fname` = '$firstname', `user_lname` = '$lastname', `user_dob` = '$dob', `user_phone` = '$phno', `user_gender` = '$gender', `user_occupation` = '$occupation', `user_referredby` = '$reffered', `user_height` = '$height', `user_weight` = '$weight'
        WHERE `users`.`user_id` = '$user_id'";
 
        mysqli_query($connection, $query);
