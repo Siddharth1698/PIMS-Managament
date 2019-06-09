@@ -9,8 +9,9 @@ include "db.php";
 // REGISTER USER
 if (isset($_POST['submit'])) {
   // receive all input values from the form
-  echo "string";
-   echo $firstname = mysqli_real_escape_string($connection, $_POST['firstname']);
+
+     $firstname = mysqli_real_escape_string($connection, $_POST['firstname']);
+  $firstname = mysqli_real_escape_string($connection, $_POST['firstname']);
   $lastname = mysqli_real_escape_string($connection, $_POST['lastname']);
   $height = mysqli_real_escape_string($connection, $_POST['height']);
   $weight = mysqli_real_escape_string($connection, $_POST['weight']);
@@ -34,5 +35,15 @@ if (isset($_POST['submit'])) {
     $_SESSION['dob'] = $dob;
     $_SESSION['reffered'] = $reffered;
     $_SESSION['occupation'] = $occupation;
-    header('location: profilePatient.php');
+
+    $getquery = "SELECT user_id FROM users ORDER BY user_id DESC LIMIT 1;    ";
+    $select_user_query = mysqli_query($connection, $getquery);
+
+ while($row = mysqli_fetch_array($select_user_query)){
+    $user_id = $row['user_id'];
+ }
+
+header('Location: profilePatient.php?user_id='.$user_id);
+   
+    
   }

@@ -60,99 +60,93 @@
 <div class="card carder">
 
     <h5 class="card-header info-color white-text text-center py-4">
-        <strong>Patient Registration</strong>
+        <strong>Patient Profile</strong>
     </h5>
 <br>
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
-
         <!-- Form -->
-        <form class="text-center" method="post" action="server.php">
+<form method="post" action="server.php">
 
             <div class="row">
                 <div class="col">
-                    <div class="md-form"> First Name:
-
-                        <input type="text" name="firstname" id="FirstName"  class="form-control">
-                        <label for="FirstName"></label>
+                    <div > 
+                        <label for="FirstName" >First Name:</label>
+                        <input type="text" name="firstname" id="FirstName" class="form-control">
+                        
                     </div>
                 </div>
                 <div class="col">
-                    <div class="md-form"> Last Name:
+                   
                     <!-- Last name -->
+                        <label for="lastname">Last Name:</label>
                         <input type="text" id="LastName" name="lastname"  class="form-control">
-                        <label for="lastname"></label>
-                    </div>
+                   
                 </div>
                 <div class="col">
-                    <div class="md-form"> Occupation:
+                    
                     <!-- Last name -->
-                        <input type="text" id="Occupation" name="occupation"  class="form-control">
-                        <label for="occupation"></label>
-                    </div>
+                    <label for="occupation">Occupation:</label>
+                        <input type="text" id="Occupation" name="occupation"   class="form-control">
+                 
                 </div>
                 </div>
 
-
+<br>
    
 
             <div class="row">
                  <div class="col">
-            <div class="md-form">Height:
-                <input type="number" id="Height" name="height" class="form-control">
-                        <label for="Height"></label>
-               
-            </div>
+        <label for="Height">Height:</label>
+                <input type="number" id="Height" name="height"   class="form-control">
+                        
+            
           </div>
                  <div class="col">
-            <div class="md-form">Weight:
+            <label for="Weight">Weight:</label>
                 <input type="number" id="Weight" name="weight" class="form-control">
-                        <label for="Weight"></label>
-               
-            </div>
-          </div>
+                        
+                         </div>
 
                 <div class="col">
-            <div class="md-form">Phone Number:
-                <input type="number" id="PhoneNumber" name="phno" class="form-control">
-                        <label for="PhoneNumber"></label>
-               
-            </div>
+                  <label for="PhoneNumber">Phone Number:</label>
+                <input type="number" id="PhoneNumber" name="phno"   class="form-control">
+                      
+              
           </div>
-<br>
+
 </div>
    <!-- Password -->
-
+<br>
          <div class="row">
 
-            <div class="col">Gender:
-            <div class="md-form"> 
+            <div class="col">
+           
              
                   <!-- Basic dropdown -->
+                  <label for="gender">Gender:</label>
 <select class="browser-default custom-select" name="gender">
-  <option selected>Select Gender</option>
+  <option selected>Select Gender:</option>
   <option value="1">Male</option>
   <option value="2">Female</option>
   
 </select>
   
-</div>
+
 <!-- Basic dropdown -->
 
             </div>
- <!-- E-mail --><div class="col">Date of Birth(mm/dd/yyyy):
-            <div class="md-form"> 
-             <input type="date" id="date" name="dob" class="form-control" aria-describedby="text">
+ <!-- E-mail --><div class="col">
+            <label for="dob">Date of Birth(mm/dd/yyyy):</label>
+             <input type="date" id="date" name="dob"  class="form-control" aria-describedby="text">
 
-            </div>
+           
             </div>
 
- <div class="col"> Reffered By:
-            <div class="md-form">
+ <div class="col"> 
+            <label for="reffered">Reffered By:</label>
                 <input type="text" id="text" name="reffered" class="form-control" aria-describedby="text">
-                
-              
-            </div>
+           
 
           </div>
 
@@ -162,15 +156,14 @@
           
 
 <!-- Editable table -->
-
-            
-<input type="submit" class="btn" name="submit"></input>
-
-
+<br>
+            <br>
+            <div class="text-center">
+ <input type="submit" value="Create Patient" class="btn" name="submit"></input>
+</div>
+<br>
         </form>
-        <!-- Form -->
-
-    </div>
+  </div>
 
 </div>
 <!-- Material form register -->

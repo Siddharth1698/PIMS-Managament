@@ -103,74 +103,71 @@ $uniquekey = $uniquedob . $user_id;
 <div class="card carder">
 
     <h5 class="card-header info-color white-text text-center py-4">
-        <strong>Patient Registration</strong>
+        <strong>Patient Profile</strong>
     </h5>
 <br>
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
         <!-- Form -->
-<form class="text-center">
+<form >
 
             <div class="row">
                 <div class="col">
-                    <div class="md-form"> First Name:
-
+                    <div > 
+                        <label for="FirstName" >First Name:</label>
                         <input type="text" name="firstname" id="FirstName" value="<?php echo "$fname"; ?>" class="form-control">
-                        <label for="FirstName"></label>
+                        
                     </div>
                 </div>
                 <div class="col">
-                    <div class="md-form"> Last Name:
+                   
                     <!-- Last name -->
+                        <label for="lastname">Last Name:</label>
                         <input type="text" id="LastName" name="lastname" value="<?php echo "$lname"; ?>" class="form-control">
-                        <label for="lastname"></label>
-                    </div>
+                   
                 </div>
                 <div class="col">
-                    <div class="md-form"> Occupation:
+                    
                     <!-- Last name -->
+                    <label for="occupation">Occupation:</label>
                         <input type="text" id="Occupation" name="occupation"  value="<?php echo "$occupation"; ?>" class="form-control">
-                        <label for="occupation"></label>
-                    </div>
+                 
                 </div>
                 </div>
 
-
+<br>
    
 
             <div class="row">
                  <div class="col">
-            <div class="md-form">Height:
+        <label for="Height">Height:</label>
                 <input type="number" id="Height" name="height" value="<?php echo "$height"; ?>"  class="form-control">
-                        <label for="Height"></label>
-               
-            </div>
+                        
+            
           </div>
                  <div class="col">
-            <div class="md-form">Weight:
+            <label for="Weight">Weight:</label>
                 <input type="number" id="Weight" name="weight" value="<?php echo "$weight"; ?>" class="form-control">
-                        <label for="Weight"></label>
-               
-            </div>
-          </div>
+                        
+                         </div>
 
                 <div class="col">
-            <div class="md-form">Phone Number:
+                  <label for="PhoneNumber">Phone Number:</label>
                 <input type="number" id="PhoneNumber" name="phno" value="<?php echo "$phno"; ?>"  class="form-control">
-                        <label for="PhoneNumber"></label>
-               
-            </div>
+                      
+              
           </div>
-<br>
+
 </div>
    <!-- Password -->
-
+<br>
          <div class="row">
 
-            <div class="col">Gender:
-            <div class="md-form"> 
+            <div class="col">
+           
              
                   <!-- Basic dropdown -->
+                  <label for="gender">Gender:</label>
 <select class="browser-default custom-select" name="gender">
   <option selected><?php echo "$gender"; ?></option>
   <option value="1">Male</option>
@@ -178,23 +175,21 @@ $uniquekey = $uniquedob . $user_id;
   
 </select>
   
-</div>
+
 <!-- Basic dropdown -->
 
             </div>
- <!-- E-mail --><div class="col">Date of Birth(mm/dd/yyyy):
-            <div class="md-form"> 
+ <!-- E-mail --><div class="col">
+            <label for="dob">Date of Birth(mm/dd/yyyy):</label>
              <input type="date" id="date" name="dob" value="<?php echo "$dob"; ?>"  class="form-control" aria-describedby="text">
 
-            </div>
+           
             </div>
 
- <div class="col"> Reffered By:
-            <div class="md-form">
+ <div class="col"> 
+            <label for="reffered">Reffered By:</label>
                 <input type="text" id="text" name="reffered" value="<?php echo "$reffered"; ?>" class="form-control" aria-describedby="text">
-                
-              
-            </div>
+           
 
           </div>
 
@@ -204,11 +199,12 @@ $uniquekey = $uniquedob . $user_id;
           
 
 <!-- Editable table -->
-
-            
+<br>
+            <br>
+            <div class="text-center">
 <input type="submit" value="Update" class="btn" name="Update"></input>
-
-
+</div>
+<br>
         </form>
   </div>
 
