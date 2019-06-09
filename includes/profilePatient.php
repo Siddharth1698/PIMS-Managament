@@ -1,8 +1,10 @@
 <?php
-
-session_start();
+include "db.php";
  
 // Accessing session data
-echo 'Hi, ' . $_SESSION["firstname"] . ' ' . $_SESSION["lastname"];
+$uid = $_GET['user_id'];
+$sql = "SELECT * FROM users WHERE user_id=$uid";
+mysqli_query($connection, $sql);
+echo "$uid";
 
 ?>

@@ -103,13 +103,10 @@ if ($result->num_rows > 0) {
 
     ?>
     <tr>
-<?php
-$_SESSION['firstname'] = $fname;
-    $_SESSION['lastname'] = $lname;
-?>
+
 
       <th><?php echo $uniqueid; ?></th>
-      <td><a href="profilePatient.php?user_id='$uniqueid'"><?php echo $fname; ?></a></td>
+      <td><a href="profilePatient.php?user_id=<?php echo $fname; ?>"><?php echo $fname; ?></a></td>
       <td><?php echo $lname; ?></td>
       <td><?php echo $dob; ?></td>
       <td>myLastVisit</td>
