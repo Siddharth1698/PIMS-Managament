@@ -1,8 +1,9 @@
 <?php
  ob_start();
  include "db.php";
+ session_start();
 
-$sql = "SELECT user_fname, user_lname, user_dob, user_uniqueid FROM users";
+$sql = "SELECT user_fname, user_lname, user_dob, user_id FROM users";
 $result = $connection->query($sql);
 
 ?>
@@ -93,16 +94,22 @@ $result = $connection->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        $uniqueid = $row["user_uniqueid"];
+        $uniqueid = $row["user_id"];
         $fname =  $row["user_fname"];
         $lname = $row["user_lname"];
         $dob = $row["user_dob"];
-    
+        
+
 
     ?>
     <tr>
+<?php
+$_SESSION['firstname'] = $fname;
+    $_SESSION['lastname'] = $lname;
+?>
+
       <th><?php echo $uniqueid; ?></th>
-      <td><?php echo $fname; ?></td>
+      <td><a href="profilePatient.php?user_id='$uniqueid'"><?php echo $fname; ?></a></td>
       <td><?php echo $lname; ?></td>
       <td><?php echo $dob; ?></td>
       <td>myLastVisit</td>
