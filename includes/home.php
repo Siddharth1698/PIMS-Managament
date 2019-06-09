@@ -1,7 +1,7 @@
 <?php
  ob_start();
  include "db.php";
- session_start();
+ 
 
 $sql = "SELECT user_fname, user_lname, user_dob, user_id FROM users";
 $result = $connection->query($sql);
@@ -106,7 +106,7 @@ if ($result->num_rows > 0) {
 
 
       <th><?php echo $uniqueid; ?></th>
-      <td><a href="profilePatient.php?user_id=<?php echo $fname; ?>"><?php echo $fname; ?></a></td>
+      <td><a href="profilePatient.php?user_id=<?php echo $uniqueid; ?>"><?php echo $fname; ?></a></td>
       <td><?php echo $lname; ?></td>
       <td><?php echo $dob; ?></td>
       <td>myLastVisit</td>

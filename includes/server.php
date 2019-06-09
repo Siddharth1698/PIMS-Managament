@@ -2,9 +2,6 @@
 session_start();
 include "db.php";
 
-if ($connection) {
-   echo "cool1";
-}
 
 // connect to the database
 
