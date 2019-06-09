@@ -27,8 +27,12 @@ if($user_uniqueid == ''){
 $uniquedob = intval(preg_replace('/[^0-9]+/', '', $dob), 10);
 $uniquekey = $uniquedob . $user_id;
 
+
+
  $uniquequery = "UPDATE `users` SET `user_uniqueid` = '$uniquekey' WHERE `users`.`user_id` = '$user_id';";
  mysqli_query($connection, $uniquequery);
+
+
 }
 
 
@@ -109,51 +113,53 @@ $uniquekey = $uniquedob . $user_id;
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
         <!-- Form -->
-<form >
+<form action="detailsupdate.php" method="post">
 
             <div class="row">
                 <div class="col">
-                    <div > 
-                        <label for="FirstName" >First Name:</label>
-                        <input type="text" name="firstname" id="FirstName" value="<?php echo "$fname"; ?>" class="form-control">
+                  
+                        <label for="firstname" >First Name:</label>
+                        <input type="text" id="firstname" name="firstname"  value="<?php echo "$fname"; ?>" class="form-control">
+
+                        <input type="hidden" name="user_id" value="<?php echo "$user_id"; ?>">
                         
-                    </div>
+                   
                 </div>
                 <div class="col">
                    
                     <!-- Last name -->
                         <label for="lastname">Last Name:</label>
-                        <input type="text" id="LastName" name="lastname" value="<?php echo "$lname"; ?>" class="form-control">
+                        <input type="text" id="lastname" name="lastname" value="<?php echo "$lname"; ?>" class="form-control">
                    
                 </div>
                 <div class="col">
                     
                     <!-- Last name -->
                     <label for="occupation">Occupation:</label>
-                        <input type="text" id="Occupation" name="occupation"  value="<?php echo "$occupation"; ?>" class="form-control">
+                        <input type="text" id="occupation" name="occupation"  value="<?php echo "$occupation"; ?>" class="form-control">
                  
                 </div>
                 </div>
 
-<br>
+               <br>
    
 
             <div class="row">
                  <div class="col">
-        <label for="Height">Height:</label>
-                <input type="number" id="Height" name="height" value="<?php echo "$height"; ?>"  class="form-control">
+                  <label for="height">Height:</label>
+                <input type="number" id="height" name="heighted" value="<?php echo "$height"; ?>"  class="form-control">
                         
             
           </div>
                  <div class="col">
-            <label for="Weight">Weight:</label>
+                 <label for="Weight">Weight:</label>
                 <input type="number" id="Weight" name="weight" value="<?php echo "$weight"; ?>" class="form-control">
                         
                          </div>
 
                 <div class="col">
-                  <label for="PhoneNumber">Phone Number:</label>
-                <input type="number" id="PhoneNumber" name="phno" value="<?php echo "$phno"; ?>"  class="form-control">
+                  <label for="phno">Phone Number:</label>
+                <input type="number" id="phno" name="phno" value="<?php echo "$phno"; ?>"  class="form-control">
                       
               
           </div>
@@ -170,8 +176,8 @@ $uniquekey = $uniquedob . $user_id;
                   <label for="gender">Gender:</label>
 <select class="browser-default custom-select" name="gender">
   <option selected><?php echo "$gender"; ?></option>
-  <option value="1">Male</option>
-  <option value="2">Female</option>
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
   
 </select>
   
@@ -181,14 +187,14 @@ $uniquekey = $uniquedob . $user_id;
             </div>
  <!-- E-mail --><div class="col">
             <label for="dob">Date of Birth(mm/dd/yyyy):</label>
-             <input type="date" id="date" name="dob" value="<?php echo "$dob"; ?>"  class="form-control" aria-describedby="text">
+             <input type="date" id="dob" name="dob" value="<?php echo "$dob"; ?>"  class="form-control" aria-describedby="text">
 
            
             </div>
 
  <div class="col"> 
             <label for="reffered">Reffered By:</label>
-                <input type="text" id="text" name="reffered" value="<?php echo "$reffered"; ?>" class="form-control" aria-describedby="text">
+                <input type="text" id="reffered" name="reffered" value="<?php echo "$reffered"; ?>" class="form-control" aria-describedby="text">
            
 
           </div>
@@ -201,11 +207,15 @@ $uniquekey = $uniquedob . $user_id;
 <!-- Editable table -->
 <br>
             <br>
-            <div class="text-center">
-<input type="submit" value="Update" class="btn" name="Update"></input>
+<div class="text-center">
+    <input type="submit" name="submit" class="btn" value="Update"></input>
+            
+
+
 </div>
 <br>
-        </form>
+</form>
+        
   </div>
 
 </div>
