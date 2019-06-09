@@ -1,19 +1,23 @@
 <?php
+session_start();
+$user_id = $_SESSION["user_id"];
 $status=$_GET["status"];
 
 if($status=="disp")
 {
 $link=mysqli_connect("localhost","root","");
 mysqli_select_db($link,"jarvis");
-$res=mysqli_query($link,"select * from table1");
+$res=mysqli_query($link,"select * from table1 where user_id='$user_id'");
 
 echo "<table>";
 while($row=mysqli_fetch_array($res))
 {
-echo "<tr>";
 
+
+
+echo "<tr>";
 echo "<td>"; ?><h5><div id="name<?php echo $row["id"]; ?>"> <?php echo $row["name"]; ?> :</div></h5>  <?php  echo "</td>"; 
-echo "<td>"; ?><h6><div id="city<?php echo $row["id"]; ?>"> <?php echo $row["city"]; ?> </div></h6><?php  echo "</td>";
+echo "<td>"; ?><h6><div id="city<?php echo $row["id"]; ?>"> <?php echo $row["detail"]; ?> </div></h6><?php  echo "</td>";
 echo "<td>"; ?> <input class="btn" type="button" id="<?php echo $row["id"]; ?>" name="<?php echo $row["id"]; ?>" value="delete" onClick="delete1(this.id)"> <?php echo "</td>";
 echo "<td>"; ?> 
 <input type="button" class="btn" id="<?php echo $row["id"]; ?>" name="<?php echo $row["id"]; ?>" value="edit" onClick="aa(this.id)"> 
@@ -42,7 +46,7 @@ $city=trim($city);
 
 $link=mysqli_connect("localhost","root","");
 mysqli_select_db($link,"jarvis");
-$res=mysqli_query($link,"update table1 set name='$name',city='$city' where id=$id");
+$res=mysqli_query($link,"update table1 set name='$name',detail='$city' where id=$id");
 
 
 
@@ -64,11 +68,9 @@ if($status=="ins")
 {
 $nm=$_GET["nm"];
 $ct=$_GET["ct"];
-
 $link=mysqli_connect("localhost","root","");
 mysqli_select_db($link,"jarvis");
-$res=mysqli_query($link,"insert into table1 values('','$nm','$ct')");
-
+$res=mysqli_query($link,"insert into table1 values('','$user_id','$nm','$ct')");
 
 
 }

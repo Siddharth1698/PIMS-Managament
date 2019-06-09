@@ -209,7 +209,11 @@ $uniquekey = $uniquedob . $user_id;
             <br>
 <div class="text-center">
     <input type="submit" name="submit" class="btn" value="Update"></input>
+    <br> <hr>
             
+            <?php
+            $_GET['user_id']=$user_id;
+            include "tabs.php";  ?>
 
 
 </div>
