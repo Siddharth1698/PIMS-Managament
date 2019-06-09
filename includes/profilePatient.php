@@ -22,6 +22,14 @@ $select_user_query = mysqli_query($connection, $sql);
     $occupation = $row['user_occupation'];
  }
 
+if($user_uniqueid == ''){
+    
+$uniquedob = intval(preg_replace('/[^0-9]+/', '', $dob), 10);
+$uniquekey = $uniquedob . $user_id;
+
+ $uniquequery = "UPDATE `users` SET `user_uniqueid` = '$uniquekey' WHERE `users`.`user_id` = '$user_id';";
+ mysqli_query($connection, $uniquequery);
+}
 
 
 ?>
