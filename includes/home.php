@@ -3,8 +3,9 @@
  include "db.php";
  
 
-$sql = "SELECT user_fname, user_lname, user_dob, user_id FROM users";
+$sql = "SELECT user_fname, user_lname, user_dob, user_id,current_appointment FROM users";
 $result = $connection->query($sql);
+
 
 ?>
 
@@ -98,6 +99,8 @@ if ($result->num_rows > 0) {
         $fname =  $row["user_fname"];
         $lname = $row["user_lname"];
         $dob = $row["user_dob"];
+        $current_appointment = $row["current_appointment"];
+
         
 
 
@@ -109,7 +112,7 @@ if ($result->num_rows > 0) {
       <td><a href="profilePatient.php?user_id=<?php echo $uniqueid; ?>"><?php echo $fname; ?></a></td>
       <td><?php echo $lname; ?></td>
       <td><?php echo $dob; ?></td>
-      <td>myLastVisit</td>
+      <td><?php echo $current_appointment; ?></td>
        <td>myVisitHistory</td>
     </tr>
  <?php

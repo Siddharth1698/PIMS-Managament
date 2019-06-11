@@ -77,6 +77,10 @@ if (isset($_POST['sub'])) {
     $query = "INSERT INTO `visit` (`visit_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '$current_appointment');";
   $result =  mysqli_query($connection, $query);
 
+
+    $queryes = "UPDATE `users` SET `current_appointment` = '$current_appointment' WHERE `users`.`user_id` = $user_id;";
+    mysqli_query($connection, $queryes);
+
     header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0');
 
 
