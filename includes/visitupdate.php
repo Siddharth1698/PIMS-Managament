@@ -111,7 +111,7 @@ $select_user_query = mysqli_query($connection, $sql);
    <div class="text-center">
     <input type="submit" value="Update" class="btn update" name="up" ></input>
 
-   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+   <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Final Submission</button>
         
     </div>
 
@@ -128,12 +128,12 @@ $select_user_query = mysqli_query($connection, $sql);
         
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+        <p>This action will commit data to the DB. No further changes possible. Do you want to continue"</p>
       </div>
       <div class="modal-footer">
-        <input type="submit" value="Submit" class="btn sub" name="sub" ></input>
+        <input type="submit" value="Yes" class="btn sub" name="sub" ></input>
 
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn" data-dismiss="modal">No</button>
       </div>
     </div>
 

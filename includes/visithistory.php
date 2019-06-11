@@ -1,3 +1,19 @@
+<?php
+ob_start();
+ include "db.php";
+
+ 
+$uid = $_GET['user_id'];
+$sql = "SELECT * FROM visit WHERE user_id='$uid' order by current_appointment desc";
+$select_user_query = mysqli_query($connection, $sql);
+$i =0 ;
+
+ 
+ 
+
+
+ ?>
+
 <table class="table">
   <thead class="blue white-text">
     <tr>
@@ -6,16 +22,23 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-          <td><a href="" data-toggle="modal" data-target="#modalCookie1"> 22/03/2019</a></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>12/01/2019</td>
-    </tr>
     
+      <?php
+
+while($row = mysqli_fetch_array($select_user_query)){
+    $current_appointment = $row['current_appointment'];
+    $i = $i + 1;
+
+      ?><tr>
+      <th scope="row"><?php echo "$i";  ?></th>
+          <td><a href="" data-toggle="modal" data-target="#modalCookie1"> <?php echo "$current_appointment";  ?></a></td> </tr>  
+     <?php  
+ }
+?>
+    
+ 
   </tbody>
+
 </table>
 
 

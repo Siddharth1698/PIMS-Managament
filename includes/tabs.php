@@ -41,7 +41,7 @@ include "ailments.php";
   <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 
 <?php
-
+ $_GET['user_id']=$user_id;
 include "visithistory.php";
 ?>
     <!--/.Content-->
