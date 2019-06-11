@@ -21,8 +21,8 @@ while($row=mysqli_fetch_array($res))
 
 
 echo "<tr>";
-echo "<td>"; ?><h5><div id="name<?php echo $row["id"]; ?>"> <?php echo $row["name"]; ?> :</div></h5>  <?php  echo "</td>"; 
-echo "<td>"; ?><h6><div id="city<?php echo $row["id"]; ?>"> <?php echo $row["detail"]; ?> </div></h6><?php  echo "</td>";
+echo "<td>"; ?><h5><div id="name<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></div></h5><?php  echo "</td>"; 
+echo "<td>"; ?><h6><div id="city<?php echo $row["id"]; ?>"><?php echo $row["detail"]; ?></div></h6><?php  echo "</td>";
 ?><td>
 <input type="button" class="btn" id="<?php echo $row["id"]; ?>" name="<?php echo $row["id"]; ?>" value="edit" onClick="aa(this.id)"> </td>
 <?php

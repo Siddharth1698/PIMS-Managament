@@ -29,7 +29,22 @@ $_SESSION['user_id'] = $user_id;
 
 
 <div id="disp_data"></div>
-
+<style type="text/css">
+   
+    
+    .tables{
+        width: 100%;
+        margin-bottom: 20px;
+    border-collapse: collapse;
+    }
+    .tables, th, td{
+        border: 1px solid #cdcdcd;
+    }
+    .tables th, table td{
+        padding: 10px;
+        text-align: left;
+    }
+</style>
 
 
 <script type="text/javascript">

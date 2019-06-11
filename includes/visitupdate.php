@@ -1,3 +1,34 @@
+<?php
+include "db.php";
+
+
+if (isset($_POST['submit'])) {
+
+
+  $complaints = mysqli_real_escape_string($connection, $_POST['complaints']);
+  $bp1 = mysqli_real_escape_string($connection, $_POST['bp1']);
+  $bp2 = mysqli_real_escape_string($connection, $_POST['bp2']);
+  $pulse = mysqli_real_escape_string($connection, $_POST['pulse']);
+  $ge = mysqli_real_escape_string($connection, $_POST['ge']);
+  $se = mysqli_real_escape_string($connection, $_POST['se']);
+  $fd = mysqli_real_escape_string($connection, $_POST['fd']);
+  $fcheck = mysqli_real_escape_string($connection, $_POST['field1']);
+  $comments = mysqli_real_escape_string($connection, $_POST['comments']);
+  $next_appointment = mysqli_real_escape_string($connection, $_POST['next_appointment']);
+
+
+ 
+
+  
+    $query = "INSERT INTO `savedvisit` (`post_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '2019-06-12');";
+  $result =  mysqli_query($connection, $query);
+
+}
+
+?>
+
+
+
 <div class="card">
 
     <h5 class="card-header info-color white-text text-center py-4">
@@ -10,7 +41,7 @@
         <!-- Form -->
 
  
-  <form>
+  <form method="post" >
     <div class="form-group">
         <label for="complaints">Complaints: </label>
         <textarea type="text" name="complaints" rows="6" class="form-control" id="complaints" placeholder="Complaints"></textarea>
@@ -27,7 +58,7 @@
 
     <div class="form-group">
         <label for="ps">Pulse Rate: </label>
-        <input type="number" name="ps" class="form-control" id="ps" placeholder="Pulse Rate">
+        <input type="number" name="pulse" class="form-control" id="ps" placeholder="Pulse Rate">
     </div>
 
      <div class="form-group">
@@ -42,36 +73,43 @@
 
       <div class="form-group form-inline">
         <label for="pd">Investigation Parameters: </label>
-        <?php include "investe.php"; ?>
+      
         
     </div>
     <div class="form-group">
         <label for="fd">Final Diganosis: </label>
         <textarea type="text" name="fd" rows="6" class="form-control" id="fd" placeholder="Final Diganosis"></textarea>
-        <input type="checkbox" name="fdtopresc" value="True"  placeholder="Final Diganosis">Please tick the checkbox to include in prescription
+        <input type="hidden" name="field1" value="0">
+<input type="checkbox" name="field1" value="1">Please tick the checkbox to include in prescription
 <br>
     </div>
 
-     <div class="form-group form-inline">
+    
+      <div class="form-group form-inline">
         <label for="pd">Medication: </label>
-        <input type="text" name="ipdropdown" class="form-control" id="ipdropdown" ></textarea>
+
+
+     
+        
     </div>
 
       <div class="form-group">
         <label for="ac">Any comments: </label>
-        <textarea type="text" rows="6" name="ac" class="form-control" id="ac" placeholder="Any Comments"></textarea>
+        <textarea type="text" rows="6" name="comments" class="form-control" id="ac" placeholder="Any Comments"></textarea>
     </div>
 
        <div class="form-group">
         <label for="pnv">Planned Next Visit: </label>
-        <input type="date" name="pnv" class="form-control" id="pnv" placeholder="Planned Next Visit"></textarea>
+        <input type="date" name="next_appointment" class="form-control" id="pnv" placeholder="Planned Next Visit"></textarea>
     </div>
    
    
    <div class="text-center">
-    <button type="submit" name="update" class="btn btn-primary">Update</button>
-    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+    <input type="submit" value="Update" class="btn" name="submit"></input>
     </div>
 </form>
 
     </div>
+
+<script type="text/javascript">
+  

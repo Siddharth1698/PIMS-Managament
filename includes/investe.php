@@ -1,54 +1,18 @@
-<!-- 
- <div class="form-group form-inline">
-        <label for="pd">Investigation Parameters: </label><br>
-        <input type="text" name="ipdropdown" class="form-control" id="ipdropdown" list="hal">--
-<datalist id="hal">
-  <option value="Headache">
-  <option value="Fever">
-  <option value="ChickenPox">
-  <option value="Diabetis">
-  <option value="Safari">
-</datalist>
-
-        <input type="text" name="iptext" class="form-control" id="iptext" >-
-        <input type="submit" name="addbtn" class="form-control" id="addbtn">
-
-    </div>
-
-
-<table style="width:100%">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td> 
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td> 
-    <td>94</td>
-  </tr>
-</table>
-
- -->
-
 
 <style type="text/css">
    
-    
-    .tables{
+    form input, button{
+        padding: 5px;
+    }
+    table{
         width: 100%;
         margin-bottom: 20px;
-		border-collapse: collapse;
+        border-collapse: collapse;
     }
-    .tables, th, td{
+    table, th, td{
         border: 1px solid #cdcdcd;
     }
-    .tables th, table td{
+    table th, table td{
         padding: 10px;
         text-align: left;
     }
@@ -66,23 +30,23 @@
         // Find and remove selected table rows
         $(".delete-row").click(function(){
             $("table tbody").find('input[name="record"]').each(function(){
-            	if($(this).is(":checked")){
+                if($(this).is(":checked")){
                     $(this).parents("tr").remove();
                 }
             });
         });
     });    
 </script>
-
-    <form>
+<body>
+   
         <input type="text" id="name" placeholder="Name">
         <input type="text" id="email" placeholder="Email Address">
-    	<input type="button" class="add-row" value="Add Row">
-    </form>
-    <table class="tables">
+        <input type="button" class="add-row" value="Add Row">
+  
+    <table>
         <thead>
             <tr>
-                <th></th>
+                <th>Select</th>
                 <th>Name</th>
                 <th>Email</th>
             </tr>
@@ -96,3 +60,4 @@
         </tbody>
     </table>
     <button type="button" class="delete-row">Delete Row</button>
+                         
