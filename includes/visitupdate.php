@@ -4,7 +4,7 @@ $flag = $_GET['flag'];
 $post_id = $_GET['post_id'];
 
 
-if($flag == 1){
+if($flag == 1 && $post_id!=0){
 
 $sql = "SELECT * FROM savedvisit WHERE post_id='$post_id'";
 $select_user_query = mysqli_query($connection, $sql);
@@ -110,9 +110,37 @@ $select_user_query = mysqli_query($connection, $sql);
    
    <div class="text-center">
     <input type="submit" value="Update" class="btn update" name="up" ></input>
+
+   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+        
+    </div>
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
         <input type="submit" value="Submit" class="btn sub" name="sub" ></input>
 
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
     </div>
+
+  </div>
+</div>
+
+
 </form>
 
     </div>

@@ -50,6 +50,13 @@ if (isset($_POST['up'])) {
 
 if (isset($_POST['sub'])) {
 
+  ?>
+<!-- Central Modal Small -->
+
+<!-- Central Modal Small -->
+
+  <?php
+
 
   $complaints = mysqli_real_escape_string($connection, $_POST['complaints']);
   $bp1 = mysqli_real_escape_string($connection, $_POST['bp1']);
@@ -70,7 +77,7 @@ if (isset($_POST['sub'])) {
     $query = "INSERT INTO `visit` (`visit_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '$current_appointment');";
   $result =  mysqli_query($connection, $query);
 
-    header('Location: profilePatient.php?user_id='.$user_id);
+    header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0');
 
 
 
