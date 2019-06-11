@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
     $_SESSION['reffered'] = $reffered;
     $_SESSION['occupation'] = $occupation;
 
-    $getquery = "SELECT user_id FROM users ORDER BY user_id DESC LIMIT 1;    ";
+    $getquery = "SELECT user_id FROM users ORDER BY user_id DESC LIMIT 1;";
     $select_user_query = mysqli_query($connection, $getquery);
 
  while($row = mysqli_fetch_array($select_user_query)){
