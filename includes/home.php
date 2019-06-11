@@ -3,7 +3,7 @@
  include "db.php";
  
 
-$sql = "SELECT user_fname, user_lname, user_dob, user_id,current_appointment FROM users";
+$sql = "SELECT user_fname, user_lname, user_dob, user_uniqueid,user_id,current_appointment FROM users";
 $result = $connection->query($sql);
 
 
@@ -95,7 +95,8 @@ $result = $connection->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        $uniqueid = $row["user_id"];
+        $uniqueid = $row["user_uniqueid"];
+        $uid = $row["user_id"];
         $fname =  $row["user_fname"];
         $lname = $row["user_lname"];
         $dob = $row["user_dob"];
@@ -109,7 +110,7 @@ if ($result->num_rows > 0) {
 
 
       <th><?php echo $uniqueid; ?></th>
-      <td><a href="profilePatient.php?user_id=<?php echo $uniqueid; ?>"><?php echo $fname; ?></a></td>
+      <td><a href="profilePatient.php?user_id=<?php echo $uid; ?>"><?php echo $fname; ?></a></td>
       <td><?php echo $lname; ?></td>
       <td><?php echo $dob; ?></td>
       <td><?php echo $current_appointment; ?></td>
