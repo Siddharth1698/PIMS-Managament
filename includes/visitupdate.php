@@ -42,7 +42,7 @@
 
       <div class="form-group form-inline">
         <label for="pd">Investigation Parameters: </label>
-        <?php include "invparam/test.html"; ?>
+        <?php include "investe.php"; ?>
         
     </div>
     <div class="form-group">
