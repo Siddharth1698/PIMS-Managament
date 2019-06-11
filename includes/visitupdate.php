@@ -3,133 +3,75 @@
     <h5 class="card-header info-color white-text text-center py-4">
         <strong>Visit Information</strong>
     </h5>
-
+<br>
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
 
         <!-- Form -->
-        <form class="text-center" style="color: #757575;">
 
-            <div class="form-row">
-                <div class="col">
-                    <!-- First name -->
-                    <div class="md-form">   Complaints:
-                        <input type="text" id="materialRegisterFormFirstName" class="form-control" >
-                        <label for="materialRegisterFormFirstName"></label>
-                    </div>
-                </div>
-               
-            </div>
-
-            <!-- E-mail -->
-            <div class="form-row">
-
-              <div class="col">
-                    <!-- First name -->
-                    <div class="md-form d-inline p-2 "> Blood Pressure:
-                        <input type="number" id="materialRegisterFormFirstName" class="form-control">/
-                        <input type="number" id="" class="form-control">
-                        <label for="materialRegisterFormFirstName"></label>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <!-- First name -->
-                    <div class="md-form"> Pulse Rate:
-                        <input type="number" id="materialRegisterFormFirstName"  class="form-control">
-                        <label for="materialRegisterFormFirstName"></label>
-                    </div>
-                </div>
-              
-
-            </div>
-         
-            <!-- E-mail -->
-            <div class="form-row">
-
-              <div class="col">
-                    <!-- First name -->
-                    <div class="md-form"> General examination:
-                        <input type="text" id="materialRegisterFormFirstName" class="form-control">
-                        <label for="materialRegisterFormFirstName"></label>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <!-- First name -->
-                    <div class="md-form"> System Examination:
-                        <input type="text" id="materialRegisterFormFirstName" class="form-control">
-                        <label for="materialRegisterFormFirstName"></label>
-                    </div>
-                </div>
-              
-
-            </div>
-
-             <div class="form-row">
-
-              <div class="col">
-                    <!-- First name -->
-                    <div class="md-form"> Provisional Diganosis:
-                        <input type="text" id="materialRegisterFormFirstName" class="form-control">
-                        <label for="materialRegisterFormFirstName"></label>
-                    </div>
-                </div>
-
-              
-            </div>
-
-          <div class="form-row">
-
-              <div class="col">
-                    <!-- First name -->
-                    <div class="md-form"> Final Diganosis:
-                        <input type="text" id="materialRegisterFormFirstName" class="form-control">
-                        <label for="materialRegisterFormFirstName"></label>
-                    </div>
-                </div>
-
-              
-              
-
-            </div>
-
-             <div class="form-row">
-
-              <div class="col">
-                    <!-- First name -->
-                    <div class="md-form"> Any Comments:
-                        <input type="text" id="materialRegisterFormFirstName" class="form-control">
-                        <label for="materialRegisterFormFirstName"></label>
-                    </div>
-                </div>
-
-
-              <div class="col">
-            <div class="md-form"> Next Appointment: 
-                <input type="date" id="materialRegisterFormFirstName"  class="form-control">
-                        <label for="materialRegisterFormFirstName"></label> 
-            </div>
-            </div>
-
-              
-              
-
-            </div>
-
-
-
-          
+ 
+  <form>
+    <div class="form-group">
+        <label for="complaints">Complaints: </label>
+        <textarea type="text" name="complaints" rows="6" class="form-control" id="complaints" placeholder="Complaints"></textarea>
+    </div>
 
     
+    <div class="form-group">
+         <label for="bp1">Blood Pressure: </label>
+         <div class="form-inline">
+         <input type="number" name="bp1" class="form-control" id="bp1" placeholder="1st BP Field"> /
+         <input type="number" name="bp2" class="form-control" id="bp2" placeholder="2nd BP field">
+    </div>
+   </div>
 
-            <!-- Sign up button -->
-            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Submit</button>
+    <div class="form-group">
+        <label for="ps">Pulse Rate: </label>
+        <input type="number" name="ps" class="form-control" id="ps" placeholder="Pulse Rate">
+    </div>
 
-            <!-- Social register -->
-  
+     <div class="form-group">
+        <label for="ge">General Examination: </label>
+        <textarea type="text" name="ge" rows="6" class="form-control" id="ge" placeholder="General Examination"></textarea>
+    </div>
+     <div class="form-group">
+        <label for="se">System Examination: </label>
+        <textarea type="text" name="se" rows="6" class="form-control" id="se" placeholder="System Examination"></textarea>
+    </div>
+     
 
-        </form>
-        <!-- Form -->
+      <div class="form-group form-inline">
+        <label for="pd">Investigation Parameters: </label>
+        <?php include "invparam/test.html"; ?>
+        
+    </div>
+    <div class="form-group">
+        <label for="fd">Final Diganosis: </label>
+        <textarea type="text" name="fd" rows="6" class="form-control" id="fd" placeholder="Final Diganosis"></textarea>
+        <input type="checkbox" name="fdtopresc" value="True"  placeholder="Final Diganosis">Please tick the checkbox to include in prescription
+<br>
+    </div>
+
+     <div class="form-group form-inline">
+        <label for="pd">Medication: </label>
+        <input type="text" name="ipdropdown" class="form-control" id="ipdropdown" ></textarea>
+    </div>
+
+      <div class="form-group">
+        <label for="ac">Any comments: </label>
+        <textarea type="text" rows="6" name="ac" class="form-control" id="ac" placeholder="Any Comments"></textarea>
+    </div>
+
+       <div class="form-group">
+        <label for="pnv">Planned Next Visit: </label>
+        <input type="date" name="pnv" class="form-control" id="pnv" placeholder="Planned Next Visit"></textarea>
+    </div>
+   
+   
+   <div class="text-center">
+    <button type="submit" name="update" class="btn btn-primary">Update</button>
+    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
 
     </div>

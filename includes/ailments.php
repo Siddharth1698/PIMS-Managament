@@ -19,9 +19,9 @@ $_SESSION['user_id'] = $user_id;
 
 
 <input type="text" id="txtcityins" class="form-control mb-4" placeholder="Ailment Text">
+<div class="text-center">
 <input type="button" id="but1" class="btn" value="Add Ailment" onClick="ins();">
-
-
+</div>
     
 </form>
 <!-- Default form login -->

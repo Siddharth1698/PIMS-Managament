@@ -46,7 +46,7 @@ $result = $connection->query($sql);
       </li>
 
     <li class="nav-item active">
-        <a class="nav-link" href="addPatient.php">
+        <a class="nav-link" href="registration.php">
           <i class="fas fa-plus-square"></i> Add Patient
           
         </a>

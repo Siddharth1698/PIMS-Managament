@@ -27,7 +27,7 @@ include "ailments.php";
 ?>
 <!-- Material inline form -->
 </div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 <!-- Material form register -->
   <?php
               $_GET['user_id']=$user_id;

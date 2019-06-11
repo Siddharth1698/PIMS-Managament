@@ -85,14 +85,14 @@ $uniquekey = $uniquedob . $user_id;
   <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="home.html">
+        <a class="nav-link" href="home.php">
           <i class="fas fa-clinic-medical"></i> Home
           
         </a>
       </li>
 
        <li class="nav-item active">
-        <a class="nav-link" href="../index.html">
+        <a class="nav-link" href="../index.php">
          <i class="fab fa-instagram"></i> Logout</a>
       </li>
 
@@ -206,11 +206,11 @@ $uniquekey = $uniquedob . $user_id;
 
 <!-- Editable table -->
 <br>
-            <br>
-<div class="text-center">
-    <input type="submit" name="submit" class="btn" value="Update"></input>
+           
+<div>
+ <div  class="text-center">  <input type="submit" name="submit" class="btn" value="Update"></input></div> 
     <br> <hr>
-            
+             <br>
             <?php
             $_GET['user_id']=$user_id;
             include "tabs.php";  ?>
