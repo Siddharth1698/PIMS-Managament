@@ -25,8 +25,6 @@ $select_user_query = mysqli_query($connection, $sql);
  }
 
 
-
-
 }
 
 
@@ -111,10 +109,12 @@ $select_user_query = mysqli_query($connection, $sql);
    
    
    <div class="text-center">
-    <input type="submit" value="Update" class="btn update" name="up"></input>
+    <input type="submit" value="Update" class="btn update" name="up" ></input>
+        <input type="submit" value="Submit" class="btn sub" name="sub" ></input>
+
     </div>
 </form>
 
     </div>
 
-    
+

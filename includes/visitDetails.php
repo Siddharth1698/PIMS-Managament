@@ -46,4 +46,34 @@ if (isset($_POST['up'])) {
 }
 
 
+
+
+if (isset($_POST['sub'])) {
+
+
+  $complaints = mysqli_real_escape_string($connection, $_POST['complaints']);
+  $bp1 = mysqli_real_escape_string($connection, $_POST['bp1']);
+  $bp2 = mysqli_real_escape_string($connection, $_POST['bp2']);
+  $pulse = mysqli_real_escape_string($connection, $_POST['pulse']);
+  $ge = mysqli_real_escape_string($connection, $_POST['ge']);
+  $se = mysqli_real_escape_string($connection, $_POST['se']);
+  $fd = mysqli_real_escape_string($connection, $_POST['fd']);
+  $fcheck = mysqli_real_escape_string($connection, $_POST['field1']);
+  $comments = mysqli_real_escape_string($connection, $_POST['comments']);
+  $next_appointment = mysqli_real_escape_string($connection, $_POST['next_appointment']);
+  date_default_timezone_set('Asia/Kolkata');
+  $current_appointment =  date('d-m-Y H:i');
+
+
+
+  
+    $query = "INSERT INTO `visit` (`visit_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '$current_appointment');";
+  $result =  mysqli_query($connection, $query);
+
+    header('Location: profilePatient.php?user_id='.$user_id);
+
+
+
+}
+
 ?>
