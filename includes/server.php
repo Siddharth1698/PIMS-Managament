@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
     $user_id = $row['user_id'];
  }
 
-header('Location: profilePatient.php?user_id='.$user_id);
+header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0');
    
     
   }
