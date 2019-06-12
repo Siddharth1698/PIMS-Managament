@@ -66,12 +66,28 @@ while($row = mysqli_fetch_array($select_user_query)){
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="printableArea">
+
         <?php include "report.php";  ?>
       </div>
       <div class="modal-footer">
+
         <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary btn-lg">Print</button>
+        <button type="button"  onclick="printDiv('printableArea')" class="btn btn-primary btn-lg">Print</button>
+
+
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
       </div>
     </div>
   </div>
