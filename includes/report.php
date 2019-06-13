@@ -58,9 +58,9 @@ while($row = mysqli_fetch_array($select_user_query)){
     }
     .fixed-header, .fixed-footer{
         width: 100%;
-        position: fixed;        
+               
         background: #333;
-        padding: 10px 0;
+        
         color: #fff;
     }
     .fixed-header{
@@ -73,7 +73,7 @@ while($row = mysqli_fetch_array($select_user_query)){
     nav a{
         color: #fff;
         text-decoration: none;
-        padding: 7px 25px;
+        
         display: inline-block;
     }
     .container p{
@@ -88,11 +88,28 @@ while($row = mysqli_fetch_array($select_user_query)){
         <div class="container">
            <div style="text-align: center;">
 			
-			Patient Information Manangment Sysytem
+		
+
+			<div style="text-align: right;">
+					Dr. Jinachandran, MD,Whatnot, Best doctor in the world,<br>
+		
+Php, Email, etc 
+  
+        	
+			</div>
 		</div>
         </div>
     </div>
-		
+    <?php
+
+ $date = new DateTime($dob);
+ $now = new DateTime();
+ $interval = $now->diff($date);
+ $age = $interval->y;
+ 
+
+    ?>
+	<div >	
 		<br><br>
 		<p><span style="font-weight: 400;" class="text-center">Visit Summary Report</span></p>
 	<p><span style="font-weight: 400;">____________________________________________________________________________</span></p>
@@ -101,12 +118,12 @@ while($row = mysqli_fetch_array($select_user_query)){
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Unique ID:</span><span style="font-weight: 400;"><?php echo "$user_uniqueid";  ?></span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Name</span><span style="font-weight: 400;">: <?php echo "$fname"; echo "$lname"; ?></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-weight: 400; margin-left: 30px;" >Age</span><span style="font-weight: 400;">: <?php echo "$dob";  ?> Years&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-weight: 400; margin-left: 30px;">Gender</span><span style="font-weight: 400;">: <?php echo "$gender";  ?></span></p>
+<p><span style="font-weight: 400;">Name</span><span style="font-weight: 400;">: <?php echo "$fname"; echo " "; echo "$lname"; ?></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-weight: 400; margin-left: 30px;" >Age</span><span style="font-weight: 400;">: <?php echo "$age";  ?> Years&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-weight: 400; margin-left: 30px;">Gender</span><span style="font-weight: 400;">: <?php echo "$gender";  ?></span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Referred by</span><span style="font-weight: 400;">: <?php echo "$reffered";  ?></span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Complaints</span><span style="font-weight: 400;">: </span></p>
-<p><span style="font-weight: 400;"><?php echo "$complaints";  ?></span></p>
+<p><span style="font-weight: 400;" rows="6"><?php echo "$complaints";  ?></span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Past History</span><span style="font-weight: 400;">:</span></p>
 <ol>
@@ -117,7 +134,7 @@ while($row = mysqli_fetch_array($select_user_query)){
 </ol>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">On Examination</span><span style="font-weight: 400;">:</span></p>
-<p><span style="font-weight: 400;">BP: <?php echo "$bp1";  ?> / <?php echo "$bp2";  ?> mmHG</span> <span style="font-weight: 400;">Pulse Rate: <?php echo "$pulse";  ?> /min</span></p>
+<p><span style="font-weight: 400;">BP: <?php echo "$bp1";  ?> / <?php echo "$bp2";  ?> mmHG&nbsp; &nbsp;</span> <span style="font-weight: 400;">Pulse Rate: <?php echo "$pulse";  ?> /min</span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">General Examination</span><span style="font-weight: 400;">:</span></p>
 <p><span style="font-weight: 400;"><?php echo "$ge";  ?></span></p>
@@ -162,38 +179,14 @@ while($row = mysqli_fetch_array($select_user_query)){
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php echo "$next_appointment";  ?></span></p>
 <br>
-
+</div>
 
         
 
-<style>
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  
-  color: white;
-  text-align: center;
-}
 
-@media print
-{    
-    .no-print, .no-print *
-    {
-        display: none !important;
-    }
-}
-</style>
 
-<div class="footer">
-  
-        		<p>Dr. Jinachandran, MD,Whatnot, Best doctor in the world,<br>
-		
-Php, Email, etc </p>
+
 </div>
-
-
 
 <br>
 <div  style=" text-align: center;" class='no-print'>
@@ -208,9 +201,15 @@ Php, Email, etc </p>
 	
 function printElem(divId) {
     var content = document.getElementById(divId).innerHTML;
-    var mywindow = window.open('', 'Print', 'height=600,width=800');
+    var mywindow = window.open('', 'Print');
 
     mywindow.document.write(content);
+
+
+ mywindow.document.write('<html><head><title> Patient Information Manangment Sysytem</title>');
+    mywindow.document.write('</head><body >');
+    mywindow.document.write(content);
+    mywindow.document.write('</body></html>');
 
 
     mywindow.document.close();
