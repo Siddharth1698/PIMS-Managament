@@ -1,4 +1,4 @@
-<?php
+<?php ob_start();
 
 $user_id = $_GET['user_id'];
 

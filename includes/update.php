@@ -1,12 +1,12 @@
 <?php
+ob_start();
 session_start();
 $user_id = $_SESSION["user_id"];
 $status=$_GET["status"];
 
 if($status=="disp")
 {
-$link=mysqli_connect("localhost","root","");
-mysqli_select_db($link,"jarvis");
+include "db.php";
 $res=mysqli_query($link,"select * from table1 where user_id='$user_id'");
 
 echo "<table>";
@@ -52,8 +52,8 @@ $name=trim($name);
 $city=trim($city);
 
 
-$link=mysqli_connect("localhost","root","");
-mysqli_select_db($link,"jarvis");
+include "db.php";
+
 $res=mysqli_query($link,"update table1 set name='$name',detail='$city' where id=$id");
 
 
@@ -65,8 +65,8 @@ if($status=="delete")
 {
 $id=$_GET["id"];
 
-$link=mysqli_connect("localhost","root","");
-mysqli_select_db($link,"jarvis");
+include "db.php";
+
 $res=mysqli_query($link,"delete from table1 where id=$id");
 
 }
@@ -76,8 +76,8 @@ if($status=="ins")
 {
 $nm=$_GET["nm"];
 $ct=$_GET["ct"];
-$link=mysqli_connect("localhost","root","");
-mysqli_select_db($link,"jarvis");
+include "db.php";
+
 $res=mysqli_query($link,"insert into table1 values('','$user_id','$nm','$ct')");
 
 

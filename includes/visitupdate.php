@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 $flag = $_GET['flag'];
 $post_id = $_GET['post_id'];
