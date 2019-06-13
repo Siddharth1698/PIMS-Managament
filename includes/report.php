@@ -45,26 +45,54 @@ while($row = mysqli_fetch_array($select_user_query)){
 <html>
 <head>
 	<title> Patient Information Manangment Sysytem</title>
-	<style type="text/css">
-	@media screen {
-  div.divFooter {
-    display: none;
-  }
-}
-@media print {
-  div.divFooter {
-    position: fixed;
-    bottom: 0;
-  }
-}
+<style type="text/css">
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    body{        
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }    
+    /* Some more styles to beutify this example */
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+    }
+    .container p{
+        line-height: 200px; /* Create scrollbar to test positioning */
+    }
 </style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body style="margin-left: 20px;" >
 	<div id="printthis">
-		<div style="text-align: center;">
+		 <div class="fixed-header">
+        <div class="container">
+           <div style="text-align: center;">
 			
 			Patient Information Manangment Sysytem
 		</div>
+        </div>
+    </div>
+		
 		<br><br>
 		<p><span style="font-weight: 400;" class="text-center">Visit Summary Report</span></p>
 	<p><span style="font-weight: 400;">____________________________________________________________________________</span></p>
@@ -134,19 +162,41 @@ while($row = mysqli_fetch_array($select_user_query)){
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php echo "$next_appointment";  ?></span></p>
 <br>
-<footer>
-	<div class="divFooter">
 
-	<p><span style="font-weight: 400;">Dr. Jinachandran, MD,Whatnot, Best doctor in the world,</span><span style="font-weight: 400;"><br>
-		<span style="font-weight: 400;">
-Ph, Email, etc </span><span style="font-weight: 400;">:</span></p></div>
 
-       
-</footer>
+        
+
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
+  color: white;
+  text-align: center;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+</style>
+
+<div class="footer">
+  
+        		<p>Dr. Jinachandran, MD,Whatnot, Best doctor in the world,<br>
+		
+Php, Email, etc </p>
 </div>
 
+
+
 <br>
-<div class="text-center form-inline" style="margin-left: 200px; ">
+<div  style=" text-align: center;" class='no-print'>
 <button onclick="printElem('printthis')">Print</button>
 <button>Close</button></div>
 <br><br><br><br>
