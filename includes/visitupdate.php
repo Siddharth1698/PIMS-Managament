@@ -90,7 +90,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
     
       <div class="form-group form-inline">
-        <label for="pd">Medication: </label>
+        <label for="pd">Medication/Tests: </label>
 
 
      
