@@ -80,8 +80,9 @@ $result = $connection->query($sql);
       <th class="m-sm-5 ">First Name</th>
       <th class="m-sm-5 ">Last Name</th>
       <th class="m-sm-5  ">DOB</th>
+       <th class="m-sm-5 ">Age</th>
       <th class="m-sm-5 ">Last Visit</th>
-            <th class="m-sm-5 ">Visit History</th>
+           
 
     </tr>
     <tr class="warning no-result">
@@ -102,6 +103,11 @@ if ($result->num_rows > 0) {
         $dob = $row["user_dob"];
         $current_appointment = $row["current_appointment"];
 
+         $date = new DateTime($dob);
+         $now = new DateTime();
+         $interval = $now->diff($date);
+         $age = $interval->y;
+
         
 
 
@@ -113,8 +119,9 @@ if ($result->num_rows > 0) {
       <td><a href="profilePatient.php?user_id=<?php echo $uid; ?>&flag=0&post_id=0"><?php echo $fname; ?></a></td>
       <td><?php echo $lname; ?></td>
       <td><?php echo $dob; ?></td>
+       <td><?php echo $age; ?></td>
       <td><?php echo $current_appointment; ?></td>
-       <td>myVisitHistory</td>
+      
     </tr>
  <?php
 
