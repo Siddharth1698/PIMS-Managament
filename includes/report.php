@@ -49,7 +49,7 @@ while($row = mysqli_fetch_array($select_user_query)){
     /* Add some padding on document's body to prevent the content
     to go underneath the header and footer */
     body{        
-        padding-top: 60px;
+        padding-top: 5px;
         padding-bottom: 40px;
     }
     .container{
@@ -59,9 +59,9 @@ while($row = mysqli_fetch_array($select_user_query)){
     .fixed-header, .fixed-footer{
         width: 100%;
                
-        background: #333;
         
-        color: #fff;
+        
+        
     }
     .fixed-header{
         top: 0;
@@ -191,13 +191,17 @@ Php, Email, etc
 <br>
 <div  style=" text-align: center;" class='no-print'>
 <button onclick="printElem('printthis')">Print</button>
-<button>Close</button></div>
+<button onclick="goBack()">Close</button></div>
 <br><br><br><br>
 </body>
 </html>
 
 
 <script type="text/javascript">
+
+	function goBack() {
+  window.history.back();
+}
 	
 function printElem(divId) {
     var content = document.getElementById(divId).innerHTML;
@@ -207,9 +211,8 @@ function printElem(divId) {
 
 
  mywindow.document.write('<html><head><title> Patient Information Manangment Sysytem</title>');
-    mywindow.document.write('</head><body >');
-    mywindow.document.write(content);
-    mywindow.document.write('</body></html>');
+
+    
 
 
     mywindow.document.close();
