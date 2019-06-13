@@ -8,7 +8,9 @@ $sql = "SELECT * FROM visit WHERE user_id='$uid' order by current_appointment de
 $select_user_query = mysqli_query($connection, $sql);
 $i =0 ;
 
- 
+ if($select_user_query){
+  $rowcount=mysqli_num_rows($select_user_query);
+ }
  
 
 
@@ -27,12 +29,12 @@ $i =0 ;
 
 while($row = mysqli_fetch_array($select_user_query)){
     $current_appointment = $row['current_appointment'];
-    $i = $i + 1;
+   
 
       ?><tr>
-      <th scope="row"><?php echo "$i";  ?></th>
+      <th scope="row"><?php echo "$rowcount";  ?></th>
           <td><a href="" data-toggle="modal" data-target="#modalCookie1"> <?php echo "$current_appointment";  ?></a></td> </tr>  
-     <?php  
+     <?php   $rowcount = $rowcount - 1;
  }
 ?>
     
@@ -66,28 +68,37 @@ while($row = mysqli_fetch_array($select_user_query)){
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body" id="printableArea">
-
+      <div class="modal-body" id="section-to-print" >
         <?php include "report.php";  ?>
       </div>
       <div class="modal-footer">
 
         <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
-        <button type="button"  onclick="printDiv('printableArea')" class="btn btn-primary btn-lg">Print</button>
-
-
+        <button type="button" onclick="myFunction()" class="btn btn-primary btn-lg" >Print</button>
+        
 <script>
-function printDiv(divName) {
-     var printContents = document.getElementById(divName).innerHTML;
-     var originalContents = document.body.innerHTML;
-
-     document.body.innerHTML = printContents;
-
-     window.print();
-
-     document.body.innerHTML = originalContents;
+function myFunction() {
+  window.print();
 }
 </script>
+        <style type="text/css">
+
+
+          
+          @media print {
+  body * {
+    visibility: hidden;
+  }
+  #section-to-print, #section-to-print * {
+    visibility: visible;
+  }
+  #section-to-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+        </style>
       </div>
     </div>
   </div>
