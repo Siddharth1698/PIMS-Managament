@@ -44,7 +44,7 @@ while($row = mysqli_fetch_array($select_user_query)){
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title> Patient Information Manangment Sysytem</title>
 	<style type="text/css">
 	@media screen {
   div.divFooter {
@@ -61,6 +61,10 @@ while($row = mysqli_fetch_array($select_user_query)){
 </head>
 <body style="margin-left: 20px;" >
 	<div id="printthis">
+		<div style="text-align: center;">
+			
+			Patient Information Manangment Sysytem
+		</div>
 		<br><br>
 		<p><span style="font-weight: 400;" class="text-center">Visit Summary Report</span></p>
 	<p><span style="font-weight: 400;">____________________________________________________________________________</span></p>
@@ -156,10 +160,8 @@ function printElem(divId) {
     var content = document.getElementById(divId).innerHTML;
     var mywindow = window.open('', 'Print', 'height=600,width=800');
 
-    mywindow.document.write('<html><head><title>Print</title>');
-    mywindow.document.write('</head><body >');
     mywindow.document.write(content);
-    mywindow.document.write('</body></html>');
+
 
     mywindow.document.close();
     mywindow.focus()
