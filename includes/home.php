@@ -1,8 +1,16 @@
 <?php
+session_start();
  ob_start();
  include "db.php";
  
+
   $user_id = $_GET["admin_id"];
+
+
+if (empty($_SESSION['adminid'])) {
+    header('Location: ../index.php');
+ 
+}
 
 if (empty($_GET)) {
     header('Location: ../index.php');
