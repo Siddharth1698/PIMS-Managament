@@ -56,7 +56,10 @@ Patient Information Managment System  </span>
             </div>
 
             <!-- Sign in button -->
-            <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" name="login">Sign in </button>
+            <div style="text-align: right;">
+                          <button class="btn waves-effect" type="submit" name="login">Sign in </button>
+
+            </div>
 
 
         </form>
