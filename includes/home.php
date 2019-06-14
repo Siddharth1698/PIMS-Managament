@@ -70,7 +70,7 @@ $result = $connection->query($sql);
   
 <!-- Material form subscription -->
 <div class="form-group pull-right">
-    <input type="text" class="search form-control" placeholder="What you looking for?">
+    <input type="text" class="search form-control" placeholder="What are you looking for?">
 </div>
 <span class="counter pull-right"></span>
 <table class="table table-hover table-bordered results">
