@@ -1,3 +1,10 @@
+<?php ob_start();
+
+include "db.php";
+$admin_id = $_GET['admin_id'];
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +73,7 @@
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
         <!-- Form -->
-<form method="post" action="server.php">
+<form method="post" action="server.php?admin_id=<?php echo "$admin_id";  ?>">
 
             <div class="row">
                 <div class="col">

@@ -2,6 +2,7 @@
 ob_start();
 session_start();
 include "db.php";
+ $admin_id = $_GET["admin_id"];
 
 
 // connect to the database
@@ -44,7 +45,7 @@ if (isset($_POST['submit'])) {
     $user_id = $row['user_id'];
  }
 
-header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0');
+header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id.'');
    
     
   }

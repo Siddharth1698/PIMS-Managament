@@ -14,8 +14,6 @@ if (empty($_SESSION['adminid'])) {
 if (empty($_GET)) {
     header('Location: ../index.php');
 
-}else{
-
 }
 
 
@@ -63,7 +61,7 @@ $result = $connection->query($sql);
       </li>
 
     <li class="nav-item active">
-        <a class="nav-link" href="registration.php">
+        <a class="nav-link" href="registration.php?admin_id=<?php echo $admin_id; ?>">
           <i class="fas fa-plus-square"></i> Add Patient
           
         </a>
