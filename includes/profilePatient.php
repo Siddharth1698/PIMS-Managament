@@ -21,6 +21,8 @@ $select_user_query = mysqli_query($connection, $sql);
     $dob = $row['user_dob'];
     $reffered = $row['user_referredby'];
     $occupation = $row['user_occupation'];
+
+  
  }
 
 if($user_uniqueid == ''){
@@ -148,13 +150,13 @@ $uniquekey = $uniquedob . $user_id;
             <div class="row">
               <div class="form-inline">
                     <div class="col">
-                  <label for="height" >Height:</label>
+                  <label for="height" >Height(Kg):</label>
                 <input type="number" id="height" name="heighted" value="<?php echo "$height"; ?>"  class="form-control">
                         
             
                  </div>
                  <div class="col">
-                 <label for="Weight">Weight:</label>
+                 <label for="Weight">Weight(Cm):</label>
                 <input type="number" id="Weight" name="weight" value="<?php echo "$weight"; ?>" class="form-control">
                         
                          </div>
@@ -200,10 +202,18 @@ $uniquekey = $uniquedob . $user_id;
             </div>
  <!-- E-mail --><div class="col">
             <label for="dob">Date of Birth(mm/dd/yyyy):</label>
-             <input type="date" id="dob" name="dob" value="<?php echo "$dob"; ?>"  class="form-control">
 
-           
-            </div>
+            
+            
+              <input  name="dob" value="<?php echo "$dob"; ?>"  type="date"  id="datepicker" width="276" class="form-control datepicker">
+
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+          </div>
+
 
           <div class="col"> 
             <label for="reffered">Reffered By:</label>
@@ -221,7 +231,7 @@ $uniquekey = $uniquedob . $user_id;
 <br>
            
 <div>
- <div  class="text-center">  <input type="submit" name="submit" class="btn" value="Update"></input></div> 
+ <div  style="text-align: right;">  <input type="submit" name="submit" class="btn" value="Update"></input></div> 
     <br> <hr>
              <br>
             <?php

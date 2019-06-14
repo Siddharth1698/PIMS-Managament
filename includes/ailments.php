@@ -9,8 +9,8 @@ $_SESSION['user_id'] = $user_id;
 <form name="form1" class="text-center border border-light p-5">
 	
 
-    <input type="text" id="txtnameins" class="form-control mb-4" placeholder="Ailment Name">
-<input type="text" id="txtcityins" class="form-control mb-4" placeholder="Ailment Text">
+    <input type="text" id="txtnameins" class="form-control mb-4" placeholder="Ailment">
+<input type="text" id="txtcityins" class="form-control mb-4" placeholder="Description">
 <div class="text-center">
 <input type="button" id="but1" class="btn" value="Add Ailment" onClick="ins();">
 </div>
@@ -30,7 +30,7 @@ $_SESSION['user_id'] = $user_id;
     border-collapse: collapse;
     }
     .tables, th, td{
-        border: 1px solid #cdcdcd;
+        
     }
     .tables th, table td{
         padding: 10px;
