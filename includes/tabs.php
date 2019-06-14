@@ -1,6 +1,7 @@
 <?php ob_start();
 
 $user_id = $_GET['user_id'];
+$admin_id = $_GET['admin_id'];
 
 ?>
 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -23,6 +24,8 @@ $user_id = $_GET['user_id'];
 
 <?php
  $_GET['user_id']=$user_id;
+ $_GET['admin_id']=$admin_id;
+
 include "ailments.php";
 ?>
 <!-- Material inline form -->
@@ -31,6 +34,9 @@ include "ailments.php";
 <!-- Material form register -->
   <?php
               $_GET['user_id']=$user_id;
+               $_GET['admin_id']=$admin_id;
+
+
 
            include "visitupdate.php";
            ?>
@@ -42,6 +48,8 @@ include "ailments.php";
 
 <?php
  $_GET['user_id']=$user_id;
+  $_GET['admin_id']=$admin_id;
+
 include "visithistory.php";
 ?>
     <!--/.Content-->

@@ -3,7 +3,7 @@ ob_start();
 session_start();
 include "db.php";
 
-
+ $admin_id = $_GET['admin_id'];
  $user_id = $_SESSION['user_id'] ;
 
 
@@ -42,7 +42,7 @@ if (isset($_POST['up'])) {
 
 
 
-  header('Location: profilePatient.php?user_id='.$user_id.'&flag=1&post_id='.$post_id);
+  header('Location: profilePatient.php?user_id='.$user_id.'&flag=1&post_id='.$post_id.'&admin_id='.$admin_id);
 
 }
 
@@ -82,7 +82,7 @@ if (isset($_POST['sub'])) {
     $queryes = "UPDATE `users` SET `current_appointment` = '$current_appointment' WHERE `users`.`user_id` = $user_id;";
     mysqli_query($connection, $queryes);
 
-    header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0');
+    header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id);
 
 
 

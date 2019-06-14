@@ -3,6 +3,8 @@ ob_start();
 
 $flag = $_GET['flag'];
 $post_id = $_GET['post_id'];
+ $admin_id=$_GET['admin_id'];
+
 
 
 if($flag == 1 && $post_id!=0){
@@ -46,7 +48,7 @@ $select_user_query = mysqli_query($connection, $sql);
         <!-- Form -->
 
  
-  <form method="post" action="visitDetails.php" >
+  <form method="post" action="visitDetails.php?admin_id=<?php echo "$admin_id"; ?>" >
     <div class="form-group">
         <label for="complaints">Complaints: </label>
         <textarea type="text" name="complaints" rows="6"  class="form-control" id="complaints" placeholder="Complaints"><?php  if($flag==1){ echo "$complaints";}  ?></textarea>
