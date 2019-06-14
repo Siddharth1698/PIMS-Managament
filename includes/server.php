@@ -23,12 +23,27 @@ if (isset($_POST['submit'])) {
   $reffered = mysqli_real_escape_string($connection, $_POST['reffered']);
   $occupation = mysqli_real_escape_string($connection, $_POST['occupation']);
 
- 
 
-  
-  	$query = "INSERT INTO `users` (`user_id`, `user_uniqueid`, `user_fname`, `user_lname`, `user_dob`, `user_phone`, `user_gender`, `user_occupation`, `user_referredby`, `user_height`, `user_weight`) VALUES (NULL, '', '$firstname', '$lastname', '$dob', '$phno', '$gender', '$occupation', '$reffered ', '$height', '$weight')";
-  	mysqli_query($connection, $query);
-  	$_SESSION['firstname'] = $firstname;
+  $sqlf = "SELECT user_fname,user_lname,user_dob FROM users WHERE user_fname='$firstname' AND user_lname='$lastname' AND user_dob='$dob'";
+  $ressqlf = mysqli_query($connection, $sqlf);
+
+  if (mysqli_num_rows($ressqlf) > 0) {
+      $message = "User already exist";
+     echo "<SCRIPT type='text/javascript'> //not showing me this
+        alert('$message');
+        window.location.replace(\"http:://localhost\sidd\includes\home.php?admin_id=1\");
+    </SCRIPT>";
+      header('Location: home.php?admin_id='.$admin_id.'');
+
+
+    }
+    else{
+
+
+
+    $query = "INSERT INTO `users` (`user_id`, `user_uniqueid`, `user_fname`, `user_lname`, `user_dob`, `user_phone`, `user_gender`, `user_occupation`, `user_referredby`, `user_height`, `user_weight`) VALUES (NULL, '', '$firstname', '$lastname', '$dob', '$phno', '$gender', '$occupation', '$reffered ', '$height', '$weight')";
+    mysqli_query($connection, $query);
+    $_SESSION['firstname'] = $firstname;
     $_SESSION['lastname'] = $lastname;
     $_SESSION['height'] = $height;
     $_SESSION['weight'] = $weight;
@@ -47,5 +62,11 @@ if (isset($_POST['submit'])) {
 
 header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id.'');
    
+
+    }
+
+ 
+
+  
     
   }
