@@ -205,13 +205,8 @@ $uniquekey = $uniquedob . $user_id;
 
             
             
-              <input  name="dob" value="<?php echo "$dob"; ?>"  type="date"  id="datepicker" width="276" class="form-control datepicker">
+              <input  name="dob" value="<?php echo "$dob"; ?>"  type="date" class="form-control">
 
-    <script>
-        $('#datepicker').datepicker({
-            uiLibrary: 'bootstrap4'
-        });
-    </script>
           </div>
 
 
