@@ -114,7 +114,7 @@ $uniquekey = $uniquedob . $user_id;
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
         <!-- Form -->
-<form action="detailsupdate.php" method="post">
+<form action="detailsupdate.php?admin_id=<?php  echo "$aid";  ?>" method="post">
 
             <div class="row">
                 <div class="col">
