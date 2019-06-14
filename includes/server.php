@@ -28,12 +28,8 @@ if (isset($_POST['submit'])) {
   $ressqlf = mysqli_query($connection, $sqlf);
 
   if (mysqli_num_rows($ressqlf) > 0) {
-      $message = "User already exist";
-     echo "<SCRIPT type='text/javascript'> //not showing me this
-        alert('$message');
-        window.location.replace(\"http:://localhost\sidd\includes\home.php?admin_id=1\");
-    </SCRIPT>";
-      header('Location: home.php?admin_id='.$admin_id.'');
+      $message = 1;
+      header('Location: home.php?admin_id='.$admin_id.'&message='. $message);
 
 
     }

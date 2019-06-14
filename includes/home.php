@@ -41,8 +41,29 @@ $result = $connection->query($sql);
   <link href="../css/style.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/home.css">
 </head>
+<?php
+ 
+ if($_GET['message'] == 1){
+?>
+  <body onload="myFunction()">
+    <script>
+function myFunction() {
+  alert("User Already Exists");
+}
+</script>
+<?php 
+}
+else{
+   ?>
+  <body>
 
-<body>
+    <?php
+  }
+  ?>
+
+
+
+
 
   <!-- Start your project here-->
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark indigo fixed-top">
