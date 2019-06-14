@@ -29,7 +29,7 @@ if(isset($_POST['login'])){
         $_SESSION['username'] = $db_admin_username;
         $_SESSION['adminid'] = $db_admin_id;
 
-        header("Location: home.php");
+        header("Location: home.php?admin_id=$db_admin_id");
     }
     else{
         header("Location: ../index.php");

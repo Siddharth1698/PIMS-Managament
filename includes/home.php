@@ -2,6 +2,15 @@
  ob_start();
  include "db.php";
  
+  $user_id = $_GET["admin_id"];
+
+if (empty($_GET)) {
+    header('Location: ../index.php');
+
+}else{
+
+}
+
 
 $sql = "SELECT user_fname, user_lname, user_dob, user_uniqueid,user_id,current_appointment FROM users";
 $result = $connection->query($sql);
