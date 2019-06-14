@@ -2,7 +2,8 @@
 ob_start();
  include "db.php";
 
- 
+   $aid = $_GET["admin_id"];
+
 // Accessing session data
 $uid = $_GET['user_id'];
 $sql = "SELECT * FROM users WHERE user_id='$uid'";
@@ -85,7 +86,7 @@ $uniquekey = $uniquedob . $user_id;
   <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="home.php">
+        <a class="nav-link" href="home.php?admin_id=<?php echo "$aid";   ?>">
           <i class="fas fa-clinic-medical"></i> Home
           
         </a>
