@@ -105,7 +105,7 @@ else{
   
 <!-- Material form subscription -->
 <div class="form-group pull-right">
-    <input type="text" class="search form-control" placeholder="What are you looking for?">
+    <input type="text" class="search form-control" placeholder="Search Value">
 </div>
 <span class="counter pull-right"></span>
 <table class="table table-hover table-bordered results">

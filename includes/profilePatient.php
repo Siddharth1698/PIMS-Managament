@@ -136,8 +136,8 @@ $uniquekey = $uniquedob . $user_id;
                 <div class="col">
                     
                     <!-- Last name -->
-                    <label for="occupation">Occupation:</label>
-                        <input type="text" id="occupation" name="occupation"  value="<?php echo "$occupation"; ?>" class="form-control">
+                    <label for="uniqueid">Unique Id:</label>
+                        <input type="text" id="uniqueid" name="uniqueid"  value="<?php echo "$user_uniqueid"; ?>" class="form-control" disabled>
                  
                 </div>
                 </div>
@@ -146,17 +146,29 @@ $uniquekey = $uniquedob . $user_id;
    
 
             <div class="row">
-                 <div class="col">
-                  <label for="height">Height:</label>
+              <div class="form-inline">
+                    <div class="col">
+                  <label for="height" >Height:</label>
                 <input type="number" id="height" name="heighted" value="<?php echo "$height"; ?>"  class="form-control">
                         
             
-          </div>
+                 </div>
                  <div class="col">
                  <label for="Weight">Weight:</label>
                 <input type="number" id="Weight" name="weight" value="<?php echo "$weight"; ?>" class="form-control">
                         
                          </div>
+
+              </div>
+             
+
+                          <div class="col">
+                    
+                    <!-- Last name -->
+                    <label for="occupation">Occupation:</label>
+                        <input type="text" id="occupation" name="occupation"  value="<?php echo "$occupation"; ?>" class="form-control">
+                 
+                </div>
 
                 <div class="col">
                   <label for="phno">Phone Number:</label>
