@@ -132,8 +132,10 @@ $admin_id = $_GET['admin_id'];
              
                   <!-- Basic dropdown -->
                   <label for="gender">Gender: *</label>
+
 <select class="browser-default custom-select" name="gender" required>
-  <option selected>Select Gender:</option>
+
+  <option value="">Select Gender</option>
   <option value="Male">Male</option>
   <option value="Female">Female</option>
   
