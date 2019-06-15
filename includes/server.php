@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
   $occupation = mysqli_real_escape_string($connection, $_POST['occupation']);
 
 
-  $sqlf = "SELECT user_fname,user_lname,user_dob FROM users WHERE user_fname='$firstname' AND user_lname='$lastname' AND user_dob='$dob'";
+  $sqlf = "SELECT user_fname,user_lname,user_dob FROM users WHERE user_fname='$firstname' AND user_lname='$lastname' AND user_dob='$dob' AND user_gender='$gender' ";
   $ressqlf = mysqli_query($connection, $sqlf);
 
   if (mysqli_num_rows($ressqlf) > 0) {

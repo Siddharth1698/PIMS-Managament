@@ -17,7 +17,7 @@ if (empty($_GET)) {
 }
 
 
-$sql = "SELECT user_fname, user_lname, user_dob, user_uniqueid,user_id,current_appointment FROM users";
+$sql = "SELECT user_fname, user_lname, user_dob, user_uniqueid,user_id,current_appointment FROM users ORDER BY `user_id` DESC";
 $result = $connection->query($sql);
 
 
