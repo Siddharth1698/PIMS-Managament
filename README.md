@@ -3,6 +3,7 @@
 Personal Information Managment System(PIMS) is a cloud information managment system developed for doctors which can be used to help doctors find all information about patients, add patients and take their report.It has many other cool features personalized for doctors.
 
 -- This Website is currently hosted with Amazon EC2 Web Service (AWS) --
+ http://3.13.123.180/index.php
 
 
 FOR SETUP:
