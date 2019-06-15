@@ -175,7 +175,7 @@ if ($result->num_rows > 0) {
 </div>
 
 
-
+<br><br>
 <!-- Footer -->
 <footer class="page-footer font-small blue fixed-bottom">
 
