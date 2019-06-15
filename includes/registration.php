@@ -78,16 +78,16 @@ $admin_id = $_GET['admin_id'];
             <div class="row">
                 <div class="col">
                     <div > 
-                        <label for="FirstName" >First Name:</label>
-                        <input type="text" name="firstname" id="FirstName" class="form-control">
+                        <label for="FirstName" >First Name: *</label>
+                        <input type="text" name="firstname" id="FirstName" class="form-control" required>
                         
                     </div>
                 </div>
                 <div class="col">
                    
                     <!-- Last name -->
-                        <label for="lastname">Last Name:</label>
-                        <input type="text" id="LastName" name="lastname"  class="form-control">
+                        <label for="lastname">Last Name: *</label>
+                        <input type="text" id="LastName" name="lastname"  class="form-control" required>
                    
                 </div>
                 <div class="col">
@@ -131,8 +131,8 @@ $admin_id = $_GET['admin_id'];
            
              
                   <!-- Basic dropdown -->
-                  <label for="gender">Gender:</label>
-<select class="browser-default custom-select" name="gender">
+                  <label for="gender">Gender: *</label>
+<select class="browser-default custom-select" name="gender" required>
   <option selected>Select Gender:</option>
   <option value="Male">Male</option>
   <option value="Female">Female</option>
@@ -144,8 +144,8 @@ $admin_id = $_GET['admin_id'];
 
             </div>
  <!-- E-mail --><div class="col">
-            <label for="dob">Date of Birth(mm/dd/yyyy):</label>
-             <input type="date" id="date" name="dob"  class="form-control" aria-describedby="text">
+            <label for="dob">Date of Birth(mm/dd/yyyy): *</label>
+             <input type="date" id="date" name="dob"  class="form-control" aria-describedby="text" required>
 
            
             </div>

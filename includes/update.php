@@ -21,15 +21,19 @@ while($row=mysqli_fetch_array($res))
 
 
 echo "<tr>";
-echo "<td>"; ?><h5><div id="name<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></div></h5><?php  echo "</td>"; 
-echo "<td>"; ?><h6><div id="city<?php echo $row["id"]; ?>"><?php echo $row["detail"]; ?></div></h6><?php  echo "</td>";
+?>
+<div class="">
+
+<?php
+echo "<td>"; ?><h5><div  id="name<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></div></h5><?php  echo "</td>"; 
+echo "<td>"; ?><h6><div style="" id="city<?php echo $row["id"]; ?>"><?php echo $row["detail"]; ?></div></h6><?php  echo "</td>";
 ?><td>
 <input type="button" class="btn" id="<?php echo $row["id"]; ?>" name="<?php echo $row["id"]; ?>" value="edit" onClick="aa(this.id)"> </td>
 <?php
 echo "<td>"; ?> <input class="btn" type="button" id="<?php echo $row["id"]; ?>" name="<?php echo $row["id"]; ?>" value="delete" onClick="delete1(this.id)"> <?php echo "</td>";
  ?> 
 
-
+</div>
 <td><input type="button" class="btn" id="update<?php echo $row["id"]; ?>" name="<?php echo $row["id"]; ?>" value="update" style="visibility:hidden " onClick="bb(this.name)"> </td>
 
 <?php echo "</td>";
