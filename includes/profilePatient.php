@@ -21,14 +21,18 @@ $select_user_query = mysqli_query($connection, $sql);
     $dob = $row['user_dob'];
     $reffered = $row['user_referredby'];
     $occupation = $row['user_occupation'];
+    $date_clicked = $row['user_date_clicked'];
+
 
   
  }
 
 if($user_uniqueid == ''){
     
-$uniquedob = intval(preg_replace('/[^0-9]+/', '', $dob), 10);
+$uniquedob = intval(preg_replace('/[^0-9]+/', '', $date_clicked), 10);
 $uniquekey = $uniquedob . $user_id;
+
+$user_uniqueid = $uniquekey;
 
 
 

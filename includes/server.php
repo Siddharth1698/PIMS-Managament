@@ -12,7 +12,9 @@ include "db.php";
 if (isset($_POST['submit'])) {
   // receive all input values from the form
 
-     $firstname = mysqli_real_escape_string($connection, $_POST['firstname']);
+   $date_clicked = date('Y-m-d');
+
+     
   $firstname = mysqli_real_escape_string($connection, $_POST['firstname']);
   $lastname = mysqli_real_escape_string($connection, $_POST['lastname']);
   $height = mysqli_real_escape_string($connection, $_POST['height']);
@@ -37,7 +39,7 @@ if (isset($_POST['submit'])) {
 
 
 
-    $query = "INSERT INTO `users` (`user_id`, `user_uniqueid`, `user_fname`, `user_lname`, `user_dob`, `user_phone`, `user_gender`, `user_occupation`, `user_referredby`, `user_height`, `user_weight`) VALUES (NULL, '', '$firstname', '$lastname', '$dob', '$phno', '$gender', '$occupation', '$reffered ', '$height', '$weight')";
+    $query = "INSERT INTO `users` (`user_id`, `user_uniqueid`, `user_fname`, `user_lname`, `user_dob`, `user_phone`, `user_gender`, `user_occupation`, `user_referredby`, `user_height`, `user_weight`, `user_date_clicked`) VALUES (NULL, '', '$firstname', '$lastname', '$dob', '$phno', '$gender', '$occupation', '$reffered ', '$height', '$weight','$date_clicked')";
     mysqli_query($connection, $query);
     $_SESSION['firstname'] = $firstname;
     $_SESSION['lastname'] = $lastname;
