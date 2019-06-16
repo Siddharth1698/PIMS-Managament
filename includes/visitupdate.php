@@ -54,6 +54,7 @@ $select_user_query = mysqli_query($connection, $sql);
         <textarea type="text" name="complaints" rows="6"  class="form-control" id="complaints" placeholder="Complaints"><?php  if($flag==1){ echo "$complaints";}  ?></textarea>
     </div>
 
+
     
     <div class="form-group">
          <label for="bp1">Blood Pressure: </label>
@@ -63,10 +64,16 @@ $select_user_query = mysqli_query($connection, $sql);
     </div>
    </div>
 
+
     <div class="form-group">
         <label for="ps">Pulse Rate: </label>
         <input type="number" name="pulse" value= "<?php  if($flag==1){ echo "$pulse";}  ?>" class="form-control" id="ps" placeholder="Pulse Rate">
     </div>
+
+<div class="form-group">
+     
+ <a href="<?php  echo "investigation/index.php?user_id=$user_id"; ?>" class="btn btn-lg btn-success" >Add Investigation Parameters</a>    </div>
+   
 
      <div class="form-group">
         <label for="ge">General Examination: </label>
@@ -78,11 +85,7 @@ $select_user_query = mysqli_query($connection, $sql);
     </div>
      
 
-      <div class="form-group form-inline">
-        <label for="pd">Investigation Parameters: </label>
-      
-        
-    </div>
+     
     <div class="form-group">
         <label for="fd">Final Diganosis: </label>
         <textarea type="text" name="fd" value= "" rows="6" class="form-control" id="fd" placeholder="Final Diganosis"><?php  if($flag==1){ echo "$fd";}  ?></textarea>
@@ -92,13 +95,6 @@ $select_user_query = mysqli_query($connection, $sql);
     </div>
 
     
-      <div class="form-group form-inline">
-        <label for="pd">Medication/Tests: </label>
-
-
-     
-        
-    </div>
 
       <div class="form-group">
         <label for="ac">Any comments: </label>
@@ -143,8 +139,6 @@ $select_user_query = mysqli_query($connection, $sql);
   </div>
 </div>
 
-
-</form>
 
     </div>
 
