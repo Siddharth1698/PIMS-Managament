@@ -142,6 +142,10 @@ $select_user_query = mysqli_query($connection, $sql);
 <br>
     </div>
 
+
+    <button  class="btn"> <a href="<?php  echo "medication/index.php?user_id=$user_id&p_date=$p_date"; ?>" class="btn btn-lg btn-success" >Medication</a> </button>
+
+
     
 
       <div class="form-group">
