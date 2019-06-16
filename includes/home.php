@@ -3,6 +3,8 @@ session_start();
  ob_start();
  include "db.php";
  
+ $date_clicked = time();
+
 
 $admin_id = $_SESSION['adminid'];
 
@@ -151,7 +153,7 @@ if ($result->num_rows > 0) {
 
 
       <th><?php echo $uniqueid; ?></th>
-      <td><a href="profilePatient.php?user_id=<?php echo $uid; ?>&flag=0&post_id=0&admin_id=<?php echo $admin_id; ?>"><?php echo $fname; ?></a></td>
+      <td><a href="profilePatient.php?user_id=<?php echo $uid; ?>&flag=0&post_id=0&admin_id=<?php echo $admin_id; ?>&p_date=<?php echo $date_clicked; ?>"><?php echo $fname; ?></a></td>
       <td><?php echo $lname; ?></td>
       <td><?php echo $dob; ?></td>
        <td><?php echo $age; ?></td>

@@ -11,10 +11,7 @@ $admin_id = $_GET['admin_id'];
     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
       aria-selected="false">Visit Update</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" id="para-tab" data-toggle="tab" href="#para" role="tab" aria-controls="para"
-      aria-selected="false">Investigation and Medication</a>
-  </li>
+ 
 
   <li class="nav-item">
     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
@@ -46,11 +43,7 @@ include "ailments.php";
 <!-- Material form register -->
   </div>
 <!-- Material form register -->
-<div class="tab-pane fade" id="para" role="tabpanel" aria-labelledby="para-tab">
-  
-<button  class="btn"> <a href="<?php  echo "investigation/index.php?user_id=$user_id&"; ?>" class="btn btn-lg btn-success" >Add Investigation Parameters</a> </button>
 
-</div>
 
 
 

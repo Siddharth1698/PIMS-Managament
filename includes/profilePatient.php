@@ -3,7 +3,8 @@ ob_start();
  include "db.php";
 
    $aid = $_GET["admin_id"];
-
+   $p_date = $_GET["p_date"];
+ 
 // Accessing session data
 $uid = $_GET['user_id'];
 $sql = "SELECT * FROM users WHERE user_id='$uid'";
@@ -120,7 +121,7 @@ $user_uniqueid = $uniquekey;
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
         <!-- Form -->
-<form action="detailsupdate.php?admin_id=<?php  echo "$aid";  ?>" method="post">
+<form action="detailsupdate.php?admin_id=<?php  echo "$aid";  ?>&p_date=<?php echo "$p_date";  ?>" method="post">
 
             <div class="row">
                 <div class="col">

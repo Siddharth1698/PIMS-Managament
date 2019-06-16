@@ -4,6 +4,8 @@ ob_start();
 $flag = $_GET['flag'];
 $post_id = $_GET['post_id'];
  $admin_id=$_GET['admin_id'];
+ $p_date = $_GET["p_date"];
+
 
 
 
@@ -48,7 +50,7 @@ $select_user_query = mysqli_query($connection, $sql);
         <!-- Form -->
 
  
-  <form method="post" action="visitDetails.php?admin_id=<?php echo "$admin_id"; ?>" >
+  <form method="post" action="visitDetails.php?admin_id=<?php echo "$admin_id"; ?>&p_date=<?php echo "$p_date"; ?>" >
     <div class="form-group">
         <label for="complaints">Complaints: </label>
         <textarea type="text" name="complaints" rows="6"  class="form-control" id="complaints" placeholder="Complaints"><?php  if($flag==1){ echo "$complaints";}  ?></textarea>
@@ -70,9 +72,12 @@ $select_user_query = mysqli_query($connection, $sql);
         <input type="number" name="pulse" value= "<?php  if($flag==1){ echo "$pulse";}  ?>" class="form-control" id="ps" placeholder="Pulse Rate">
     </div>
 
-<div class="form-group">
+
+  
+
+<button  class="btn"> <a href="<?php  echo "investigation/index.php?user_id=$user_id&p_date=$p_date"; ?>" class="btn btn-lg btn-success" >Investigation Parameters</a> </button>
+
      
- <a href="<?php  echo "investigation/index.php?user_id=$user_id"; ?>" class="btn btn-lg btn-success" >Add Investigation Parameters</a>    </div>
    
 
      <div class="form-group">

@@ -6,6 +6,9 @@ include "db.php";
  $admin_id = $_GET['admin_id'];
  $user_id = $_SESSION['user_id'] ;
 
+ 
+
+
 
 
 if (isset($_POST['up'])) {
@@ -39,10 +42,10 @@ if (isset($_POST['up'])) {
  }
 
    
+$p_date= $_GET["p_date"];
 
 
-
-  header('Location: profilePatient.php?user_id='.$user_id.'&flag=1&post_id='.$post_id.'&admin_id='.$admin_id);
+  header('Location: profilePatient.php?user_id='.$user_id.'&flag=1&post_id='.$post_id.'&admin_id='.$admin_id.'&p_date='.$p_date);
 
 }
 

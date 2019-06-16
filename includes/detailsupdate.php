@@ -3,6 +3,7 @@ ob_start();
 include "db.php";
 
 $admin_id = $_GET['admin_id'];
+$p_date = $_GET['p_date'];
 
 // connect to the database
 
@@ -32,7 +33,7 @@ $quersel = "SELECT * FROM `users` WHERE `user_id` LIKE '$user_id'";
 
 
 
-   header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id.'');
+   header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id.'&p_date='.$p_date);
    
     
   }
