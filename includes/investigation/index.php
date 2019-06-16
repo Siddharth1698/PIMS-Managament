@@ -11,7 +11,14 @@ $_SESSION['p_date'] = $p_date;
 <form name="form1" class="text-center border border-light p-5">
 	
 
-    <input type="text" id="txtnameins" class="form-control mb-4" placeholder="Investigation Parameters">
+    <input type="text" id="txtnameins" class="form-control mb-4" placeholder="Investigation Parameters" list="param">
+    <datalist id="param">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
 <input type="text" id="txtcityins" class="form-control mb-4" placeholder="Description">
 <div class="text-center">
 <input type="button" id="but1" class="btn" value="Add Parameters" onClick="ins();">
