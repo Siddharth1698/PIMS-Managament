@@ -77,6 +77,49 @@ $select_user_query = mysqli_query($connection, $sql);
 
 <button  class="btn"> <a href="<?php  echo "investigation/index.php?user_id=$user_id&p_date=$p_date"; ?>" class="btn btn-lg btn-success" >Investigation Parameters</a> </button>
 
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Investigation</th>
+      <th scope="col">Details</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+      <?php
+       $i = 1;
+
+$sql = "SELECT * FROM investigation WHERE user_id='$user_id' AND p_date='$p_date'";
+$select_user_query = mysqli_query($connection, $sql);
+
+ while($row = mysqli_fetch_array($select_user_query)){
+ 
+    $inname = $row['name'];
+    $indet = $row['detail'];
+    
+ 
+
+
+
+?><tr>
+      <th scope="row"><?php echo "$i"; ?></th>
+      <td><?php echo "$inname";  ?></td>
+      <td><?php echo "$indet";  ?></td>
+      
+    </tr>
+
+    <?php
+    $i =$i + 1;
+}
+
+    ?>
+    
+  </tbody>
+</table>
+
      
    
 

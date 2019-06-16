@@ -81,6 +81,14 @@ if (isset($_POST['sub'])) {
     $query = "INSERT INTO `visit` (`visit_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '$current_appointment');";
   $result =  mysqli_query($connection, $query);
 
+    
+$p_date= $_GET["p_date"];
+
+
+    $invquery = "UPDATE `investigation` SET `final_sub` = '1' WHERE `investigation`.`user_id` = '$user_id' AND investigation.`p_date`= '$p_date'";
+    mysqli_query($connection,$invquery);
+
+
 
     $queryes = "UPDATE `users` SET `current_appointment` = '$current_appointment' WHERE `users`.`user_id` = $user_id;";
     mysqli_query($connection, $queryes);

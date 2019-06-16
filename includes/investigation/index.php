@@ -16,13 +16,21 @@ $_SESSION['p_date'] = $p_date;
 <div class="text-center">
 <input type="button" id="but1" class="btn" value="Add Parameters" onClick="ins();">
 </div>
-    
+   
 </form>
 <!-- Default form login -->
 
 
 
 <div id="disp_data"></div>
+
+ <button onclick="goBack()">Go Back</button>
+    <script type="text/javascript">
+
+  function goBack() {
+  window.history.back();
+}
+</script>
 <style type="text/css">
    
     
