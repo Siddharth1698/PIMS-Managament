@@ -153,6 +153,53 @@ $select_user_query = mysqli_query($connection, $sql);
     <button  class="btn"> <a href="<?php  echo "medication/index.php?user_id=$user_id&p_date=$p_date"; ?>" class="btn btn-lg btn-success" >Medication</a> </button>
 
 
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Med/Test</th>
+      <th scope="col">Frequency</th>
+      <th scope="col">Weeks</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+      <?php
+       $i = 1;
+
+$sql = "SELECT * FROM medication WHERE user_id='$user_id' AND p_date='$p_date'";
+$select_user_query = mysqli_query($connection, $sql);
+
+ while($row = mysqli_fetch_array($select_user_query)){
+ 
+    $inname = $row['name'];
+    $indet = $row['detail'];
+        $inmed = $row['med'];
+
+    
+ 
+
+
+
+?><tr>
+      <th scope="row"><?php echo "$i"; ?></th>
+      <td><?php echo "$inname";  ?></td>
+      <td><?php echo "$indet";  ?></td>
+       <td><?php echo "$inmed";  ?></td>
+      
+    </tr>
+
+    <?php
+    $i =$i + 1;
+}
+
+    ?>
+    
+  </tbody>
+</table>
+
+
     
 
       <div class="form-group">
