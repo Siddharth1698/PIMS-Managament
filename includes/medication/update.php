@@ -8,7 +8,7 @@ $status=$_GET["status"];
 if($status=="disp")
 {
 include "db.php";
-$res=mysqli_query($link,"select * from investigation where user_id='$user_id' and p_date='$p_date'");
+$res=mysqli_query($link,"select * from medication where user_id='$user_id' and p_date='$p_date'");
 
 echo "<table>";
 ?>
@@ -28,6 +28,8 @@ echo "<tr>";
 <?php
 echo "<td>"; ?><h5><div  id="name<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></div></h5><?php  echo "</td>"; 
 echo "<td>"; ?><h6><div style="" id="city<?php echo $row["id"]; ?>"><?php echo $row["detail"]; ?></div></h6><?php  echo "</td>";
+echo "<td>"; ?><h6><div style="" id="med<?php echo $row["id"]; ?>"><?php echo $row["med"]; ?></div></h6><?php  echo "</td>";
+
 ?><td>
 <input type="button" class="btn" id="<?php echo $row["id"]; ?>" name="<?php echo $row["id"]; ?>" value="edit" onClick="aa(this.id)"> </td>
 <?php
@@ -52,13 +54,15 @@ if($status=="update")
 $id=$_GET["id"];
 $name=$_GET["name"];
 $city=$_GET["city"];
+$med = $_GET["med"];
 
 $name=trim($name);
 $city=trim($city);
+$med=trim($med);
 
 include "db.php";
 
-$res=mysqli_query($link,"update investigation set name='$name',detail='$city' where id=$id");
+$res=mysqli_query($link,"update medication set name='$name',detail='$city',med='$med' where id=$id");
 
 
 
@@ -71,7 +75,7 @@ $id=$_GET["id"];
 
 include "db.php";
 
-$res=mysqli_query($link,"delete from investigation where id=$id");
+$res=mysqli_query($link,"delete from medication where id=$id");
 
 }
 
@@ -79,10 +83,11 @@ if($status=="ins")
 {
 $nm=$_GET["nm"];
 $ct=$_GET["ct"];
+$md=$_GET['md'];
 include "db.php";
 
-$res=mysqli_query($link,"INSERT INTO investigation
-VALUES (NULL,'$user_id','$nm','$ct','$p_date','0')");
+$res=mysqli_query($link,"INSERT INTO medication
+VALUES (NULL,'$user_id','$nm','$ct','$md','$p_date','0')");
 }
 
 ?>
