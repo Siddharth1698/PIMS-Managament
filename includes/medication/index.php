@@ -78,7 +78,7 @@ var city=document.getElementById(cityid).innerHTML;
 document.getElementById(cityid).innerHTML="<input type='text' value='"+city+"' id='"+txtcityid+"'>";
 
 medid="med"+a;
-txtmedid="txtmedid"+a;
+txtmedid="txtmed"+a;
 var med=document.getElementById(medid).innerHTML;
 document.getElementById(medid).innerHTML="<input type='text' value='"+med+"' id='"+txtmedid+"'>";
 

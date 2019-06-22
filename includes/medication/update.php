@@ -54,7 +54,7 @@ if($status=="update")
 $id=$_GET["id"];
 $name=$_GET["name"];
 $city=$_GET["city"];
-$med = $_GET["med"];
+$med=$_GET["med"];
 
 $name=trim($name);
 $city=trim($city);
