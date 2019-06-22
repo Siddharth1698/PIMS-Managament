@@ -20,6 +20,7 @@ if (isset($_POST['up'])) {
   $pulse = mysqli_real_escape_string($connection, $_POST['pulse']);
   $ge = mysqli_real_escape_string($connection, $_POST['ge']);
   $se = mysqli_real_escape_string($connection, $_POST['se']);
+  $pd = mysqli_real_escape_string($connection, $_POST['pd']);
   $fd = mysqli_real_escape_string($connection, $_POST['fd']);
   $fcheck = mysqli_real_escape_string($connection, $_POST['field1']);
   $comments = mysqli_real_escape_string($connection, $_POST['comments']);
@@ -29,7 +30,7 @@ if (isset($_POST['up'])) {
  
 
   
-    $query = "INSERT INTO `savedvisit` (`post_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '2019-06-12');";
+    $query = "INSERT INTO `savedvisit` (`post_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`,`pd`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$pd','$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '2019-06-12');";
   $result =  mysqli_query($connection, $query);
 
 
@@ -68,6 +69,7 @@ if (isset($_POST['sub'])) {
   $pulse = mysqli_real_escape_string($connection, $_POST['pulse']);
   $ge = mysqli_real_escape_string($connection, $_POST['ge']);
   $se = mysqli_real_escape_string($connection, $_POST['se']);
+  $pd = mysqli_real_escape_string($connection, $_POST['pd']);
   $fd = mysqli_real_escape_string($connection, $_POST['fd']);
   $fcheck = mysqli_real_escape_string($connection, $_POST['field1']);
   $comments = mysqli_real_escape_string($connection, $_POST['comments']);
@@ -78,7 +80,7 @@ if (isset($_POST['sub'])) {
 
 
   
-    $query = "INSERT INTO `visit` (`visit_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '$current_appointment');";
+    $query = "INSERT INTO `visit` (`visit_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`, `pd`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$pd','$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '$current_appointment');";
   $result =  mysqli_query($connection, $query);
 
     

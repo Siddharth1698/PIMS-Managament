@@ -21,6 +21,7 @@ $select_user_query = mysqli_query($connection, $sql);
   $bp1 = $row['bp1'];
   $bp2 = $row['bp2'];
   $pulse = $row['pulse'];
+  $pd = $row['pd'];
   $ge = $row['ge'];
   $se = $row['se'];
   $fd = $row['fd'];
@@ -71,6 +72,12 @@ $select_user_query = mysqli_query($connection, $sql);
         <label for="ps">Pulse Rate: </label>
         <input type="number" name="pulse" value= "<?php  if($flag==1){ echo "$pulse";}  ?>" class="form-control" id="ps" placeholder="Pulse Rate">
     </div>
+
+     <div class="form-group">
+        <label for="pd">Provisional Diganosis: </label>
+        <textarea type="text" name="pd" rows="6"  class="form-control" id="pd" placeholder="Provisional Diganosis"><?php  if($flag==1){ echo "$pd";}  ?></textarea>
+    </div>
+
 
 
   
