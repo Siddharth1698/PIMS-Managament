@@ -110,7 +110,7 @@ $p_date= $_GET["p_date"];
     if($rowcount>0){
      
 
-       header('Location: prescription.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id);
+       header('Location: prescription.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id.'&p_date='.$p_date);
 
 
     }else{       
