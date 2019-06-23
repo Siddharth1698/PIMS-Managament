@@ -80,7 +80,7 @@ if (isset($_POST['sub'])) {
 
 
   
-    $query = "INSERT INTO `visit` (`visit_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`, `pd`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$pd','$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '$current_appointment');";
+    $query = "INSERT INTO `visit` (`visit_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`, `pd`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$pd', '$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '$current_appointment');";
   $result =  mysqli_query($connection, $query);
 
     
@@ -98,7 +98,28 @@ $p_date= $_GET["p_date"];
     $queryes = "UPDATE `users` SET `current_appointment` = '$current_appointment' WHERE `users`.`user_id` = $user_id;";
     mysqli_query($connection, $queryes);
 
-    header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id);
+     $cntquery = "SELECT * FROM `medication` WHERE `medication`.`user_id` = '$user_id' AND medication.`p_date`= '$p_date'";
+
+        $result = mysqli_query($connection, $cntquery);
+        $rowcount=mysqli_num_rows($result);
+          
+
+
+     
+
+    if($rowcount>0){
+     
+
+       header('Location: prescription.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id);
+
+
+    }else{       
+
+
+         header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id);
+
+    }
+
 
 
 
