@@ -87,10 +87,10 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 ?><tr>
-      <th scope="row"><?php echo "$i"; ?></th>
+      <th scope="row"><?php echo "$i"; echo "."; ?></th>
       <td><?php echo "$inname";  ?></td>
       <td><?php echo "$indet"; echo " ";  echo "for"; ?></td>
-       <td><?php echo "$inmed";  ?></td>
+       <td><?php echo "$inmed";   echo " ";  echo "weeks"; ?></td>
       
     </tr>
 
@@ -101,9 +101,45 @@ $select_user_query = mysqli_query($connection, $sql);
     ?>
     
 
-<p><span style="font-weight: 400;">Final Diagnosis</span><span style="font-weight: 400;">: </span><em><span style="font-weight: 400;">In case ticked in the visit report</span></em><span style="font-weight: 400;"> &nbsp;</span></p>
+
+<?php
+
+$sql = "SELECT * FROM visit WHERE current_appointment='$current_appointment'";
+$select_user_query = mysqli_query($connection, $sql);
+
+ while($row = mysqli_fetch_array($select_user_query)){
+    $user_id = $row['user_id'];
+ 
+  $complaints = $row['complaints'];
+  $bp1 = $row['bp1'];
+  $bp2 = $row['bp2'];
+  $pulse = $row['pulse'];
+  $pd = $row['pd'];
+  $ge = $row['ge'];
+  $se = $row['se'];
+  $fd = $row['fd'];
+  $fcheck = $row['fcheck'];
+  $comments = $row['comments'];
+  $next_appointment = $row['next_appointment'];
+ }
+
+
+
+?>
+
+<?php
+   
+   if ($fcheck == "1") {
+   	?>
+<p><span style="font-weight: 400;">Final Diagnosis</span><span style="font-weight: 400;">: </span><em><span style="font-weight: 400;"></span></em><span style="font-weight: 400;"> &nbsp;</span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: dd/mm/yyyy</span></p></div>
+
+   	<?php
+   }
+
+?>
+
+<p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php  echo "$next_appointment";  ?></span></p></div>
 <p><br /><br /><br /><br /></p>
 
 </body>
