@@ -1,3 +1,14 @@
+<?php
+
+ob_start();
+ include "db.php";
+ $user_id = $_GET["user_id"];
+ $current_appointment = $_GET["current_appointment"];
+
+
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,14 +24,46 @@
 	</style>
 
 
+<?php
 
+$sql = "SELECT * FROM users WHERE user_id='$user_id'";
+$select_user_query = mysqli_query($connection, $sql);
+
+ while($row = mysqli_fetch_array($select_user_query)){
+    $user_id = $row['user_id'];
+    $user_uniqueid = $row['user_uniqueid'];
+    $fname = $row['user_fname'];
+    $lname = $row['user_lname'];
+    $height = $row['user_height'];
+    $weight = $row['user_weight'];
+    $phno = $row['user_phone'];
+    $gender = $row['user_gender'];
+    $dob = $row['user_dob'];
+    $reffered = $row['user_referredby'];
+    $occupation = $row['user_occupation'];
+    $date_clicked = $row['user_date_clicked'];
+
+
+
+         $date = new DateTime($dob);
+         $now = new DateTime();
+         $interval = $now->diff($date);
+         $age = $interval->y;
+
+
+  
+ }
+
+
+
+?>
 
 	<p><br /><br /><br /><br /><br /></p>
 	<div class="man">
-<p><span style="font-weight: 400;">Date</span><span style="font-weight: 400;">: dd/mm/yyyy </span><em><span style="font-weight: 400;">Same as visit date</span></em></p>
+<p><span style="font-weight: 400;">Date</span><span style="font-weight: 400;">: <?php  echo "$current_appointment";   ?> </span><em><span style="font-weight: 400;"></span></em></p>
 <p><br /><br /></p>
-<p><span style="font-weight: 400;">Unique ID</span><span style="font-weight: 400;">: xxxx</span></p>
-<p><span style="font-weight: 400;">Name</span><span style="font-weight: 400;">: First_Name Last_Name</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: 400;">Age</span><span style="font-weight: 400;">: 38 Years&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-weight: 400;">Gender</span><span style="font-weight: 400;">: Male</span></p>
+<p><span style="font-weight: 400;">Unique ID</span><span style="font-weight: 400;">: <?php echo "$user_uniqueid";  ?></span></p>
+<p><span style="font-weight: 400;">Name</span><span style="font-weight: 400;">: <?php echo "$fname"; echo " "; echo "$lname";  ?></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: 400;">Age</span><span style="font-weight: 400;">: <?php echo "$age";  ?> Years&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-weight: 400;">Gender</span><span style="font-weight: 400;">: <?php echo "$gender";  ?></span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Medications</span><span style="font-weight: 400;">:</span></p>
 <p><span style="font-weight: 400;">Deigene</span> <span style="font-weight: 400;">1-1-1</span> <span style="font-weight: 400;">for 2 weeks</span></p>
