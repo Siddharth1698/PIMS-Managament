@@ -4,6 +4,10 @@ ob_start();
 
    $aid = $_GET["admin_id"];
    $p_date = $_GET["p_date"];
+   $post_id = $_GET['post_id'];
+   $flag = $_GET['flag'];
+
+
  
 // Accessing session data
 $uid = $_GET['user_id'];
@@ -121,7 +125,7 @@ $user_uniqueid = $uniquekey;
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
         <!-- Form -->
-<form action="detailsupdate.php?admin_id=<?php  echo "$aid";  ?>&p_date=<?php echo "$p_date";  ?>" method="post">
+<form action="detailsupdate.php?admin_id=<?php  echo "$aid";  ?>&p_date=<?php echo "$p_date";  ?>&flag=<?php  echo "$flag";  ?>&post_id=<?php echo "$post_id" ; ?>" method="post">
 
             <div class="row">
                 <div class="col">
@@ -155,13 +159,13 @@ $user_uniqueid = $uniquekey;
             <div class="row">
               <div class="form-inline">
                     <div class="col">
-                  <label for="height" >Height(Kg):</label>
+                  <label for="height" >Height(Cm):</label>
                 <input type="number" id="height" name="heighted" value="<?php echo "$height"; ?>"  class="form-control">
                         
             
                  </div>
                  <div class="col">
-                 <label for="Weight">Weight(Cm):</label>
+                 <label for="Weight">Weight(Kg):</label>
                 <input type="number" id="Weight" name="weight" value="<?php echo "$weight"; ?>" class="form-control">
                         
                          </div>

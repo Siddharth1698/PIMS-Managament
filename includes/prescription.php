@@ -75,7 +75,9 @@ $select_user_query = mysqli_query($connection, $sql);
 
   <div id="printthis">
 
-	<p><br /><br /><br /><br /><br /></p>
+
+
+	<p><br /><br /><br /><br /><h4 style="text-align: center;">Prescription</h4><br /></p>
 	<div class="man">
 <p><span style="font-weight: 400;">Date</span><span style="font-weight: 400;">: <?php  echo "$current_appointment";   ?> </span><em><span style="font-weight: 400;"></span></em></p>
 <p><br /><br /></p>
