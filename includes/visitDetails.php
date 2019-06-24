@@ -117,7 +117,7 @@ $p_date= $_GET["p_date"];
        $current_appointment =  date('d-m-Y H:i');
      
 
-       header('Location: prescription.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id.'&p_date='.$p_date.'&current_appointment='.$current_appointment);
+       header('Location: prescription.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id.'&p_date='.$p_date.'&current_appointment='.$current_appointment.'&prstatus=0');
 
 
     }else{       
