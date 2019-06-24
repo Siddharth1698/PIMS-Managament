@@ -87,7 +87,7 @@ $md=$_GET['md'];
 include "db.php";
 
 $res=mysqli_query($link,"INSERT INTO medication
-VALUES (NULL,'$user_id','$nm','$ct','$md','$p_date','0')");
+VALUES (NULL,'$user_id','$nm','$ct','$md','$p_date','0','0')");
 }
 
 ?>
