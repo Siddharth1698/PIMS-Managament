@@ -144,7 +144,15 @@ $select_user_query = mysqli_query($connection, $sql);
 ?>
 
 <p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php  echo "$next_appointment";  ?></span></p></div>
-<p><br /><br /><br /><br /></p>
+<p></p>
 
+
+
+
+<br>
+<div  style=" text-align: center;" class='no-print'>
+<button onclick="printElem('printthis')">Print</button>
+<button onclick="goBack()">Close</button></div>
+<br><br><br><br>
 </body>
 </html>
