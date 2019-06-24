@@ -4,9 +4,11 @@ ob_start();
  include "db.php";
  $user_id = $_GET["user_id"];
  $p_date = $_GET["p_date"];
+ $admin_id = $_GET["admin_id"];
  $current_appointment = $_GET["current_appointment"];
 
 
+ $date_clickeder = time();
 
  ?>
 
@@ -141,6 +143,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
    	<?php
+
    }
 
 ?>
@@ -153,7 +156,7 @@ $select_user_query = mysqli_query($connection, $sql);
 <br>
 <div  style=" text-align: center;" class='no-print'>
 <button onclick="printElem('printthis')">Print</button>
-<button onclick="goBack()">Close</button></div>
+<button ><a href="profilePatient.php?user_id=<?php echo "$user_id" ?>&flag=0&post_id=0&admin_id=<?php echo "$admin_id" ?>&p_date=<?php echo "$date_clickeder" ?>">Close</a></button></div>
 <br><br><br><br>
 </body>
 </html>
@@ -162,9 +165,6 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 <script type="text/javascript">
-  function goBack() {
-  window.history.back();
-}
   
 function printElem(divId) {
     var content = document.getElementById(divId).innerHTML;
