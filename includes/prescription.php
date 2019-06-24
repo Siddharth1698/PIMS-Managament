@@ -59,6 +59,8 @@ $select_user_query = mysqli_query($connection, $sql);
 
 ?>
 
+  <div id="printthis">
+
 	<p><br /><br /><br /><br /><br /></p>
 	<div class="man">
 <p><span style="font-weight: 400;">Date</span><span style="font-weight: 400;">: <?php  echo "$current_appointment";   ?> </span><em><span style="font-weight: 400;"></span></em></p>
@@ -91,7 +93,7 @@ $select_user_query = mysqli_query($connection, $sql);
       <td><?php echo "$inname";  ?></td>
       <td><?php echo "$indet"; echo " ";  echo "for"; ?></td>
        <td><?php echo "$inmed";   echo " ";  echo "weeks"; ?></td>
-      
+      <br>
     </tr>
 
     <?php
@@ -146,8 +148,7 @@ $select_user_query = mysqli_query($connection, $sql);
 <p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php  echo "$next_appointment";  ?></span></p></div>
 <p></p>
 
-
-
+</div>
 
 <br>
 <div  style=" text-align: center;" class='no-print'>
@@ -156,3 +157,25 @@ $select_user_query = mysqli_query($connection, $sql);
 <br><br><br><br>
 </body>
 </html>
+
+
+
+
+<script type="text/javascript">
+  function goBack() {
+  window.history.back();
+}
+  
+function printElem(divId) {
+    var content = document.getElementById(divId).innerHTML;
+    var mywindow = window.open('', 'Print');
+    mywindow.document.write(content);
+ mywindow.document.write('<html><head><title> Patient Information Manangment Sysytem</title>');
+    
+    mywindow.document.close();
+    mywindow.focus()
+    mywindow.print();
+    mywindow.close();
+    return true;
+}
+</script>

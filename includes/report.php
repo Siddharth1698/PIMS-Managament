@@ -1,16 +1,10 @@
 <?php
-
 ob_start();
  include "db.php";
  $user_id = $_GET["user_id"];
  $current_appointment = $_GET["current_appointment"];
-
-
  $sql = "SELECT * FROM visit INNER JOIN users ON visit.user_id= $user_id AND users.user_id = $user_id AND visit.current_appointment= '$current_appointment' ";
-
 $select_user_query = mysqli_query($connection, $sql);
-
-
 while($row = mysqli_fetch_array($select_user_query)){
       $user_id = $row['user_id'];
  
@@ -34,17 +28,14 @@ while($row = mysqli_fetch_array($select_user_query)){
   $fcheck = $row['fcheck'];
   $comments = $row['comments'];
   $next_appointment = $row['next_appointment'];
-
  }
-
-
  ?>
 
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Patient Information Manangment Sysytem</title>
+  <title> Patient Information Manangment Sysytem</title>
 <style type="text/css">
     /* Add some padding on document's body to prevent the content
     to go underneath the header and footer */
@@ -83,36 +74,34 @@ while($row = mysqli_fetch_array($select_user_query)){
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body style="margin-left: 20px;" >
-	<div id="printthis">
-		 <div class="fixed-header">
+  <div id="printthis">
+     <div class="fixed-header">
         <div class="container">
            <div style="text-align: center;">
-			
-		
+      
+    
 
-			<div style="text-align: right;">
-					Dr. Jinachandran, MD,Whatnot, Best doctor in the world,<br>
-		
+      <div style="text-align: right;">
+          Dr. Jinachandran, MD,Whatnot, Best doctor in the world,<br>
+    
 Php, Email, etc 
   
-        	
-			</div>
-		</div>
+          
+      </div>
+    </div>
         </div>
     </div>
     <?php
-
  $date = new DateTime($dob);
  $now = new DateTime();
  $interval = $now->diff($date);
  $age = $interval->y;
  
-
     ?>
-	<div >	
-		<br><br>
-		<p><span style="font-weight: 400;" class="text-center">Visit Summary Report</span></p>
-	<p><span style="font-weight: 400;">____________________________________________________________________________</span></p>
+  <div >  
+    <br><br>
+    <p><span style="font-weight: 400;" class="text-center">Visit Summary Report</span></p>
+  <p><span style="font-weight: 400;">____________________________________________________________________________</span></p>
 
 <p><span style="font-weight: 400;">Date: <?php echo "$current_appointment";  ?></span></p>
 <p>&nbsp;</p>
@@ -198,23 +187,16 @@ Php, Email, etc
 
 
 <script type="text/javascript">
-
-	function goBack() {
+  function goBack() {
   window.history.back();
 }
-	
+  
 function printElem(divId) {
     var content = document.getElementById(divId).innerHTML;
     var mywindow = window.open('', 'Print');
-
     mywindow.document.write(content);
-
-
  mywindow.document.write('<html><head><title> Patient Information Manangment Sysytem</title>');
-
     
-
-
     mywindow.document.close();
     mywindow.focus()
     mywindow.print();
