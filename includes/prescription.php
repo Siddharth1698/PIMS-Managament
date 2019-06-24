@@ -5,7 +5,19 @@ ob_start();
  $user_id = $_GET["user_id"];
  $p_date = $_GET["p_date"];
  $admin_id = $_GET["admin_id"];
+ $prstatus = $_GET["prstatus"];
  $current_appointment = $_GET["current_appointment"];
+
+ if ($prstatus == "1") {
+
+ 	$sql = "SELECT * FROM medication WHERE user_id='$user_id' AND current_appointment='$current_appointment'";
+$select_user_query = mysqli_query($connection, $sql);
+
+ while($row = mysqli_fetch_array($select_user_query)){
+ $p_date = $row['p_date'];
+
+ }
+ }
 
 
  $date_clickeder = time();
