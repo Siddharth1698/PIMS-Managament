@@ -127,12 +127,16 @@ $select_user_query = mysqli_query($connection, $sql);
 
 ?>
 
+
+
 <?php
    
    if ($fcheck == "1") {
    	?>
-<p><span style="font-weight: 400;">Final Diagnosis</span><span style="font-weight: 400;">: </span><em><span style="font-weight: 400;"></span></em><span style="font-weight: 400;"> &nbsp;</span></p>
+<p><span style="font-weight: 400;">Final Diagnosis</span><span style="font-weight: 400;">: </span><span style="font-weight: 400;"><p><?php echo "$fd";  ?></p></span><span style="font-weight: 400;"> &nbsp;</span></p>
 <p>&nbsp;</p>
+
+
 
    	<?php
    }
