@@ -140,7 +140,7 @@ Php, Email, etc
       <?php
        $i = 1;
 
-$sql = "SELECT * FROM investigation WHERE user_id='$user_id' AND p_date='$p_date'";
+$sql = "SELECT * FROM investigation WHERE user_id='$user_id' AND current_appointment='$current_appointment'";
 $select_user_query = mysqli_query($connection, $sql);
 
  while($row = mysqli_fetch_array($select_user_query)){
@@ -156,6 +156,7 @@ $select_user_query = mysqli_query($connection, $sql);
       <th scope="row"><?php echo "$i"; ?></th>
       <td><?php echo "$inname";  ?></td>
       <td><?php echo "$indet";  ?></td>
+      <br>
       
     </tr>
 

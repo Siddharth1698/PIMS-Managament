@@ -82,7 +82,7 @@ $ct=$_GET["ct"];
 include "db.php";
 
 $res=mysqli_query($link,"INSERT INTO investigation
-VALUES (NULL,'$user_id','$nm','$ct','$p_date','0')");
+VALUES (NULL,'$user_id','$nm','$ct','$p_date','0','0')");
 }
 
 ?>

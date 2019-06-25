@@ -97,6 +97,8 @@ $p_date= $_GET["p_date"];
     $insquery = "UPDATE `medication` SET `current_appointment` = '$current_appointment' WHERE `medication`.`user_id` = '$user_id' AND medication.`p_date`= '$p_date'";
         mysqli_query($connection,$insquery);
 
+  $insqueryf = "UPDATE `investigation` SET `current_appointment` = '$current_appointment' WHERE `investigation`.`user_id` = '$user_id' AND investigation.`p_date`= '$p_date'";
+        mysqli_query($connection,$insqueryf);
 
 
     $queryes = "UPDATE `users` SET `current_appointment` = '$current_appointment' WHERE `users`.`user_id` = $user_id;";
