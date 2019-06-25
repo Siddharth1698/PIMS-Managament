@@ -60,7 +60,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
     
     <div class="form-group">
-         <label for="bp1">Blood Pressure: </label>
+         <label for="bp1">Blood Pressure(mmHg): </label>
          <div class="form-inline">
          <input type="number" value= "<?php  if($flag==1){ echo "$bp1";}  ?>" name="bp1" class="form-control" id="bp1" placeholder="1st BP Field"> /
          <input type="number" name="bp2" value= "<?php  if($flag==1){ echo "$bp2";}  ?>" class="form-control" id="bp2" placeholder="2nd BP field">
@@ -69,7 +69,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
     <div class="form-group">
-        <label for="ps">Pulse Rate: </label>
+        <label for="ps">Pulse Rate(/min): </label>
         <input type="number" name="pulse" value= "<?php  if($flag==1){ echo "$pulse";}  ?>" class="form-control" id="ps" placeholder="Pulse Rate">
     </div>
 
