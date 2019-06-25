@@ -3,6 +3,12 @@ ob_start();
  include "db.php";
  $user_id = $_GET["user_id"];
  $current_appointment = $_GET["current_appointment"];
+
+
+
+$ailsql = "SELECT * FROM table1 where user_id='$user_id";
+
+
  $sql = "SELECT * FROM visit INNER JOIN users ON visit.user_id= $user_id AND users.user_id = $user_id AND visit.current_appointment= '$current_appointment' ";
 $select_user_query = mysqli_query($connection, $sql);
 while($row = mysqli_fetch_array($select_user_query)){
@@ -116,12 +122,41 @@ Php, Email, etc
 <p><span style="font-weight: 400;" rows="6"><?php echo "$complaints";  ?></span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Past History</span><span style="font-weight: 400;">:</span></p>
-<ol>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Ailment 1 for 2 years</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Ailment 2 was there, now got married so other problems instead</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Ailment 3 same as Ailment 2</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Ailment 4 same as Ailment 2</span></li>
-</ol>
+
+
+  <?php
+       $i = 1;
+
+$sql = "select * from table1 where user_id='$user_id'";
+$select_user_query = mysqli_query($connection, $sql);
+
+ while($row = mysqli_fetch_array($select_user_query)){
+ 
+    $inname = $row['name'];
+    $indet = $row['detail'];
+    
+ 
+
+
+
+?><tr>
+      <th scope="row"><?php echo "$i"; echo "."; ?></th>
+      <td><?php echo "$inname";  ?></td>
+      <td><?php echo "$indet";  ?></td>
+      <br>
+      
+    </tr>
+
+    <?php
+    $i =$i + 1;
+}
+
+    ?>
+
+
+
+
+
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">On Examination</span><span style="font-weight: 400;">:</span></p>
 <p><span style="font-weight: 400;">BP: <?php echo "$bp1";  ?> / <?php echo "$bp2";  ?> mmHG&nbsp; &nbsp;</span> <span style="font-weight: 400;">Pulse Rate: <?php echo "$pulse";  ?> /min</span></p>
