@@ -25,6 +25,7 @@ while($row = mysqli_fetch_array($select_user_query)){
   $ge = $row['ge'];
   $se = $row['se'];
   $fd = $row['fd'];
+  $pd = $row['pd'];
   $fcheck = $row['fcheck'];
   $comments = $row['comments'];
   $next_appointment = $row['next_appointment'];
@@ -132,7 +133,7 @@ Php, Email, etc
 <p><span style="font-weight: 400;"><?php echo "$se";  ?></span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Provisional Diagnosis</span><span style="font-weight: 400;">:</span></p>
-<p><span style="font-weight: 400;"><?php echo "to be added.. mistakenly missed it";  ?></span></p>
+<p><span style="font-weight: 400;"><?php echo "$pd";  ?></span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Investigation Parameters</span><span style="font-weight: 400;">:</span></p>
 
