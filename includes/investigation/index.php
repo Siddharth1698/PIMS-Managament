@@ -8,16 +8,37 @@ $_SESSION['p_date'] = $p_date;
 
 ?>
 <!-- Default form login -->
-<form name="form1" class="text-center border border-light p-5">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Patient Info Managment System</title>
+  
+ 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- ignore those br, just for stackoverflow full page view -->
+</head>
+
+<body>
+
+<form name="form1" class=" border border-light p-5">
 
   <style type="text/css">
     option:nth-child(2), option:nth-child(11), option:nth-child(21), option:nth-child(30), option:nth-child(37) {
     font-weight:bold;
-    font-size: 15px;
+    font-size: 13px;
 }
   </style>
-	
-  <select type="text" id="txtnameins" class="form-control mb-4" placeholder="Investigation Parameters" list="param">
+  <div class="row">
+  <div class="col-md-4 form-group">
+    <label for="search">Investigation Parameters:</label>
+  
+
+  <select type="text" id="txtnameins" class="form-control" placeholder="Investigation Parameters" list="param">
 
   <option value="Selct an option" selected disabled>Investigation Parameters</option>
   <option value="CBC" disabled="">CBC</option>
@@ -69,20 +90,31 @@ $_SESSION['p_date'] = $p_date;
 <option value="Endoscopy">Endoscopy</option>
 <option value="Others">Others</option>
 </select>
+  </div>
+  <div class="col-md-4 form-group">
+    <label for="txtcityins">Value:</label>
 
-<textarea id="txtcityins" class="form-control mb-4" placeholder="Description"></textarea>
-<div class="text-center">
-<input type="button" id="but1" class="btn" value="Add Parameters" onClick="ins();">
-</div>
+<input type="number" id="txtcityins" class="form-control" placeholder="Value">  </div>
+ 
+  <div class="col-md-2 form-group">
+  <label for="created_at_lt">&nbsp;</label>
+<input type="button" id="but1" class="btn bt" value="Add Parameters" onClick="ins();">  
+  </div>
+
+  </div>  
+ 
+
+
+
    
 </form>
 <!-- Default form login -->
 
 
 
-<div id="disp_data"></div>
+<div id="disp_data" ></div>
 
- <button onclick="goBack()">Go Back</button>
+<div class="text-center"><button class="btn" onclick="goBack()">Go Back</button></div> 
     <script type="text/javascript">
 
   function goBack() {
@@ -90,7 +122,9 @@ $_SESSION['p_date'] = $p_date;
 }
 </script>
 <style type="text/css">
-   
+   .bt{
+    margin-top: 30px;
+   }
     
     .tables{
         width: 100%;
@@ -170,4 +204,22 @@ document.getElementById("txtnameins").value="";
 document.getElementById("txtcityins").value="";
 }
 </script>
+
+
+<!-- Footer -->
+  <!-- Start your project here-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  
+
+  <!-- Bootstrap tooltips -->
+  
+
+  <!-- Bootstrap core JavaScript -->
+ 
+</body>
+
+</html>
+
 

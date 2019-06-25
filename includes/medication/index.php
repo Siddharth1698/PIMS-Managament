@@ -7,26 +7,64 @@ $_SESSION['user_id'] = $user_id;
 $_SESSION['p_date'] = $p_date;
 
 ?>
-<!-- Default form login -->
-<form name="form1" class="text-center border border-light p-5">
-	
 
-    <input type="text" id="txtnameins" class="form-control mb-4" placeholder="Medications">
-<input type="text" id="txtcityins" class="form-control mb-4" placeholder="Frequency">
-<input type="text" id="txtmedins" class="form-control mb-4" placeholder="Num in Weeks">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Patient Info Managment System</title>
+  
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+ 
+</head>
 
-<div class="text-center">
-<input type="button" id="but1" class="btn" value="Add Parameters" onClick="ins();">
+<body>
+
+
+  <form name="form1" class=" border border-light p-5">
+
+ 
+  <div class="row">
+    <div class="col-md-3 form-group">
+       <label for="txtcityins">Medication/Test:</label>
+    <input type="text" id="txtnameins" class="form-control" placeholder="Medication/Test"> 
+
 </div>
+  <div class="col-md-3 form-group">
+    <label for="txtcityins">Frequency:</label>
+  
+<input type="text" id="txtcityins" class="form-control" placeholder="Frequency"> 
+ 
+  </div>
+  <div class="col-md-3 form-group">
+     <label for="txtcityins">Number in weeks/days:</label>
+    <input type="text" id="txtmedins" class="form-control" placeholder="Number in weeks/days">
+</div>
+ 
+  <div class="col-md-2 form-group">
+  <label for="created_at_lt">&nbsp;</label>
+<input type="button" id="but1" class="btn bt" value="Add Parameters" onClick="ins();">  
+  </div>
+
+  </div>  
+ 
+
+
+
    
 </form>
+
+<!-- Default form login -->
+
 <!-- Default form login -->
 
 
 
 <div id="disp_data"></div>
 
- <button onclick="goBack()">Go Back</button>
+ <div class="text-center"><button class="btn bt" onclick="goBack()">Go Back</button></div> 
     <script type="text/javascript">
 
   function goBack() {
@@ -34,6 +72,10 @@ $_SESSION['p_date'] = $p_date;
 }
 </script>
 <style type="text/css">
+.bt{
+  margin-top: 30px;
+}
+   
    
     
     .tables{
@@ -138,3 +180,7 @@ document.getElementById("txtmedins").value="";
 }
 </script>
 
+ 
+</body>
+
+</html>

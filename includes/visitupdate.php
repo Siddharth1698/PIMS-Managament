@@ -81,8 +81,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
   
-
-<button  class="btn"> <a href="<?php  echo "investigation/index.php?user_id=$user_id&p_date=$p_date"; ?>" class="btn btn-lg btn-success" >Investigation Parameters</a> </button>
+<a href="<?php  echo "investigation/index.php?user_id=$user_id&p_date=$p_date"; ?>" class="btn" >Investigation Parameters</a>
 
 
 <table class="table table-bordered">
@@ -123,22 +122,25 @@ $select_user_query = mysqli_query($connection, $sql);
 }
 
     ?>
-    
+
   </tbody>
 </table>
 
-     
-   
+   <div class="form-inline">
+   <div class="form-group "> <pre>   </pre>
+        <label for="ge">General Examination:</label>
+     <textarea type="text" name="ge" value= "" rows="6" cols="50" class="form-control" id="ge" placeholder="General Examination"><?php  if($flag==1){ echo "$ge";}  ?></textarea>
+    </div>
+     <div class="form-group "> <pre>       </pre>
 
-     <div class="form-group">
-        <label for="ge">General Examination: </label>
-        <textarea type="text" name="ge" value= "" rows="6" class="form-control" id="ge" placeholder="General Examination"><?php  if($flag==1){ echo "$ge";}  ?></textarea>
-    </div>
-     <div class="form-group">
         <label for="se">System Examination: </label>
-        <textarea type="text" name="se" rows="6" value= "" class="form-control" id="se" placeholder="System Examination"><?php  if($flag==1){ echo "$se";}  ?></textarea>
-    </div>
-     
+        <textarea type="text" name="se" rows="6" value= "" cols="50" class="form-control" id="se" placeholder="System Examination"><?php  if($flag==1){ echo "$se";}  ?></textarea>
+    
+     </div>
+
+
+</div>
+    
 
      
     <div class="form-group">
@@ -150,7 +152,7 @@ $select_user_query = mysqli_query($connection, $sql);
     </div>
 
 
-    <button  class="btn"> <a href="<?php  echo "medication/index.php?user_id=$user_id&p_date=$p_date"; ?>" class="btn btn-lg btn-success" >Medication</a> </button>
+     <a href="<?php  echo "medication/index.php?user_id=$user_id&p_date=$p_date"; ?>" class="btn" >Medication</a> 
 
 
     <table class="table table-bordered">
