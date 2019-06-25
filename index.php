@@ -45,13 +45,13 @@ Patient Information Managment System  </span>
 
             <!-- Name -->
             <div class="md-form mt-3">
-                <input type="text" name="username" id="username" class="form-control">
+                <input type="text" name="username" id="username" class="form-control" required>
                 <label for="username">Name</label>
             </div>
 
             <!-- E-mai -->
             <div class="md-form">
-                <input type="password" name="password" id="password" class="form-control">
+                <input type="password" name="password" id="password" class="form-control" required>
                 <label for="password">Password</label>
             </div>
 

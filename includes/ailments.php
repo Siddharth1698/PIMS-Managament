@@ -9,7 +9,7 @@ $_SESSION['user_id'] = $user_id;
 <form name="form1" class="text-center border border-light p-5">
 	
 
-    <input type="text" id="txtnameins" class="form-control mb-4" placeholder="Ailment">
+    <input type="text" id="txtnameins" class="form-control mb-4" placeholder="Ailment" required>
 <input type="text" id="txtcityins" class="form-control mb-4" placeholder="Description">
 <div class="text-center">
 <input type="button" id="but1" class="btn" value="Add Ailment" onClick="ins();">
