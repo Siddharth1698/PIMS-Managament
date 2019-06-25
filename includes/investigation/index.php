@@ -9,16 +9,67 @@ $_SESSION['p_date'] = $p_date;
 ?>
 <!-- Default form login -->
 <form name="form1" class="text-center border border-light p-5">
-	
 
-    <input type="text" id="txtnameins" class="form-control mb-4" placeholder="Investigation Parameters" list="param">
-    <datalist id="param">
-  <option value="Internet Explorer">
-  <option value="Firefox">
-  <option value="Chrome">
-  <option value="Opera">
-  <option value="Safari">
-</datalist>
+  <style type="text/css">
+    option:nth-child(2), option:nth-child(11), option:nth-child(21), option:nth-child(30), option:nth-child(37) {
+    font-weight:bold;
+    font-size: 15px;
+}
+  </style>
+	
+  <select type="text" id="txtnameins" class="form-control mb-4" placeholder="Investigation Parameters" list="param">
+
+  <option value="Selct an option" selected disabled>Investigation Parameters</option>
+  <option value="CBC" disabled="">CBC</option>
+
+
+
+
+<option value="Hb (gm%)">Hb (gm%)</option>
+<option value="TC">TC</option>
+<option value="DC_P (%)">DC_P (%)</option>
+<option value="DC_L (%)">DC_L (%)</option>
+<option value="DC_E (%)">DC_E (%)</option>
+<option value="ESR (mm/hr)">ESR (mm/hr)</option>
+<option value="PCV (%)">PCV (%)</option>
+<option value="Platelet Count (Million)">Platelet Count (Million)</option>
+
+
+<option disabled value="LFT">LFT</option>
+<option value="Billirubin(T) (mg%)">Billirubin(T) (mg%)</option>
+<option value="Direct (mg%)">Direct (mg%)</option>
+<option value="Indirect (mg%)">Indirect (mg%)</option>
+<option value="SGOT (IU/L)">SGOT (IU/L)</option>
+<option value="SGPT (IU/L)">SGPT (IU/L)</option>
+<option value="Protein(T) (gm%)">Protein(T) (gm%)</option>
+<option value="Albumin (gm%)">Albumin (gm%)</option>
+<option value="Globulin (gm%)">Globulin (gm%)</option>
+<option value="Alk'ptase (lu/l)">Alk'ptase (lu/l)</option>
+
+<option disabled value="Other Blood">Other Blood</option>
+<option value="PT Value (sec)">PT Value (sec)</option>
+<option value="Control (sec)">Control (sec)</option>
+<option value="INR Value">INR Value</option>
+<option value="RBS (mg%">RBS (mg%)</option>
+<option value="Urea (mg%)">Urea (mg%)</option>
+<option value="Creatinine (mg%)">Creatinine (mg%)</option>
+<option value="NA+ (mEq/L)">NA+ (mEq/L)</option>
+<option value="K+ (mEq/L)">K+ (mEq/L)</option>
+
+<option disabled value="Urine Analysis">Urine Analysis</option>
+<option value="U Protein">U Protein</option>
+<option value="U Sugar)">U Sugar</option>
+<option value="Puscells (/hpf)">Puscells (/hpf)</option>
+<option value="RBC (/hpf)">RBC (/hpf)</option>
+ <option value="U Epi cells (/hpf)"> U Epi cells (/hpf)</option>
+<option value="U Urates">U Urates</option>
+
+<option disabled value="Others">Others</option>
+<option value="Ultrasound">Ultrasound</option>
+<option value="Endoscopy">Endoscopy</option>
+<option value="Others">Others</option>
+</select>
+
 <textarea id="txtcityins" class="form-control mb-4" placeholder="Description"></textarea>
 <div class="text-center">
 <input type="button" id="but1" class="btn" value="Add Parameters" onClick="ins();">

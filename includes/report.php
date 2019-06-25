@@ -203,25 +203,7 @@ $select_user_query = mysqli_query($connection, $sql);
     ?>
 
 
-<p>&nbsp;</p>
-<table>
-<tbody>
-<tr>
-<td>
-<p><span style="font-weight: 400;">SGOT = </span></p>
-</td>
-<td>
-<p><span style="font-weight: 400;">SGPT = </span></p>
-</td>
-</tr>
-<tr>
-<td>
-<p><span style="font-weight: 400;">INR = </span></p>
-</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
+
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Final Diagnosis</span><span style="font-weight: 400;">:</span></p>
 <p><span style="font-weight: 400;"><?php echo "$fd";  ?></span></p>
