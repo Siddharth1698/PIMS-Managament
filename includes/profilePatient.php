@@ -31,6 +31,10 @@ $select_user_query = mysqli_query($connection, $sql);
 
   
  }
+  $llname = $lname;
+
+
+
 
 if($user_uniqueid == ''){
     
@@ -130,8 +134,8 @@ $user_uniqueid = $uniquekey;
             <div class="row">
                 <div class="col">
                   
-                        <label for="firstname" >First Name:</label>
-                        <input type="text" id="firstname" name="firstname"  value="<?php echo "$fname"; ?>" class="form-control">
+                        <label for="firstname" >First Name: </label>
+                        <input type="text" id="firstname" name="firstname"  value="<?php echo "$fname"; ?>" class="form-control" readonly="readonly">
 
                         <input type="hidden" name="user_id" value="<?php echo "$user_id"; ?>">
                         
@@ -140,15 +144,15 @@ $user_uniqueid = $uniquekey;
                 <div class="col">
                    
                     <!-- Last name -->
-                        <label for="lastname">Last Name:</label>
-                        <input type="text" id="lastname" name="lastname" value="<?php echo "$lname"; ?>" class="form-control">
+                        <label for="lastname">Last Name: </label>
+                        <input type="text" id="lastname" name="lastname" value="<?php echo "$llname"; ?>" class="form-control" readonly="readonly">
                    
                 </div>
                 <div class="col">
                     
                     <!-- Last name -->
                     <label for="uniqueid">Unique Id:</label>
-                        <input type="text" id="uniqueid" name="uniqueid"  value="<?php echo "$user_uniqueid"; ?>" class="form-control" disabled>
+                        <input type="text" id="uniqueid" name="uniqueid"  value="<?php echo "$user_uniqueid"; ?>" class="form-control" readonly="readonly">
                  
                 </div>
                 </div>
@@ -213,8 +217,8 @@ $user_uniqueid = $uniquekey;
             <label for="dob">Date of Birth(mm/dd/yyyy):</label>
 
             
-            
-              <input  name="dob" value="<?php echo "$dob"; ?>"  type="date" class="form-control">
+             
+              <input  name="dob" value="<?php echo "$dob"; ?>"  type="date" class="form-control" readonly="readonly">
 
           </div>
 

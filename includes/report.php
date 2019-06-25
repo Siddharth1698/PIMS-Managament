@@ -189,7 +189,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 ?><tr>
-      <th scope="row"><?php echo "$i"; ?></th>
+      <th scope="row"><?php echo "$i"; echo "."; ?></th>
       <td><?php echo "$inname";  ?></td>
       <td><?php echo "$indet";  ?></td>
       <br>
@@ -225,7 +225,7 @@ $select_user_query = mysqli_query($connection, $sql);
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Final Diagnosis</span><span style="font-weight: 400;">:</span></p>
 <p><span style="font-weight: 400;"><?php echo "$fd";  ?></span></p>
-<p><br /><br /><br /><br /><br /></p>
+<p><br /></p>
 <p><span style="font-weight: 400;">Medications</span><span style="font-weight: 400;">:</span></p>
 
 <?php
@@ -246,7 +246,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 ?><tr>
-      <th scope="row"><?php echo "$i"; ?></th>
+      <th scope="row"><?php echo "$i"; echo "."; ?></th>
       <td><?php echo "$inname";  ?></td>
       <td><?php echo "$indet";  echo " "; echo "for"; ?></td>
        <td><?php echo "$inmed"; echo " "; echo "weeks"; ?></td>  <br>
