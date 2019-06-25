@@ -128,7 +128,7 @@ $user_uniqueid = $uniquekey;
 <br>
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
-        <!-- Form -->
+
 <form action="detailsupdate.php?admin_id=<?php  echo "$aid";  ?>&p_date=<?php echo "$p_date";  ?>&flag=<?php  echo "$flag";  ?>&post_id=<?php echo "$post_id" ; ?>" method="post">
 
             <div class="row">

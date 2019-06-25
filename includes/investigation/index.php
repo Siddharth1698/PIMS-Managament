@@ -23,8 +23,8 @@ $_SESSION['p_date'] = $p_date;
 <!-- ignore those br, just for stackoverflow full page view -->
 </head>
 
-<body>
-
+<body><br>
+<div class="text-center"><h6>Investigation Parameters</h6></div>
 <form name="form1" class=" border border-light p-5">
 
   <style type="text/css">
