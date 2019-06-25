@@ -26,8 +26,8 @@ echo "<tr>";
 <div class="">
 
 <?php
-echo "<td>"; ?><h5><div  id="name<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></div></h5><?php  echo "</td>"; 
-echo "<td>"; ?><h6><div style="" id="city<?php echo $row["id"]; ?>"><?php echo $row["detail"]; ?></div></h6><?php  echo "</td>";
+echo "<td>"; ?><p><div  id="name<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></div></p><?php  echo "</td>"; 
+echo "<td>"; ?><p><div style="" id="city<?php echo $row["id"]; ?>"><?php echo $row["detail"]; ?></div></p><?php  echo "</td>";
 ?><td>
 <input type="button" class="btn" id="<?php echo $row["id"]; ?>" name="<?php echo $row["id"]; ?>" value="edit" onClick="aa(this.id)"> </td>
 <?php

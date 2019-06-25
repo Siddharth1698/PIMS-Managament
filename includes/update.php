@@ -25,7 +25,7 @@ echo "<tr>";
 <div class="">
 
 <?php
-echo "<td>"; ?><h5><div  id="name<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></div></h5><?php  echo "</td>"; 
+echo "<td>"; ?><h6><div  id="name<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></div></h6><?php  echo "</td>"; 
 echo "<td>"; ?><h6><div style="" id="city<?php echo $row["id"]; ?>"><?php echo $row["detail"]; ?></div></h6><?php  echo "</td>";
 ?><td>
 <input type="button" class="btn" id="<?php echo $row["id"]; ?>" name="<?php echo $row["id"]; ?>" value="edit" onClick="aa(this.id)"> </td>
@@ -88,3 +88,8 @@ $res=mysqli_query($link,"insert into table1 values('','$user_id','$nm','$ct')");
 }
 
 ?>
+<style type="text/css">
+	h6{
+		font-size: 16px;
+	}
+</style>
