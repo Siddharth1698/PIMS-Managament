@@ -33,9 +33,9 @@ $quersel = "SELECT * FROM `users` WHERE `user_id` LIKE '$user_id'";
 
        mysqli_query($connection, $query);
 
+header("location:javascript://history.go(-1)");
 
-
-       header('Location: profilePatient.php?user_id='.$user_id.'&flag='.$flag.'&post_id='.$post_id.'&admin_id='.$admin_id.'&p_date='.$p_date);
+      // header('Location: profilePatient.php?user_id='.$user_id.'&flag='.$flag.'&post_id='.$post_id.'&admin_id='.$admin_id.'&p_date='.$p_date);
 
    
 

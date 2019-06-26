@@ -27,6 +27,13 @@ if (isset($_POST['up'])) {
   $next_appointment = mysqli_real_escape_string($connection, $_POST['next_appointment']);
 
 
+  if ($fcheck=='yes') {
+    
+  }else{
+    $fcheck= 0;
+  }
+
+
  
 
   
