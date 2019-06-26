@@ -35,6 +35,8 @@ while($row = mysqli_fetch_array($select_user_query)){
   $fcheck = $row['fcheck'];
   $comments = $row['comments'];
   $next_appointment = $row['next_appointment'];
+
+   $dater = DateTime::createFromFormat('Y-m-d', "$next_appointment"); 
  }
  ?>
 
@@ -247,7 +249,7 @@ $select_user_query = mysqli_query($connection, $sql);
 <p><span style="font-weight: 400;">Comments</span><span style="font-weight: 400;">:</span></p>
 <p><span style="font-weight: 400;"><?php echo "$comments";  ?></span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php echo "$next_appointment";  ?></span></p>
+<p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php echo $dater->format('d-m-Y'); ?></span></p>
 <br>
 </div>
 

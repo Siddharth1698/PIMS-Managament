@@ -147,6 +147,7 @@ $admin_id = $_GET['admin_id'];
             </div>
  <!-- E-mail --><div class="col">
             <label for="dob">Date of Birth(mm/dd/yyyy): *</label>
+
              <input type="date" id="date" name="dob"  class="form-control" aria-describedby="text" required>
 
            
