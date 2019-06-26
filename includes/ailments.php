@@ -8,8 +8,9 @@ $_SESSION['user_id'] = $user_id;
 <!-- Default form login -->
 <form name="form1" class="text-center border border-light p-5">
 	
-
+<label for="txtnameins">Ailment:</label>
     <input type="text" id="txtnameins" class="form-control mb-4" placeholder="Ailment">
+    <label for="txtcityins">Description:</label>
 <input type="text" id="txtcityins" class="form-control mb-4" placeholder="Description">
 <div class="text-center">
 <input type="button" id="but1" class="btn" value="Add Ailment" onClick="ins();">

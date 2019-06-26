@@ -6,7 +6,7 @@ $post_id = $_GET['post_id'];
  $admin_id=$_GET['admin_id'];
  $p_date = $_GET["p_date"];
 
-
+$fcheck = '';
 
 
 if($flag == 1 && $post_id!=0){
@@ -154,7 +154,7 @@ $select_user_query = mysqli_query($connection, $sql);
     <div class="form-group">
         <label for="fd">Final Diganosis: </label>
         <textarea type="text" name="fd" value= "" rows="6" class="form-control" id="fd" placeholder="Final Diganosis"><?php  if($flag==1){ echo "$fd";}  ?></textarea>
-        <input type="hidden" name="field1"  >
+        <input type="hidden" name="field1" >
 <input type="checkbox" name="field1" value="yes" <?php echo ($fcheck=='yes' ? 'checked' : '');?>>Please tick the checkbox to include in prescription
 <br>
     </div>
