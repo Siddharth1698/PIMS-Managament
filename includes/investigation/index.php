@@ -30,7 +30,7 @@ $_SESSION['p_date'] = $p_date;
   <style type="text/css">
     option:nth-child(2), option:nth-child(11), option:nth-child(21), option:nth-child(30), option:nth-child(37) {
     font-weight:bold;
-    font-size: 13px;
+    font-size: 16px;
 }
   </style>
   <div class="row">

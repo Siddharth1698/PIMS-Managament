@@ -20,7 +20,7 @@ $i =0 ;
   <thead class="blue white-text">
     <tr>
       <th scope="col">Sl.No</th>
-      <th scope="col">Visit History</th>
+      <th scope="col">Visit Number</th>
       <th scope="col">Print Prescription</th>
 
     </tr>

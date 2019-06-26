@@ -38,7 +38,6 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 
-
 <div class="card">
 
     <h5 class="card-header info-color white-text text-center py-4">
@@ -83,13 +82,21 @@ $select_user_query = mysqli_query($connection, $sql);
   
 <a href="<?php  echo "investigation/index.php?user_id=$user_id&p_date=$p_date"; ?>" class="btn" >Investigation Parameters</a>
 
+<style type="text/css">
+  .table td.fit, 
+.table th.fit {
+    white-space: nowrap;
+    width: 1%;
+}
+</style>
 
-<table class="table table-bordered">
-  <thead>
+
+<table style="white-space: nowrap; width: 1%;" class="table">
+  <thead class="blue white-text">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Investigation</th>
-      <th scope="col">Details</th>
+      <th scope="col">Sl.no</th>
+      <th scope="col">Investigation Parameters</th>
+      <th scope="col">Values</th>
       
     </tr>
   </thead>
@@ -125,6 +132,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
   </tbody>
 </table>
+<hr>
 
    <div class="form-inline">
    <div class="form-group "> <pre>   </pre>
@@ -155,13 +163,13 @@ $select_user_query = mysqli_query($connection, $sql);
      <a href="<?php  echo "medication/index.php?user_id=$user_id&p_date=$p_date"; ?>" class="btn" >Medication</a> 
 
 
-    <table class="table table-bordered">
-  <thead>
+<table  style="white-space: nowrap; width: 1%;" class="table">
+  <thead class="blue white-text">
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">Sl.No</th>
       <th scope="col">Med/Test</th>
       <th scope="col">Frequency</th>
-      <th scope="col">Weeks</th>
+      <th scope="col">Duration</th>
       
     </tr>
   </thead>
@@ -201,7 +209,7 @@ $select_user_query = mysqli_query($connection, $sql);
   </tbody>
 </table>
 
-
+<hr>
     
 
       <div class="form-group">

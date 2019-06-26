@@ -2,6 +2,17 @@
 $user_id = $_GET['user_id'];
 $admin_id = $_GET['admin_id'];
 ?>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+        localStorage.setItem('activeTab', $(e.target).attr('href'));
+    });
+    var activeTab = localStorage.getItem('activeTab');
+    if(activeTab){
+        $('#myTab a[href="' + activeTab + '"]').tab('show');
+    }
+});
+</script>
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item"> 
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
@@ -15,7 +26,7 @@ $admin_id = $_GET['admin_id'];
 
   <li class="nav-item">
     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-      aria-selected="false">Visit History</a>
+      aria-selected="false">Visit Number</a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
