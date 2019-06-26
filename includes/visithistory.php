@@ -19,9 +19,9 @@ $i =0 ;
 <table class="table">
   <thead class="blue white-text">
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">Sl.No</th>
       <th scope="col">Visit History</th>
-      <th scope="col"></th>
+      <th scope="col">Print Prescription</th>
 
     </tr>
   </thead>
@@ -35,8 +35,8 @@ while($row = mysqli_fetch_array($select_user_query)){
 
       ?><tr>
       <th scope="row"><?php echo "$rowcount";  ?></th>
-          <td><a href="report.php?user_id=<?php echo $uid; ?>&current_appointment=<?php echo $current_appointment; ?>"> <?php echo "$current_appointment";  ?></a></td>
-         <td> <a href="prescription.php?user_id=<?php echo "$user_id"?>&flag=0&post_id=0&admin_id=<?php echo "$admin_id" ?>&p_date=<?php echo "$p_date" ?>&current_appointment=<?php echo "$current_appointment"?>&prstatus=1 ">Prescription</a> </td>
+          <td><a style="text-decoration: none; border-bottom: 1px solid blue;" href="report.php?user_id=<?php echo $uid; ?>&current_appointment=<?php echo $current_appointment; ?>"> <?php echo "$current_appointment";  ?></a></td>
+         <td> <a style="text-decoration: none; border-bottom: 1px solid blue;" href="prescription.php?user_id=<?php echo "$user_id"?>&flag=0&post_id=0&admin_id=<?php echo "$admin_id" ?>&p_date=<?php echo "$p_date" ?>&current_appointment=<?php echo "$current_appointment"?>&prstatus=1 ">Prescription</a> </td>
 
           </tr>  
      <?php   $rowcount = $rowcount - 1;
