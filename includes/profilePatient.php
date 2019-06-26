@@ -202,12 +202,8 @@ $user_uniqueid = $uniquekey;
              
                   <!-- Basic dropdown -->
                   <label for="gender">Gender:</label>
-<select class="browser-default custom-select" name="gender">
-  <option selected><?php echo "$gender"; ?></option>
-  <option value="Male">Male</option>
-  <option value="Female">Female</option>
+                  <input type="text" value="<?php echo "$gender"; ?>" name="gender"  readonly="readonly" class="form-control">
   
-</select>
   
 
 <!-- Basic dropdown -->
