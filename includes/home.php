@@ -160,7 +160,7 @@ if ($result->num_rows > 0) {
 
       <td><?php echo $fname; ?></td>
       <td><?php echo $lname; ?></td>
-      <td><?php echo $dater->format('d-m-Y'); ?></td>
+      <td><?php echo $dob ?></td>
 
        <td><?php echo $age; ?></td>
       <td><?php echo $current_appointment; ?></td>

@@ -211,7 +211,16 @@ $select_user_query = mysqli_query($connection, $sql);
 
        <div class="form-group">
         <label for="pnv">Planned Next Visit: </label>
-        <input type="date" name="next_appointment" value= "<?php  if($flag==1){ echo "$next_appointment";}  ?>" class="form-control" id="pnv" placeholder="Planned Next Visit">
+
+<style type="text/css">
+  
+  .cole{
+    width: 180px;
+  }
+</style>
+
+        <input type="date"  name="next_appointment"  class="form-control cole" placeholder="Planned Next Visit" value= "<?php  if($flag==1){ echo "$next_appointment";}  ?>" id="datepicker" name="dob" class="form-control" size="30"/>  
+        
     </div>
    
    

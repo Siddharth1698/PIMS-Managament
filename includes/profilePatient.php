@@ -213,11 +213,11 @@ $user_uniqueid = $uniquekey;
 
             </div>
  <!-- E-mail --><div class="col">
-            <label for="dob">Date of Birth(mm/dd/yyyy):</label>
+            <label for="dob">Date of Birth:</label>
 
             
              
-              <input  name="dob" value="<?php echo $dater->format('d-m-Y'); ?>"  type="text" class="form-control" readonly="readonly">
+              <input  name="dob" value="<?php echo $dob ?>"  type="text" class="form-control" readonly="readonly">
 
           </div>
 

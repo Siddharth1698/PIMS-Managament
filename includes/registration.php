@@ -30,6 +30,18 @@ $admin_id = $_GET['admin_id'];
   <link rel="stylesheet" type="text/css" href="../css/registration.css">
         <script type="text/javascript" src="../js/addPatient.js"></script>
 
+ <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>  
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>  
+   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+
+   <script type="text/javascript">
+       $(function() {
+               $("#datepicker").datepicker({ dateFormat: "dd-mm-yy" }).val()
+       });
+   </script>
+
+
+
         <script src="item-ajax.js"></script>
 </head>
 
@@ -146,9 +158,9 @@ $admin_id = $_GET['admin_id'];
 
             </div>
  <!-- E-mail --><div class="col">
-            <label for="dob">Date of Birth(mm/dd/yyyy): *</label>
-
-             <input type="date" id="date" name="dob"  class="form-control" aria-describedby="text" required>
+            <label for="dob">Date of Birth: *</label>
+<input type="text" id="datepicker" name="dob" class="form-control" size="30"/>    
+            
 
            
             </div>
