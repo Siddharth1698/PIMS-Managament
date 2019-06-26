@@ -29,7 +29,8 @@ $select_user_query = mysqli_query($connection, $sql);
     $date_clicked = $row['user_date_clicked'];
 
 
-  
+   $dater = DateTime::createFromFormat('Y-m-d', "$dob"); 
+
  }
   $llname = $lname;
 
@@ -206,6 +207,8 @@ $user_uniqueid = $uniquekey;
   
   
 
+
+  
 <!-- Basic dropdown -->
 
             </div>
@@ -214,7 +217,7 @@ $user_uniqueid = $uniquekey;
 
             
              
-              <input  name="dob" value="<?php echo "$dob"; ?>"  type="date" class="form-control" readonly="readonly">
+              <input  name="dob" value="<?php echo $dater->format('d-m-Y'); ?>"  type="text" class="form-control" readonly="readonly">
 
           </div>
 
