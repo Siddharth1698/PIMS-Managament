@@ -233,7 +233,7 @@ $select_user_query = mysqli_query($connection, $sql);
       <th scope="row"><?php echo "$i"; echo "."; ?></th>
       <td><?php echo "$inname";  ?></td>
       <td><?php echo "$indet";  echo " "; echo "for"; ?></td>
-       <td><?php echo "$inmed"; echo " "; echo "weeks"; ?></td>  <br>
+       <td><?php echo "$inmed"; echo " "; ?></td>  <br>
       
     </tr>
 

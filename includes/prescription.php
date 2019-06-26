@@ -110,7 +110,7 @@ $select_user_query = mysqli_query($connection, $sql);
       <th scope="row"><?php echo "$i"; echo "."; ?></th>
       <td><?php echo "$inname";  ?></td>
       <td><?php echo "$indet"; echo " ";  echo "for"; ?></td>
-       <td><?php echo "$inmed";   echo " ";  echo "weeks"; ?></td>
+       <td><?php echo "$inmed";   echo " ";   ?></td>
       <br>
     </tr>
 
@@ -141,7 +141,7 @@ $select_user_query = mysqli_query($connection, $sql);
   $fcheck = $row['fcheck'];
   $comments = $row['comments'];
   $next_appointment = $row['next_appointment'];
-  
+
    $dater = DateTime::createFromFormat('Y-m-d', "$next_appointment"); 
  }
 
