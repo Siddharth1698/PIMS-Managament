@@ -79,7 +79,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 
-	<p><br /><br /><br /><br /><h4 style="text-align: center;">Prescription</h4><br /></p>
+	<p><h4 style="text-align: center;">Prescription</h4><br /></p>
 	<div class="man">
 <p><span style="font-weight: 400;">Date</span><span style="font-weight: 400;">: <?php  echo "$current_appointment";   ?> </span><em><span style="font-weight: 400;"></span></em></p>
 <p><br /><br /></p>
@@ -168,7 +168,12 @@ $select_user_query = mysqli_query($connection, $sql);
 
 <p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php echo $dater->format('d-m-Y'); ?></span></p></div>
 <p></p>
-
+<style type="text/css">
+  @media print {
+  @page { margin: 0; }
+  body { margin: 1.6cm; }
+}
+</style>
 </div>
 
 <br>
@@ -188,7 +193,7 @@ function printElem(divId) {
     var content = document.getElementById(divId).innerHTML;
     var mywindow = window.open('', 'Print');
     mywindow.document.write(content);
- mywindow.document.write('<html><head><title> Patient Information Manangment Sysytem</title>');
+ 
     
     mywindow.document.close();
     mywindow.focus()
