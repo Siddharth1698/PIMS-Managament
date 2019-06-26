@@ -145,17 +145,23 @@ if ($result->num_rows > 0) {
          $interval = $now->diff($date);
          $age = $interval->y;
 
+
+         $dater = DateTime::createFromFormat('Y-m-d', "$dob"); 
+         
+
         
 
 
     ?>
     <tr>
+ 
 
+      <th ><a style="text-decoration: none; border-bottom: 1px solid blue;" href="profilePatient.php?user_id=<?php echo $uid; ?>&flag=0&post_id=0&admin_id=<?php echo $admin_id; ?>&p_date=<?php echo $date_clicked; ?>"><?php  echo $uniqueid; ?></a></th>
 
-      <th><?php echo $uniqueid; ?></th>
-      <td><a href="profilePatient.php?user_id=<?php echo $uid; ?>&flag=0&post_id=0&admin_id=<?php echo $admin_id; ?>&p_date=<?php echo $date_clicked; ?>"><?php echo $fname; ?></a></td>
+      <td><?php echo $fname; ?></td>
       <td><?php echo $lname; ?></td>
-      <td><?php echo $dob; ?></td>
+      <td><?php echo $dater->format('d-m-Y'); ?></td>
+
        <td><?php echo $age; ?></td>
       <td><?php echo $current_appointment; ?></td>
       
