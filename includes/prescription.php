@@ -179,7 +179,18 @@ $select_user_query = mysqli_query($connection, $sql);
 <br>
 <div  style=" text-align: center;" class='no-print'>
 <button onclick="printElem('printthis')">Print</button>
+
+<?php if ($prstatus!=0) {
+  ?>
+<button class="btn" onclick="goBack()">Close</button>
+
+<?php }else{
+
+?>
+
 <button  ><a style="text-decoration: none; color: black;" href="profilePatient.php?user_id=<?php echo "$user_id" ?>&flag=0&post_id=0&admin_id=<?php echo "$admin_id" ?>&p_date=<?php echo "$date_clickeder" ?>">Close</a></button></div>
+<?php  }
+?>
 <br><br><br><br>
 </body>
 </html>
@@ -189,6 +200,10 @@ $select_user_query = mysqli_query($connection, $sql);
 
 <script type="text/javascript">
   
+  function goBack() {
+  window.history.back();
+}
+
 function printElem(divId) {
     var content = document.getElementById(divId).innerHTML;
     var mywindow = window.open('', 'Print');

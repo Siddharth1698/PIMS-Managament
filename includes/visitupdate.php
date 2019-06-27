@@ -135,18 +135,21 @@ $select_user_query = mysqli_query($connection, $sql);
 <hr>
 
    <div class="form-inline">
-   <div class="form-group "> <pre>   </pre>
-        <label for="ge">General Examination:</label>
-     <textarea type="text" name="ge" value= "" rows="6" cols="50" class="form-control" id="ge" placeholder="General Examination"><?php  if($flag==1){ echo "$ge";}  ?></textarea>
-    </div>
-     <div class="form-group "> <pre>       </pre>
+    <div class="row">
+       <div class="col-xs-6 col-md-6 col-sm-6 col-lg-5 form-group">
+    <label for="ge">General Examination:</label>
 
-        <label for="se">System Examination: </label>
-        <textarea type="text" name="se" rows="6" value= "" cols="50" class="form-control" id="se" placeholder="System Examination"><?php  if($flag==1){ echo "$se";}  ?></textarea>
+<textarea type="text" name="ge" value= "" rows="6" cols="50" class="form-control" id="ge" placeholder="General Examination"><?php  if($flag==1){ echo "$ge";}  ?></textarea></div>
+ 
+ <div class="col-xs-6 col-md-6 col-sm-6 col-lg-5 form-group">
     
-     </div>
+        <label for="se">System Examination: </label>
 
+  <textarea type="text" name="se" rows="6" value= "" cols="50" class="form-control" id="se" placeholder="System Examination"><?php  if($flag==1){ echo "$se";}  ?></textarea> </div>
 
+   
+
+</div>
 </div>
     
 
@@ -233,7 +236,7 @@ $select_user_query = mysqli_query($connection, $sql);
    
    
    <div class="text-center">
-    <input type="submit" value="Update" class="btn update" name="up" ></input>
+   <!--  <input type="submit" value="Update" class="btn update" name="up" ></input> -->
 
    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Final Submission</button>
         

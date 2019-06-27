@@ -37,7 +37,7 @@ if (isset($_POST['up'])) {
  
 
   
-    $query = "INSERT INTO `savedvisit` (`post_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`,`pd`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$pd','$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '2019-06-12');";
+    $query = "UPDATE `savedvisit` SET `user_id` = '$user_id', `complaints` = '$complaints', `bp1` = '$bp1', `bp2` = '$bp2', `pulse` = '$pulse', `pd` = '$pd', `ge` = '$ge', `se` = '$se', `fd` = '$fd', `fcheck` = '$fcheck', `comments` = '$comments', `next_appointment` = '$next_appointment' WHERE `savedvisit`.`post_id` = '0';";
   $result =  mysqli_query($connection, $query);
 
 
@@ -53,7 +53,8 @@ if (isset($_POST['up'])) {
 $p_date= $_GET["p_date"];
 
 
-  header('Location: profilePatient.php?user_id='.$user_id.'&flag=1&post_id='.$post_id.'&admin_id='.$admin_id.'&p_date='.$p_date);
+ // header('Location: profilePatient.php?user_id='.$user_id.'&flag=1&post_id='.$post_id.'&admin_id='.$admin_id.'&p_date='.$p_date);
+header("location:javascript://history.go(-1)");
 
 }
 
