@@ -28,6 +28,7 @@ $select_user_query = mysqli_query($connection, $sql);
 <html>
 <head>
 	<title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 	<style type="text/css">
@@ -166,7 +167,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
 ?>
 
-<p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php echo $dater->format('d-m-Y'); ?></span></p></div>
+<p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php echo $next_appointment; ?></span></p></div>
 <p></p>
 <style type="text/css">
   @media print {
@@ -177,8 +178,8 @@ $select_user_query = mysqli_query($connection, $sql);
 </div>
 
 <br>
-<div  style=" text-align: center;" class='no-print'>
-<button onclick="printElem('printthis')">Print</button>
+<div  style=" text-align: right; margin-right: 50px;"  class='no-print'>
+<button class="btn" onclick="printElem('printthis')">Print</button>
 
 <?php if ($prstatus!=0) {
   ?>
@@ -188,7 +189,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
 ?>
 
-<button  ><a style="text-decoration: none; color: black;" href="profilePatient.php?user_id=<?php echo "$user_id" ?>&flag=0&post_id=0&admin_id=<?php echo "$admin_id" ?>&p_date=<?php echo "$date_clickeder" ?>">Close</a></button></div>
+<button class="btn"  ><a style="text-decoration: none; color: black;" href="profilePatient.php?user_id=<?php echo "$user_id" ?>&flag=0&post_id=0&admin_id=<?php echo "$admin_id" ?>&p_date=<?php echo "$date_clickeder" ?>">Close</a></button></div>
 <?php  }
 ?>
 <br><br><br><br>

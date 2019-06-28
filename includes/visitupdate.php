@@ -251,7 +251,7 @@ $select_user_query = mysqli_query($connection, $sql);
     </div>
    
    
-   <div class="text-center">
+   <div  style="text-align: right;">
    <!--  <input type="submit" value="Update" class="btn update" name="up" ></input> -->
 
    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Final Submission</button>

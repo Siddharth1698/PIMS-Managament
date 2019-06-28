@@ -180,7 +180,7 @@ $admin_id = $_GET['admin_id'];
 <!-- Editable table -->
 <br>
             <br>
-            <div class="text-center">
+            <div style="text-align: right;">
  <input type="submit" value="Create Patient" class="btn" name="submit"></input>
 </div>
 <br>

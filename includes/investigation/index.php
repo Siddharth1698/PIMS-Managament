@@ -32,6 +32,10 @@ $_SESSION['p_date'] = $p_date;
     font-weight:bold;
     font-size: 16px;
 }
+
+button{
+
+}
   </style>
   <div class="row">
   <div class="col-md-4 form-group">
@@ -114,7 +118,7 @@ $_SESSION['p_date'] = $p_date;
 
 <div id="disp_data" ></div>
 
-<div class="text-center"><button class="btn" onclick="goBack()">Go Back</button></div> 
+<div style="text-align: right; margin-right: 50px;"><button class="btn " onclick="goBack()">Go Back</button></div> 
     <script type="text/javascript">
 
   function goBack() {

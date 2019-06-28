@@ -65,7 +65,7 @@ $_SESSION['p_date'] = $p_date;
 
 <div id="disp_data"></div>
 
- <div class="text-center"><button class="btn bt" onclick="goBack()">Go Back</button></div> 
+ <div style="text-align: right; margin-right: 50px;"><button class="btn bt" onclick="goBack()">Go Back</button></div> 
     <script type="text/javascript">
 
   function goBack() {

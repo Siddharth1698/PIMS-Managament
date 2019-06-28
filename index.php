@@ -57,7 +57,7 @@ Patient Information Managment System  </span>
 
             <!-- Sign in button -->
             <div style="text-align: right;">
-                          <button class="btn waves-effect" type="submit" name="login">Sign in </button>
+                          <button class="btn" type="submit" name="login">Sign in </button>
 
             </div>
 

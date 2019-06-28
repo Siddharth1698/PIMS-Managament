@@ -12,7 +12,7 @@ $_SESSION['user_id'] = $user_id;
     <input type="text" id="txtnameins" class="form-control mb-4" placeholder="Ailment">
     <label for="txtcityins">Description:</label>
 <input type="text" id="txtcityins" class="form-control mb-4" placeholder="Description">
-<div class="text-center">
+<div  style="text-align: right;"">
 <input type="button" id="but1" class="btn" value="Add Ailment" onClick="ins();">
 </div>
     

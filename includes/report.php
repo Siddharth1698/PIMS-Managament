@@ -251,18 +251,14 @@ $select_user_query = mysqli_query($connection, $sql);
 <p>&nbsp;</p>
 <?php  
 
-if ($next_appointment == "0000-00-00") {
 
-}else{
 
 ?>
-<p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php echo $dater->format('d-m-Y'); ?></span></p>
+<p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php echo $next_appointment; ?></span></p>
 <br>
 </div>
 
-        <?php }
-        ?>
-
+     
 
 
 
@@ -270,8 +266,10 @@ if ($next_appointment == "0000-00-00") {
 
 <br>
 <div  style=" text-align: center;" class='no-print'>
-<button onclick="printElem('printthis')">Print</button>
-<button onclick="goBack()">Close</button></div>
+  <div style="text-align: right; margin-right: 50px; "><button class="btn" onclick="printElem('printthis')">Print</button>
+
+<button class="btn"  onclick="goBack()">Close</button></div>
+</div>
 <br><br><br><br>
 </body>
 </html>
