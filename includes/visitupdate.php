@@ -230,7 +230,23 @@ $select_user_query = mysqli_query($connection, $sql);
   }
 </style>
 
-        <input type="date"  name="next_appointment"  class="form-control cole" placeholder="Planned Next Visit" value= "<?php  if($flag==1){ echo "$next_appointment";}  ?>" id="datepicker" name="dob" class="form-control" size="30"/>  
+
+ <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>  
+   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+  
+ 
+
+
+ <script type="text/javascript">
+       $(function() {
+               $("#datepicker").datepicker({ dateFormat: "dd-mm-yy" }).val()
+       });
+   </script>
+
+        <input type="text"  name="next_appointment"  id="datepicker"  class="form-control cole" placeholder="Planned Next Visit" value= "<?php  if($flag==1){ echo "$next_appointment";}  ?>" size="30"/> 
+
         
     </div>
    
