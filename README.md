@@ -22,5 +22,5 @@ FOR SETUP:
 
 7. OPEN http://localhost/THE_FOLDER_NAME_WHICH_YOU_CREATED_EARLIER/.
 
-8. LOGIN WITH : username: sidd and password: iamgroot .
+8. LOGIN WITH : DM me for details
   
