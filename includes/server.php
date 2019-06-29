@@ -57,8 +57,8 @@ if (isset($_POST['submit'])) {
  while($row = mysqli_fetch_array($select_user_query)){
     $user_id = $row['user_id'];
  }
-
-header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id.'');
+ $date_clicked = time();
+header('Location: profilePatient.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id.'&p_date='.$date_clicked.'');
    
 
     }
