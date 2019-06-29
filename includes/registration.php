@@ -116,13 +116,13 @@ $admin_id = $_GET['admin_id'];
 
             <div class="row">
                  <div class="col">
-        <label for="Height">Height:</label>
+        <label for="Height">Height(Cm):</label>
                 <input type="number" id="Height" name="height"   class="form-control">
                         
             
           </div>
                  <div class="col">
-            <label for="Weight">Weight:</label>
+            <label for="Weight">Weight(Kg):</label>
                 <input type="number" id="Weight" name="weight" class="form-control">
                         
                          </div>
