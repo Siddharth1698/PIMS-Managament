@@ -19,7 +19,7 @@ if (empty($_GET)) {
 }
 
 
-$sql = "SELECT user_fname, user_lname, user_dob, user_uniqueid,user_id,current_appointment FROM users ORDER BY `user_id` DESC";
+$sql = "SELECT user_fname, user_lname, user_dob, user_uniqueid,user_id,current_appointment FROM users WHERE admin_id = '$admin_id' ORDER BY `user_id` DESC";
 $result = $connection->query($sql);
 
 

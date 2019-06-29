@@ -11,7 +11,7 @@ ob_start();
  
 // Accessing session data
 $uid = $_GET['user_id'];
-$sql = "SELECT * FROM users WHERE user_id='$uid'";
+$sql = "SELECT * FROM users WHERE user_id='$uid' ";
 $select_user_query = mysqli_query($connection, $sql);
 
  while($row = mysqli_fetch_array($select_user_query)){

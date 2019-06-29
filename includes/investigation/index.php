@@ -18,8 +18,12 @@ $_SESSION['p_date'] = $p_date;
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Patient Info Managment System</title>
   
- 
+   <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="../css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  
 <!-- ignore those br, just for stackoverflow full page view -->
 </head>
 
@@ -98,7 +102,7 @@ button{
   <div class="col-md-4 form-group">
     <label for="txtcityins">Value:</label>
 
-<input type="number" id="txtcityins" class="form-control" placeholder="Value">  </div>
+<input type="number" id="txtcityins" class="form-control" placeholder="Value" >  </div>
  
   <div class="col-md-2 form-group">
   <label for="created_at_lt">&nbsp;</label>
