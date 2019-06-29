@@ -26,7 +26,7 @@ $(document).ready(function(){
 
   <li class="nav-item">
     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-      aria-selected="false">Visit Number</a>
+      aria-selected="false">Visit History</a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
