@@ -102,7 +102,7 @@ button{
   <div class="col-md-4 form-group">
     <label for="txtcityins">Value:</label>
 
-<input type="number" id="txtcityins" class="form-control" placeholder="Value" >  </div>
+<input type="text" id="txtcityins" class="form-control" placeholder="Value" >  </div>
  
   <div class="col-md-2 form-group">
   <label for="created_at_lt">&nbsp;</label>
