@@ -28,6 +28,7 @@ $select_user_query = mysqli_query($connection, $sql);
 <html>
 <head>
 	<title></title>
+
   
   <link href="../css/mdb.min.css" rel="stylesheet">
   <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -40,6 +41,7 @@ $select_user_query = mysqli_query($connection, $sql);
 			}
 
 	</style>
+
 
 
 <?php
@@ -230,10 +232,18 @@ $select_user_query = mysqli_query($connection, $sql);
 </body>
 </html>
 
-
+<script type="text/javascript">
+history.pushState(null, null, '<?php echo $_SERVER["REQUEST_URI"]; ?>');
+window.addEventListener('popstate', function(event) {
+  window.location.href="profilePatient.php?user_id=<?php echo "$user_id" ?>&flag=0&post_id=0&admin_id=<?php echo "$admin_id" ?>&p_date=<?php echo "$date_clickeder" ?>";
+   
+});
+</script>
 
 
 <script type="text/javascript">
+
+
   
   function goBack() {
   window.history.back();

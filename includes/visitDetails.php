@@ -5,9 +5,8 @@ include "db.php";
 
  $admin_id = $_GET['admin_id'];
  $user_id = $_SESSION['user_id'] ;
-
  
-
+ 
 
 
 
