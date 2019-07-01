@@ -80,6 +80,33 @@ $select_user_query = mysqli_query($connection, $sql);
 
   <div id="printthis">
 
+<?php
+
+$sql = "SELECT * FROM visit WHERE current_appointment='$current_appointment'";
+$select_user_query = mysqli_query($connection, $sql);
+
+ while($row = mysqli_fetch_array($select_user_query)){
+    $user_id = $row['user_id'];
+ 
+  $complaints = $row['complaints'];
+  $bp1 = $row['bp1'];
+  $bp2 = $row['bp2'];
+  $pulse = $row['pulse'];
+  $pd = $row['pd'];
+  $ge = $row['ge'];
+  $se = $row['se'];
+  $fd = $row['fd'];
+  $fcheck = $row['fcheck'];
+  $comments = $row['comments'];
+  $next_appointment = $row['next_appointment'];
+
+   $dater = DateTime::createFromFormat('Y-m-d', "$next_appointment"); 
+ }
+
+
+
+?>
+
 
 
 	<p><h4 style="text-align: center;">Prescription</h4><br /></p>
@@ -89,7 +116,23 @@ $select_user_query = mysqli_query($connection, $sql);
 <p><span style="font-weight: 400;">Unique ID</span><span style="font-weight: 400;">: <?php echo "$user_uniqueid";  ?></span></p>
 <p><span style="font-weight: 400;">Name</span><span style="font-weight: 400;">: <?php echo "$fname"; echo " "; echo "$lname";  ?></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: 400;">Age</span><span style="font-weight: 400;">: <?php echo "$age";  ?> Years&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-weight: 400;">Gender</span><span style="font-weight: 400;">: <?php echo "$gender";  ?></span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Medications</span><span style="font-weight: 400;">:</span></p>
+<br>
+<?php
+   
+   if ($fcheck == "yes") {
+    ?>
+<p><span style="font-weight: 400;">Diagnosis: <?php echo "$fd";  ?></span></p>
+
+
+
+
+    <?php
+
+   }
+
+?>
+
+
 
 
       <?php
@@ -109,7 +152,9 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 
-?><tr>
+?>
+<p><span style="font-weight: 400;">Medications</span><span style="font-weight: 400;">:</span></p>
+<tr>
       <th scope="row"><?php echo "$i"; echo "."; ?></th>
       <td><?php echo "$inname";  ?></td>
       <td><?php echo "$indet"; echo " ";  echo "for"; ?></td>
@@ -154,20 +199,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 
-<?php
-   
-   if ($fcheck == "yes") {
-   	?>
-<p><span style="font-weight: 400;">Final Diagnosis</span><span style="font-weight: 400;">: </span><span style="font-weight: 400;"><p><?php echo "$fd";  ?></p></span><span style="font-weight: 400;"> &nbsp;</span></p>
-<p>&nbsp;</p>
-
-
-
-   	<?php
-
-   }
-
-?>
+<br>
 
 <p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php echo $next_appointment; ?></span></p></div>
 <p></p>

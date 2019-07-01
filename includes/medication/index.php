@@ -24,13 +24,13 @@ $_SESSION['p_date'] = $p_date;
   <div class="text-center"><h6>Medication/Test</h6></div>
 
 
-  <form name="form1" class=" border border-light p-5">
+  <form name="form1" class=" border border-light p-5" >
 
  
   <div class="row">
     <div class="col-md-3 form-group">
        <label for="txtcityins">Medication/Test:</label>
-    <input type="text" id="txtnameins" class="form-control" placeholder="Medication/Test"> 
+    <input type="text" id="txtnameins" class="form-control" placeholder="Medication/Test" autocomplete="on"> 
 
 </div>
   <div class="col-md-3 form-group">
