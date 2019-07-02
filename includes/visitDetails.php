@@ -85,13 +85,13 @@ if (isset($_POST['sub'])) {
   $current_appointment =  date('d-m-Y H:i');
 
 
-
   
-    $query = "INSERT INTO `visit` (`visit_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`, `pd`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$pd', '$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '$current_appointment');";
+$p_date= $_GET["p_date"];
+  
+    $query = "INSERT INTO `visit` (`visit_id`, `user_id`, `complaints`, `bp1`, `bp2`, `pulse`, `pd`, `ge`, `se`, `fd`, `fcheck`, `comments`, `next_appointment`, `current_appointment`, `p_date`, `final_sub`) VALUES (NULL, '$user_id', '$complaints', '$bp1', '$bp2', '$pulse', '$pd', '$ge', '$se', '$fd', '$fcheck', '$comments', '$next_appointment', '$current_appointment','$p_date','1');";
   $result =  mysqli_query($connection, $query);
 
-    
-$p_date= $_GET["p_date"];
+  
 
 
     $invquery = "UPDATE `investigation` SET `final_sub` = '1' WHERE `investigation`.`user_id` = '$user_id' AND investigation.`p_date`= '$p_date'";
@@ -126,7 +126,7 @@ $p_date= $_GET["p_date"];
        $current_appointment =  date('d-m-Y H:i');
      
 
-       header('Location: prescription.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id.'&p_date='.$p_date.'&current_appointment='.$current_appointment.'&prstatus=0');
+       header('Location: prescription.php?user_id='.$user_id.'&flag=0&post_id=0&admin_id='.$admin_id.'&p_date='.$p_date.'&current_appointment='.$current_appointment.'&prstatus=0&baker=1');
 
 
     }else{       
