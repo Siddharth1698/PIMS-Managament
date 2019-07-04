@@ -81,24 +81,25 @@ while($row = mysqli_fetch_array($select_user_query)){
     }
 </style>
 
-  <link href="../css/mdb.min.css" rel="stylesheet">
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body style="margin-left: 20px;" >
-  <div id="printthis">
+
+  <body style="margin-left: 10px; margin-top: 10px; margin-right: 10px;">
+    <div style="text-align: right; margin-right: 50px; "><button class="btn" onclick="printElem('printthis')">Print</button>
+
+<button class="btn"  onclick="goBack()">Close</button></div>
+<br><br>
+      <div id="printthis">
+
+    <header >
+       <p class="text-right" ><span  style="margin-right: 75px;"><b>Dr. Jinachandran M K,</b></span> <br><span style="margin-right: 25px;">Consultant Gastroenterologist</span> <br>MBBS MD(Gen. Med),DNB(Gastro)<br><span style="margin-right: 133px;">Reg. No. 35864</span><br><span style="margin-right: 95px;">Tel: +91 9746055577</span> </p>
+</header>
+
      <div class="fixed-header">
         <div class="container">
            <div style="text-align: center;">
       
-    
 
-      <div style="text-align: right;">
-          Dr. Jinachandran, MD,Whatnot, Best doctor in the world,<br>
-    
-Php, Email, etc 
-  
-          
-      </div>
     </div>
         </div>
     </div>
@@ -273,6 +274,10 @@ $select_user_query = mysqli_query($connection, $sql);
 <button class="btn"  onclick="goBack()">Close</button></div>
 </div>
 <br><br><br><br>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
 

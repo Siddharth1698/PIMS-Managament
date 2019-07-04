@@ -6,7 +6,6 @@ ob_start();
  $p_date = $_GET["p_date"];
  $admin_id = $_GET["admin_id"];
  $prstatus = $_GET["prstatus"];
- $baker=$_GET["baker"];
  $current_appointment = $_GET["current_appointment"];
 
  if ($prstatus == "1") {
@@ -34,10 +33,7 @@ $select_user_query = mysqli_query($connection, $sql);
   <link href="../css/mdb.min.css" rel="stylesheet">
   <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
-
-
-<body >
- 
+<body>
 	<style type="text/css">
 		.man{border-style: groove;
 			padding : 25px;
@@ -175,6 +171,7 @@ $select_user_query = mysqli_query($connection, $sql);
     ?>
     
 
+
 <?php
 
 $sql = "SELECT * FROM visit WHERE current_appointment='$current_appointment'";
@@ -235,10 +232,16 @@ $select_user_query = mysqli_query($connection, $sql);
 </body>
 </html>
 
+<script type="text/javascript">
+history.pushState(null, null, '<?php echo $_SERVER["REQUEST_URI"]; ?>');
+window.addEventListener('popstate', function(event) {
+  window.location.href="profilePatient.php?user_id=<?php echo "$user_id" ?>&flag=0&post_id=0&admin_id=<?php echo "$admin_id" ?>&p_date=<?php echo "$date_clickeder" ?>";
+   
+});
+</script>
 
 
 <script type="text/javascript">
-
 
 
   
