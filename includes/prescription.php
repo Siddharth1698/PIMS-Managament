@@ -129,7 +129,7 @@ Reg. No. 35864</i>
 <p></p>
 <p><span style="font-weight: 400;"><b>Unique ID</b></span><span style="font-weight: 400;">: <?php echo "$user_uniqueid";  ?></span></p>
 <p><span style="font-weight: 400;"><b>Name</b></span><span style="font-weight: 400;">: <?php echo "$fname"; echo " "; echo "$lname";  ?></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: 400;"><b>Age</b></span><span style="font-weight: 400;">: <?php echo "$age";  ?> Years&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-weight: 400;"><b>Gender</b></span><span style="font-weight: 400;">: <?php echo "$gender";  ?></span></p>
-<br>
+
 
 <?php
    
