@@ -92,7 +92,14 @@ while($row = mysqli_fetch_array($select_user_query)){
       <div id="printthis">
 
     <header >
-       <p class="text-right" ><span  style="margin-right: 75px;"><b>Dr. Jinachandran M K,</b></span> <br><span style="margin-right: 25px;">Consultant Gastroenterologist</span> <br>MBBS MD(Gen. Med),DNB(Gastro)<br><span style="margin-right: 133px;">Reg. No. 35864</span><br><span style="margin-right: 95px;">Tel: +91 9746055577</span> </p>
+       <p style="text-align: right;" ><i>
+                Dr. Jinachandran M K<br>
+MBBS MD(Gen. Med), DNB(Gastro)<br>
+Consultant Gastroenterologist<br>
+Reg. No. 35864<br>
+Tel: +91 9746055577</i>
+
+       </p>
 </header>
 
      <div class="fixed-header">
@@ -112,21 +119,21 @@ while($row = mysqli_fetch_array($select_user_query)){
     ?>
   <div >  
     <br><br>
-    <p><span style="font-weight: 400;" class="text-center">Visit Summary Report</span></p>
+    <p><span style="font-weight: 400;" class="text-center"><b><u>Visit Summary Report</u></b></span></p>
   <p><span style="font-weight: 400;">____________________________________________________________________________</span></p>
 
-<p><span style="font-weight: 400;">Date: <?php echo "$current_appointment";  ?></span></p>
+<p><span style="font-weight: 400;"><b>Date</b>: <?php echo "$current_appointment";  ?></span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Unique ID: </span><span style="font-weight: 400;"><?php echo "$user_uniqueid";  ?></span></p>
+<p><span style="font-weight: 400;"><b>Unique ID</b>: </span><span style="font-weight: 400;"><?php echo "$user_uniqueid";  ?></span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Name</span><span style="font-weight: 400;">: <?php echo "$fname"; echo " "; echo "$lname"; ?></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-weight: 400; margin-left: 30px;" >Age</span><span style="font-weight: 400;">: <?php echo "$age";  ?> Years&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-weight: 400; margin-left: 30px;">Gender</span><span style="font-weight: 400;">: <?php echo "$gender";  ?></span></p>
+<p><span style="font-weight: 400;"><b>Name</b></span><span style="font-weight: 400;">: <?php echo "$fname"; echo " "; echo "$lname"; ?></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-weight: 400; margin-left: 30px;" ><b>Age</b></span><span style="font-weight: 400;">: <?php echo "$age";  ?> Years&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-weight: 400; margin-left: 30px;"><b>Gender</b></span><span style="font-weight: 400;">: <?php echo "$gender";  ?></span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Referred by</span><span style="font-weight: 400;">: <?php echo "$reffered";  ?></span></p>
+<p><span style="font-weight: 400;"><b>Referred by</b></span><span style="font-weight: 400;">: <?php echo "$reffered";  ?></span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Complaints</span><span style="font-weight: 400;">: </span></p>
+<p><span style="font-weight: 400;"><b>Complaints</b></span><span style="font-weight: 400;">: </span></p>
 <p><span style="font-weight: 400;" rows="6"><?php echo "$complaints";  ?></span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Past History</span><span style="font-weight: 400;">:</span></p>
+<p><span style="font-weight: 400;"><b>Past History</b></span><span style="font-weight: 400;">:</span></p>
 
 
   <?php
@@ -163,19 +170,19 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">On Examination</span><span style="font-weight: 400;">:</span></p>
-<p><span style="font-weight: 400;">BP: <?php echo "$bp1";  ?> / <?php echo "$bp2";  ?> mmHG&nbsp; &nbsp;</span> <span style="font-weight: 400;">Pulse Rate: <?php echo "$pulse";  ?> /min</span></p>
+<p><span style="font-weight: 400;"><b>On Examination</b></span><span style="font-weight: 400;">:</span></p>
+<p><span style="font-weight: 400;"><b>BP</b>: <?php echo "$bp1";  ?> / <?php echo "$bp2";  ?> mmHG&nbsp; &nbsp;</span> <span style="font-weight: 400;"><b>Pulse Rate</b>: <?php echo "$pulse";  ?> /min</span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">General Examination</span><span style="font-weight: 400;">:</span></p>
+<p><span style="font-weight: 400;"><b>General Examination</b></span><span style="font-weight: 400;">:</span></p>
 <p><span style="font-weight: 400;"><?php echo "$ge";  ?></span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">System Examination</span><span style="font-weight: 400;">:</span></p>
+<p><span style="font-weight: 400;"><b>System Examination</b></span><span style="font-weight: 400;">:</span></p>
 <p><span style="font-weight: 400;"><?php echo "$se";  ?></span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Provisional Diagnosis</span><span style="font-weight: 400;">:</span></p>
+<p><span style="font-weight: 400;"><b>Provisional Diagnosis</b></span><span style="font-weight: 400;">:</span></p>
 <p><span style="font-weight: 400;"><?php echo "$pd";  ?></span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Investigation Parameters</span><span style="font-weight: 400;">:</span></p>
+<p><span style="font-weight: 400;"><b>Investigation Parameters</b></span><span style="font-weight: 400;">:</span></p>
 
 
       <?php
@@ -210,10 +217,10 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Final Diagnosis</span><span style="font-weight: 400;">:</span></p>
+<p><span style="font-weight: 400;"><b>Final Diagnosis</b></span><span style="font-weight: 400;">:</span></p>
 <p><span style="font-weight: 400;"><?php echo "$fd";  ?></span></p>
 <p><br /></p>
-<p><span style="font-weight: 400;">Medications</span><span style="font-weight: 400;">:</span></p>
+<p><span style="font-weight: 400;"><b>Medications</b></span><span style="font-weight: 400;">:</span></p>
 
 <?php
        $i = 1;
@@ -249,7 +256,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Comments</span><span style="font-weight: 400;">:</span></p>
+<p><span style="font-weight: 400;"><b>Comments</b></span><span style="font-weight: 400;">:</span></p>
 <p><span style="font-weight: 400;"><?php echo "$comments";  ?></span></p>
 <p>&nbsp;</p>
 <?php  
@@ -257,7 +264,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 ?>
-<p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php echo $next_appointment; ?></span></p>
+<p><span style="font-weight: 400;"><b>Next review date</b></span><span style="font-weight: 400;">: <?php echo $next_appointment; ?></span></p>
 <br>
 </div>
 
