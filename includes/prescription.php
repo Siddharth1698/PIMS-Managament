@@ -108,22 +108,34 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 ?>
+<div style="text-align: center;">
+  
+  <p ><i>
+Dr. Jinachandran M K <br>
+MBBS MD(Gen. Med), DNB(Gastro)<br>
+Consultant Gastroenterologist <br>
+Reg. No. 35864</i>
+</p>
 
 
 
-	<p><h4 style="text-align: center;">Prescription</h4><br /></p>
-	<div class="man">
-<p><span style="font-weight: 400;">Date</span><span style="font-weight: 400;">: <?php  echo "$current_appointment";   ?> </span><em><span style="font-weight: 400;"></span></em></p>
-<p><br /><br /></p>
-<p><span style="font-weight: 400;">Unique ID</span><span style="font-weight: 400;">: <?php echo "$user_uniqueid";  ?></span></p>
-<p><span style="font-weight: 400;">Name</span><span style="font-weight: 400;">: <?php echo "$fname"; echo " "; echo "$lname";  ?></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: 400;">Age</span><span style="font-weight: 400;">: <?php echo "$age";  ?> Years&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-weight: 400;">Gender</span><span style="font-weight: 400;">: <?php echo "$gender";  ?></span></p>
-<p>&nbsp;</p>
+</div>
 <br>
+
+
+	<p><h4 style="text-align: center;"><u>Prescription</u></h4><br /></p>
+	<div class="man">
+<p><span style="font-weight: 400;"><b>Date</b></span><span style="font-weight: 400;">: <?php  echo "$current_appointment";   ?> </span><em><span style="font-weight: 400;"></span></em></p>
+<p></p>
+<p><span style="font-weight: 400;"><b>Unique ID</b></span><span style="font-weight: 400;">: <?php echo "$user_uniqueid";  ?></span></p>
+<p><span style="font-weight: 400;"><b>Name</b></span><span style="font-weight: 400;">: <?php echo "$fname"; echo " "; echo "$lname";  ?></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: 400;"><b>Age</b></span><span style="font-weight: 400;">: <?php echo "$age";  ?> Years&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-weight: 400;"><b>Gender</b></span><span style="font-weight: 400;">: <?php echo "$gender";  ?></span></p>
+<br>
+
 <?php
    
    if ($fcheck == "yes") {
     ?>
-<p><span style="font-weight: 400;">Diagnosis: <?php echo "$fd";  ?></span></p>
+<p><span style="font-weight: 400;"><b>Diagnosis</b>: <?php echo "$fd";  ?></span></p>
 
 
 
@@ -155,7 +167,7 @@ $select_user_query = mysqli_query($connection, $sql);
 
 
 ?>
-<p><span style="font-weight: 400;">Medications</span><span style="font-weight: 400;">:</span></p>
+<p><span style="font-weight: 400;"><b>Medications</b></span><span style="font-weight: 400;">:</span></p>
 <tr>
       <th scope="row"><?php echo "$i"; echo "."; ?></th>
       <td><?php echo "$inname";  ?></td>
@@ -203,7 +215,13 @@ $select_user_query = mysqli_query($connection, $sql);
 
 <br>
 
-<p><span style="font-weight: 400;">Next review date</span><span style="font-weight: 400;">: <?php echo $next_appointment; ?></span></p></div>
+<p><span style="font-weight: 400;"><b>Next review date</b></span><span style="font-weight: 400;">: <?php echo $next_appointment; ?></span></p></div><br>
+
+<div style="text-align: right;">
+    <p style="text-align: right;">Dr. Jinachandran M K</p>
+
+
+</div>
 <p></p>
 <style type="text/css">
   @media print {
