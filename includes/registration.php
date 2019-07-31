@@ -159,7 +159,7 @@ $admin_id = $_GET['admin_id'];
             </div>
  <!-- E-mail --><div class="col">
             <label for="dob">Date of Birth: *</label>
-<input type="text" id="datepicker" name="dob" class="form-control" size="30"/>    
+<input type="text" id="datepicker" name="dob" class="form-control" size="30" required />    
             
 
            
