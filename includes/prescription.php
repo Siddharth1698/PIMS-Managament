@@ -34,6 +34,8 @@ $select_user_query = mysqli_query($connection, $sql);
   <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
+
 	<style type="text/css">
 		.man{border-style: groove;
 			padding : 25px;
@@ -42,7 +44,25 @@ $select_user_query = mysqli_query($connection, $sql);
 
 	</style>
 
+<div>
+  <br>
+<div  style=" text-align: right; margin-right: 50px;"  class='no-print'>
+<button class="btn" onclick="printElem('printthis')">Print</button>
 
+<?php if ($prstatus!=0) {
+  ?>
+<button class="btn" onclick="goBack()">Close</button>
+
+<?php }else{
+
+?>
+
+<button class="btn"  ><a style="text-decoration: none; color: black;" href="profilePatient.php?user_id=<?php echo "$user_id" ?>&flag=0&post_id=0&admin_id=<?php echo "$admin_id" ?>&p_date=<?php echo "$date_clickeder" ?>">Close</a></button></div>
+<?php  }
+?>
+  
+
+</div>
 
 <?php
 
