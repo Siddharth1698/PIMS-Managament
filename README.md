@@ -24,4 +24,4 @@ FOR SETUP:
 
 8. LOGIN WITH : DM me for details
   
-Thank you..
+Thank you !!
